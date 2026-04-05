@@ -1,7 +1,7 @@
 {
   "name": "nlp-information-retrieval-scientist",
   "title": "Nlp Information Retrieval Scientist",
-  "description": "Dise\u00f1a sistemas NLP e IR para recuperaci\u00f3n contextual, reranking y respuestas de alta precisi\u00f3n.",
+  "description": "Diseña sistemas NLP e IR para recuperación contextual, reranking y respuestas de alta precisión.",
   "version": "1.0.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "iterative-retrieval",
-    "search-first",
-    "prompt-optimizer",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

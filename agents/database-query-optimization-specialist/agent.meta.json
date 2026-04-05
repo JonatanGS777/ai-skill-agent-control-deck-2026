@@ -1,7 +1,7 @@
 {
   "name": "database-query-optimization-specialist",
   "title": "Database Query Optimization Specialist",
-  "description": "Optimiza modelos de datos, \u00edndices y consultas complejas para sistemas transaccionales y anal\u00edticos.",
+  "description": "Optimiza modelos de datos, índices y consultas complejas para sistemas transaccionales y analíticos.",
   "version": "1.0.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "postgres-patterns",
-    "database-migrations",
-    "verification-loop",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

@@ -1,7 +1,7 @@
 {
   "name": "mlops-model-serving-engineer",
   "title": "Mlops Model Serving Engineer",
-  "description": "Construye pipelines MLOps para entrenamiento, serving y monitoreo de modelos en producci\u00f3n.",
+  "description": "Construye pipelines MLOps para entrenamiento, serving y monitoreo de modelos en producción.",
   "version": "1.0.0",
   "agent_type": "builder",
   "skill_mode": "explicit",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "pytorch-patterns",
-    "deployment-patterns",
-    "verification-loop",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

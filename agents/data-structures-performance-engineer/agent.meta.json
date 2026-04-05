@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "backend-patterns",
-    "plankton-code-quality",
-    "verification-loop",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

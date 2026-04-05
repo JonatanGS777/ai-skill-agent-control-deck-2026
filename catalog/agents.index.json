@@ -1631,9 +1631,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "backend-patterns",
-        "verification-loop",
-        "python-testing",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -1665,9 +1662,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "security-review",
-        "security-scan",
-        "backend-patterns",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5479,9 +5473,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "docker-patterns",
-        "deployment-patterns",
-        "backend-patterns",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5513,9 +5504,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "cpp-coding-standards",
-        "rust-patterns",
-        "documentation-lookup",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5547,9 +5535,7 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "frontend-design",
         "svg-architecture-linkedin-2026",
-        "python-testing",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5581,9 +5567,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "pytorch-patterns",
-        "fal-ai-media",
-        "python-testing",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5615,9 +5598,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "python-testing",
-        "verification-loop",
-        "backend-patterns",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5649,9 +5629,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "security-review",
-        "security-scan",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5683,9 +5660,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "backend-patterns",
-        "plankton-code-quality",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5717,9 +5691,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "postgres-patterns",
-        "database-migrations",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5751,9 +5722,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "verification-loop",
-        "coding-standards",
-        "python-testing",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5785,9 +5753,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "backend-patterns",
-        "deployment-patterns",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5821,7 +5786,6 @@
       "skills": [
         "fullstack-ultramodern-2026",
         "frontend-ultramodern-2026",
-        "api-design",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5853,9 +5817,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "backend-patterns",
-        "python-testing",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5887,9 +5848,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "python-testing",
-        "pytorch-patterns",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -5954,9 +5912,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "claude-api",
-        "ai-first-engineering",
-        "prompt-optimizer",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7338,9 +7293,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "pytorch-patterns",
-        "deployment-patterns",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7372,9 +7324,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "api-design",
-        "backend-patterns",
-        "security-review",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7406,9 +7355,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "iterative-retrieval",
-        "search-first",
-        "prompt-optimizer",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7440,9 +7386,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "rust-patterns",
-        "golang-patterns",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7474,9 +7417,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "python-testing",
-        "backend-patterns",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -7508,9 +7448,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "python-testing",
-        "spreadsheet",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -8892,9 +8829,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "documentation-lookup",
-        "article-writing",
-        "verification-loop",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -10006,9 +9940,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "deployment-patterns",
-        "verification-loop",
-        "codebase-onboarding",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",
@@ -10040,9 +9971,6 @@
       "skill_mode": "explicit",
       "logic_foundation_mode": "standard",
       "skills": [
-        "python-testing",
-        "verification-loop",
-        "backend-patterns",
         "logic-propositional-reasoning",
         "logic-proof-strategies",
         "complexity-analysis-foundations",

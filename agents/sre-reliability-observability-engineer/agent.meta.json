@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "deployment-patterns",
-    "verification-loop",
-    "codebase-onboarding",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

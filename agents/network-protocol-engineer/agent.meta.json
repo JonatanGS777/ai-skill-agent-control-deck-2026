@@ -1,7 +1,7 @@
 {
   "name": "network-protocol-engineer",
   "title": "Network Protocol Engineer",
-  "description": "Dise\u00f1a e implementa protocolos de red robustos con observabilidad y garant\u00edas de compatibilidad.",
+  "description": "Diseña e implementa protocolos de red robustos con observabilidad y garantías de compatibilidad.",
   "version": "1.0.0",
   "agent_type": "builder",
   "skill_mode": "explicit",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "api-design",
-    "backend-patterns",
-    "security-review",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",
