@@ -1,41 +1,41 @@
 # Contributing
 
-Gracias por contribuir a este repositorio.
+Thank you for contributing to this repository.
 
-## Flujo obligatorio
+## Required Workflow
 
-1. Crea una rama de trabajo.
-2. Implementa cambios pequeños y enfocados.
-3. Ejecuta:
+1. Create a working branch.
+2. Implement small, focused changes.
+3. Run:
 
 ```bash
 make quality
 ```
 
-4. Si el cambio es de release, ejecuta:
+4. If the change involves a release, run:
 
 ```bash
 make release-auto
 ```
 
-5. Abre PR usando el template oficial.
+5. Open a PR using the official template.
 
-## Estandares
+## Standards
 
-- Mantener compatibilidad entre Claude Code y Codex.
-- Priorizar logica, claridad, seguridad y utilidad.
-- Evitar prompts/agentes genericos sin fundamento.
-- Añadir/actualizar documentacion cuando cambie comportamiento.
+- Maintain compatibility between Claude Code and Codex.
+- Prioritize logic, clarity, security, and utility.
+- Avoid generic prompts/agents without a solid foundation.
+- Add/update documentation whenever behavior changes.
 
-## Revisiones
+## Reviews
 
-Antes de merge, valida:
+Before merging, validate against:
 - `docs/governance/review-checklist.md`
 - `docs/governance/definition-of-done.md`
 
-## Convenciones de commits
+## Commit Conventions
 
-Formato sugerido:
+Suggested format:
 - `feat: ...`
 - `fix: ...`
 - `docs: ...`

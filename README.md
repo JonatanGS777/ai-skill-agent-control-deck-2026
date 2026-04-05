@@ -2,7 +2,7 @@
 
 # AI Skill & Agent Control Deck 2026
 
-**El sistema definitivo para construir, medir y escalar skills y agentes de IA con base lógica sólida**
+**The definitive system for building, measuring, and scaling AI skills and agents with solid logical foundations**
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-22c1ff?style=for-the-badge&logo=semver&logoColor=white)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-95e6bc?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
@@ -21,40 +21,40 @@
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-[Inicio Rápido](#-inicio-rápido) · [Documentación](#-documentación) · [Skills](skills/) · [Agentes](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contribuir](CONTRIBUTING.md)
+[Quick Start](#-quick-start) · [Documentation](#-documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## ¿Qué es esto?
+## What is this?
 
-Este repositorio es una plataforma de producción para crear y gestionar **skills** (capacidades reutilizables) y **agentes** (orquestadores de skills) para Claude Code y Codex, con:
+This repository is a production platform for creating and managing **skills** (reusable capabilities) and **agents** (skill orchestrators) for Claude Code and Codex, featuring:
 
-- **Base lógica explícita** — cada skill/agente declara sus dependencias matemáticas y formales
-- **Calidad medible** — score por `logic`, `clarity`, `security`, `utility` en cada componente
-- **Gobierno automatizado** — CI bloquea PRs que no pasan benchmarks y regression checks
-- **Cobertura de dominio** — desde lógica proposicional hasta IA aplicada en 20+ industrias
+- **Explicit logical foundation** — every skill/agent declares its formal and mathematical dependencies
+- **Measurable quality** — scored by `logic`, `clarity`, `security`, and `utility` for each component
+- **Automated governance** — CI blocks PRs that fail benchmarks and regression checks
+- **Domain coverage** — from propositional logic to applied AI across 20+ industries
 
 ---
 
-## Estadísticas del Repositorio
+## Repository Stats
 
 <div align="center">
 
-| Componente | Cantidad | Estado |
+| Component | Count | Status |
 |:---:|:---:|:---:|
-| Skills especializadas | **203** | ✅ Healthy |
-| Agentes de orquestación | **196** | ✅ Healthy |
-| Logic foundation skills | **30** | ✅ 100% cubiertos |
+| Specialized skills | **203** | ✅ Healthy |
+| Orchestration agents | **196** | ✅ Healthy |
+| Logic foundation skills | **30** | ✅ 100% covered |
 | Benchmark pass rate | **100%** | ✅ Passing |
-| Versión actual | **v1.0.0** | ✅ Stable |
+| Current version | **v1.0.0** | ✅ Stable |
 
 </div>
 
 ---
 
-## Arquitectura del Sistema
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -85,57 +85,57 @@ Este repositorio es una plataforma de producción para crear y gestionar **skill
 
 ---
 
-## Dominios Cubiertos
+## Domain Coverage
 
 <div align="center">
 
-| Categoría | Skills Incluidas |
+| Category | Included Skills |
 |---|---|
-| **Lógica & Matemáticas** | Propositional reasoning, predicate quantifiers, proof strategies, Hoare logic, set theory, discrete structures, complexity analysis |
-| **IA Aplicada** | Customer success, agritech, biotech, climate analytics, cybersecurity, ecommerce, education, energy, healthcare, legal, finance, logistics |
-| **Ingeniería de Software** | Full-stack, automation, workflow orchestration, security, testing, debugging, frontend frameworks |
-| **Tipos de Agentes** | Auditor, Builder, Strategist, Reviewer |
+| **Logic & Mathematics** | Propositional reasoning, predicate quantifiers, proof strategies, Hoare logic, set theory, discrete structures, complexity analysis |
+| **Applied AI** | Customer success, agritech, biotech, climate analytics, cybersecurity, ecommerce, education, energy, healthcare, legal, finance, logistics |
+| **Software Engineering** | Full-stack, automation, workflow orchestration, security, testing, debugging, frontend frameworks |
+| **Agent Types** | Auditor, Builder, Strategist, Reviewer |
 
 </div>
 
 ---
 
-## Inicio Rápido
+## Quick Start
 
-### 1. Clonar y bootstrap
+### 1. Clone and bootstrap
 
 ```bash
 git clone https://github.com/jonatangs777/ai-skill-agent-control-deck-2026.git
 cd ai-skill-agent-control-deck-2026
 
-# Inicialización completa: logic pack + aliases + semver + quality gate
+# Full initialization: logic pack + aliases + semver + quality gate
 make bootstrap
 ```
 
-### 2. Instalar una skill en Claude Code
+### 2. Install a skill in Claude Code
 
 ```bash
-# Copiar skill a tu instalación local de Claude Code
+# Copy skill to your local Claude Code installation
 cp -r skills/automation-agentic-workflow-automation-skill-2026 ~/.claude/skills/
 
-# Recargar Claude Code para activar la skill
+# Reload Claude Code to activate the skill
 claude
 ```
 
-### 3. Ver el dashboard de calidad
+### 3. Open the quality dashboard
 
 ```bash
 make dashboard
 open catalog/quality-dashboard.html
 ```
 
-### 4. Correr el gate completo de calidad
+### 4. Run the full quality gate
 
 ```bash
 make quality
 ```
 
-### 5. Crear un release
+### 5. Create a release
 
 ```bash
 make release-auto
@@ -143,137 +143,137 @@ make release-auto
 
 ---
 
-## Comandos Make Disponibles
+## Available Make Commands
 
 ```bash
-make bootstrap      # Inicialización completa del repositorio
-make quality        # Gate completo: compile + semver + benchmarks + catalog + dashboard
-make benchmarks     # Ejecutar suite de benchmarks (score por 4 dimensiones)
-make dashboard      # Generar dashboard HTML interactivo de calidad
-make docs-portal    # Generar portal de documentación HTML
-make catalog        # Reconstruir índice de skills/agentes
-make release-auto   # Crear patch release automático
-make logic-pack     # Instalar las 30 logic foundation skills
+make bootstrap      # Full repository initialization
+make quality        # Full gate: compile + semver + benchmarks + catalog + dashboard
+make benchmarks     # Run benchmark suite (scored across 4 dimensions)
+make dashboard      # Generate interactive HTML quality dashboard
+make docs-portal    # Generate HTML documentation portal
+make catalog        # Rebuild skills/agents index
+make release-auto   # Create automatic patch release
+make logic-pack     # Install the 30 logic foundation skills
 ```
 
 ---
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 ai-skill-agent-control-deck-2026/
 │
-├── skills/                    # 203 skills especializadas
-│   └── [nombre-skill]/
-│       ├── SKILL.md           # Definición principal (frontmatter + workflow + guardrails)
-│       ├── README.md          # Instalación y uso
-│       ├── skill.meta.json    # Metadata y versión
-│       ├── examples/          # Prompts de ejemplo
-│       └── references/        # Quality gates y criterios
+├── skills/                    # 203 specialized skills
+│   └── [skill-name]/
+│       ├── SKILL.md           # Main definition (frontmatter + workflow + guardrails)
+│       ├── README.md          # Installation and usage
+│       ├── skill.meta.json    # Metadata and version
+│       ├── examples/          # Example prompts
+│       └── references/        # Quality gates and criteria
 │
-├── agents/                    # 196 agentes de orquestación
-│   └── [nombre-agente]/
-│       ├── AGENT.md           # Perfil de skills + núcleo lógico
+├── agents/                    # 196 orchestration agents
+│   └── [agent-name]/
+│       ├── AGENT.md           # Skill profile + logical core
 │       ├── agent.meta.json    # Metadata
-│       └── references/        # Índice de skills del agente
+│       └── references/        # Agent skill index
 │
-├── catalog/                   # Índices de calidad y benchmarks
-│   ├── skills.index.json      # Índice de búsqueda de skills
-│   ├── agents.index.json      # Índice de búsqueda de agentes
-│   ├── benchmark-results.json # Scores actuales (logic/clarity/security/utility)
-│   ├── quality-dashboard.html # Dashboard interactivo
+├── catalog/                   # Quality indexes and benchmarks
+│   ├── skills.index.json      # Searchable skill index
+│   ├── agents.index.json      # Searchable agent index
+│   ├── benchmark-results.json # Current scores (logic/clarity/security/utility)
+│   ├── quality-dashboard.html # Interactive dashboard
 │   └── releases/v1.0.0/       # Release notes
 │
-├── scripts/                   # 13 scripts Python de automatización
-├── docs/                      # Documentación y governance
+├── scripts/                   # 13 Python automation scripts
+├── docs/                      # Documentation and governance
 │   ├── patterns.md
 │   ├── anti-patterns.md
 │   ├── quickstart.md
 │   ├── governance/
-│   └── claude-code-guide.md   # Guía completa de Claude Code (ES/EN)
+│   └── claude-code-guide.md   # Complete Claude Code guide
 │
 ├── .github/workflows/         # CI/CD
-├── Makefile                   # Automatización de build y calidad
-└── CONTRIBUTING.md            # Flujo de contribución
+├── Makefile                   # Build and quality automation
+└── CONTRIBUTING.md            # Contribution workflow
 ```
 
 ---
 
-## Sistema de Calidad en 4 Dimensiones
+## 4-Dimension Quality System
 
-Cada skill y agente recibe un score en:
+Every skill and agent is scored across:
 
 ```
 ┌────────────┬──────────────────────────────────────────────────────┐
-│ Dimensión  │ Descripción                                          │
+│ Dimension  │ Description                                          │
 ├────────────┼──────────────────────────────────────────────────────┤
-│ logic      │ Solidez formal: correctness, invariants, proofs      │
-│ clarity    │ Documentación, ejemplos, instrucciones comprensibles │
-│ security   │ Manejo de amenazas, guardrails, boundary validation  │
-│ utility    │ Valor práctico, cobertura de casos reales            │
+│ logic      │ Formal soundness: correctness, invariants, proofs    │
+│ clarity    │ Documentation, examples, understandable instructions │
+│ security   │ Threat handling, guardrails, boundary validation     │
+│ utility    │ Practical value, real-world case coverage            │
 └────────────┴──────────────────────────────────────────────────────┘
 
-Top scores actuales: fullstack-ultramodern-2026 (98.6/100)
+Top current score: fullstack-ultramodern-2026 (98.6/100)
 ```
 
 ---
 
-## Documentación
+## Documentation
 
-| Recurso | Descripción |
+| Resource | Description |
 |---|---|
-| [Guía de Claude Code](docs/claude-code-guide.md) | Guía completa bilingüe (ES/EN) de Claude Code |
-| [Inicio Rápido](docs/quickstart.md) | Setup en 5 minutos |
-| [Patrones Recomendados](docs/patterns.md) | 5 patrones probados (Skill, Agent, Quality, Release) |
-| [Anti-patrones](docs/anti-patterns.md) | 5 errores comunes y cómo corregirlos |
-| [Definition of Done](docs/governance/definition-of-done.md) | Checklist de aceptación para contribuciones |
-| [Review Checklist](docs/governance/review-checklist.md) | Checklist de revisión de PRs |
-| [Portal de Docs](docs/portal/index.html) | Portal HTML auto-generado |
-| [Dashboard de Calidad](catalog/quality-dashboard.html) | Visualización interactiva de scores |
+| [Claude Code Guide](docs/claude-code-guide.md) | Complete Claude Code reference guide |
+| [Quick Start](docs/quickstart.md) | Setup in 5 minutes |
+| [Recommended Patterns](docs/patterns.md) | 5 proven patterns (Skill, Agent, Quality, Release) |
+| [Anti-patterns](docs/anti-patterns.md) | 5 common mistakes and how to fix them |
+| [Definition of Done](docs/governance/definition-of-done.md) | Acceptance checklist for contributions |
+| [Review Checklist](docs/governance/review-checklist.md) | PR review checklist |
+| [Docs Portal](docs/portal/index.html) | Auto-generated HTML portal |
+| [Quality Dashboard](catalog/quality-dashboard.html) | Interactive score visualization |
 
 ---
 
-## Flujo de Contribución
+## Contribution Workflow
 
 ```bash
-# 1. Fork y clonar
-git clone https://github.com/[tu-usuario]/ai-skill-agent-control-deck-2026.git
+# 1. Fork and clone
+git clone https://github.com/[your-username]/ai-skill-agent-control-deck-2026.git
 
-# 2. Crear rama de feature
-git checkout -b feat/nueva-skill-dominio
+# 2. Create a feature branch
+git checkout -b feat/new-skill-domain
 
-# 3. Crear skill usando el script universal
+# 3. Create skill using the universal script
 python scripts/universal_skill_creator.py
 
-# 4. Correr quality gate localmente
+# 4. Run quality gate locally
 make quality
 
-# 5. Abrir Pull Request
-# El CI correrá: compile + semver + benchmarks automáticamente
+# 5. Open a Pull Request
+# CI will automatically run: compile + semver + benchmarks
 ```
 
-Ver [CONTRIBUTING.md](CONTRIBUTING.md) para el flujo completo y estándares de contribución.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow and contribution standards.
 
 ---
 
 ## Releases
 
-| Versión | Fecha | Canal | Estado |
+| Version | Date | Channel | Status |
 |---|---|---|---|
 | [v1.0.0](catalog/releases/v1.0.0/release-notes.md) | 2026-04-05 | stable | ✅ Healthy |
 
 ---
 
-## Licencia
+## License
 
-MIT © 2026 Yonatan Guerrero Soriano — ver [LICENSE](LICENSE)
+MIT © 2026 Yonatan Guerrero Soriano — see [LICENSE](LICENSE)
 
 ---
 
 <div align="center">
 
-**Construido con rigor lógico, medido con benchmarks, publicado con confianza.**
+**Built with logical rigor, measured with benchmarks, released with confidence.**
 
-[Subir al inicio](#ai-skill--agent-control-deck-2026)
+[Back to top](#ai-skill--agent-control-deck-2026)
 
 </div>

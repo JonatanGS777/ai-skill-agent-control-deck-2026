@@ -1,26 +1,26 @@
 # Anti-Patterns
 
-## 1) Skills sin contrato de salida
+## 1) Skills Without an Output Contract
 
-Problema: respuestas ambiguas y no auditables.
-Correccion: definir formato de salida, criterios de aceptacion y checklist final.
+Problem: ambiguous, non-auditable responses.
+Fix: define output format, acceptance criteria, and a final checklist.
 
-## 2) Agentes con demasiadas skills activas sin priorizacion
+## 2) Agents With Too Many Active Skills and No Prioritization
 
-Problema: respuestas incoherentes o contradictorias.
-Correccion: usar seleccion por dominio + limite maximo + modo `hybrid` controlado.
+Problem: incoherent or contradictory responses.
+Fix: use domain-based selection + max limit + controlled `hybrid` mode.
 
-## 3) Cambios grandes sin benchmark/regression
+## 3) Large Changes Without Benchmark/Regression
 
-Problema: mejoras locales rompen comportamientos previos.
-Correccion: ejecutar `make quality` antes de merge.
+Problem: local improvements break previous behaviors.
+Fix: run `make quality` before merging.
 
-## 4) Versionado manual inconsistente
+## 4) Inconsistent Manual Versioning
 
-Problema: historial de cambios opaco.
-Correccion: usar `semantic_version_manager.py` + bundle release automatizado.
+Problem: opaque change history.
+Fix: use `semantic_version_manager.py` + automated release bundle.
 
-## 5) Prompts sin base logica
+## 5) Prompts Without a Logical Foundation
 
-Problema: alucinaciones y pasos sin sentido.
-Correccion: foundations de matematicas/programacion en skill y agent metadata.
+Problem: hallucinations and meaningless steps.
+Fix: add math/programming foundations to skill and agent metadata.

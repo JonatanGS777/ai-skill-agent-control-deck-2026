@@ -1,21 +1,21 @@
 # Review Checklist
 
-## Calidad tecnica
+## Technical Quality
 
-- [ ] El cambio compila y no rompe scripts existentes.
-- [ ] El contrato de entradas/salidas esta claro.
-- [ ] No hay regresiones funcionales obvias.
-- [ ] El cambio respeta guardrails de seguridad.
+- [ ] The change compiles and does not break existing scripts.
+- [ ] The input/output contract is clear.
+- [ ] No obvious functional regressions.
+- [ ] The change respects security guardrails.
 
-## Calidad de skills/agentes
+## Skill/Agent Quality
 
-- [ ] Hay objetivo y workflow explicitos.
-- [ ] Hay criterios de validacion final.
-- [ ] La base logica es coherente con el dominio.
-- [ ] Se evita contenido generico sin fundamento.
+- [ ] There is an explicit objective and workflow.
+- [ ] There are final validation criteria.
+- [ ] The logical foundation is consistent with the domain.
+- [ ] Generic content without a foundation is avoided.
 
-## Calidad del repositorio
+## Repository Quality
 
-- [ ] `make quality` pasa localmente.
-- [ ] Se actualizaron docs si cambia comportamiento.
-- [ ] Se reflejan cambios relevantes en changelog/release notes.
+- [ ] `make quality` passes locally.
+- [ ] Docs are updated if behavior changes.
+- [ ] Relevant changes are reflected in changelog/release notes.

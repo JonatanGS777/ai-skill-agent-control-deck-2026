@@ -1,6 +1,6 @@
-# Quickstart del Repositorio
+# Repository Quickstart
 
-## 1) Preparacion inicial
+## 1) Initial Setup
 
 ```bash
 make semver-init
@@ -8,35 +8,35 @@ make logic-pack
 make aliases GROUP_NAME="CEO Jonatan Agent"
 ```
 
-## 2) Validacion de calidad
+## 2) Quality Validation
 
 ```bash
 make quality
 ```
 
-Incluye:
-- compile-check de scripts Python
-- semver gate
-- benchmark + regression + coverage
-- catalogo de calidad
-- dashboard visual
-- portal de documentacion
+Includes:
+- Python script compile check
+- Semver gate
+- Benchmark + regression + coverage
+- Quality catalog
+- Visual dashboard
+- Documentation portal
 
 ## 3) Releases
 
-Release automatico (patch):
+Automatic release (patch):
 
 ```bash
 make release-auto
 ```
 
-Release explicito:
+Explicit release:
 
 ```bash
-make release RELEASE_VERSION=v1.0.0 RELEASE_CHANNEL=stable RELEASE_NOTES="Primer release estable"
+make release RELEASE_VERSION=v1.0.0 RELEASE_CHANNEL=stable RELEASE_NOTES="First stable release"
 ```
 
-## 4) Artefactos clave
+## 4) Key Artifacts
 
 - `catalog/benchmark-results.json`
 - `catalog/benchmark-history.json`

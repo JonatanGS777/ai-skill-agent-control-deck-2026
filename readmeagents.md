@@ -1,15 +1,15 @@
 # Universal Agent Creator (Claude Code + Codex)
 
-Este generador crea agentes universales compatibles con Claude Code y Codex,
-y los configura para trabajar con skills desde su protocolo interno.
+This generator creates universal agents compatible with Claude Code and Codex,
+and configures them to work with skills via their internal protocol.
 
-## Archivo principal
+## Main File
 
 - `scripts/universal_agent_creator.py`
 
-## Que crea
+## What It Creates
 
-Por cada agente genera:
+For each agent it generates:
 
 ```text
 agents/<agent-name>/
@@ -26,41 +26,41 @@ agents/<agent-name>/
     └── .gitkeep
 ```
 
-Ademas instala un entrypoint en:
+It also installs an entrypoint at:
 
 - `~/.claude/agents/<agent-name>.md`
 - `~/.codex/agents/<agent-name>.md`
 
 ## Skill Bootstrap Protocol
 
-Cada agente generado incluye un bloque interno para:
+Each generated agent includes an internal block to:
 
-1. Detectar capacidades requeridas por la tarea.
-2. Seleccionar skills relevantes (manuales y/o auto).
-3. Fusionar reglas y guardrails de esas skills.
-4. Ejecutar con plan unificado y validacion final.
+1. Detect capabilities required by the task.
+2. Select relevant skills (manual and/or auto).
+3. Merge rules and guardrails from those skills.
+4. Execute with a unified plan and final validation.
 
-## Modo de skills
+## Skill Modes
 
-- `--skill-mode explicit`: solo usa `--skill` manuales.
-- `--skill-mode auto`: detecta skills automaticamente desde las fuentes.
-- `--skill-mode hybrid` (default): combina manual + auto.
-- `--logic-foundation`: agrega base logica (`none`, `core`, `standard`, `max`) para robustez de razonamiento.
+- `--skill-mode explicit`: only uses manual `--skill` entries.
+- `--skill-mode auto`: detects skills automatically from sources.
+- `--skill-mode hybrid` (default): combines manual + auto.
+- `--logic-foundation`: adds logical foundation (`none`, `core`, `standard`, `max`) for reasoning robustness.
 
-Fuentes default de skills:
+Default skill sources:
 
 - `skills`
 - `~/.claude/skills`
 - `~/.codex/skills`
 
-## Uso rapido
+## Quick Usage
 
-### 1) Crear un agente orquestador con skills auto + manual
+### 1) Create an orchestrator agent with auto + manual skills
 
 ```bash
 python3 scripts/universal_agent_creator.py \
   --name "product orchestrator 2026" \
-  --description "Orquesta implementaciones full stack con foco en calidad de produccion." \
+  --description "Orchestrates full-stack implementations with a production quality focus." \
   --agent-type orchestrator \
   --skill fullstack-ultramodern-2026 \
   --skill frontend-ultramodern-2026 \
@@ -69,51 +69,51 @@ python3 scripts/universal_agent_creator.py \
   --install-method symlink
 ```
 
-### 2) Crear un agente sin instalar (solo repo)
+### 2) Create an agent without installing (repo only)
 
 ```bash
 python3 scripts/universal_agent_creator.py \
   --name "api quality reviewer" \
-  --description "Revisor tecnico de APIs orientado a riesgo y mantenibilidad." \
+  --description "Technical API reviewer focused on risk and maintainability." \
   --agent-type reviewer \
   --install-target none
 ```
 
-### 3) Simular sin escribir archivos
+### 3) Dry run without writing files
 
 ```bash
 python3 scripts/universal_agent_creator.py \
   --name "debug commander" \
-  --description "Diagnostico de incidentes complejos en produccion." \
+  --description "Complex production incident diagnostics." \
   --agent-type debugger \
   --dry-run
 ```
 
-## Flags clave
+## Key Flags
 
-- `--name`, `--description`: obligatorios.
+- `--name`, `--description`: required.
 - `--agent-type`: `orchestrator`, `builder`, `reviewer`, `debugger`, `specialist`.
-- `--skill`: skill manual (repetible).
+- `--skill`: manual skill (repeatable).
 - `--skill-mode`: `explicit`, `auto`, `hybrid`.
 - `--logic-foundation`: `none`, `core`, `standard`, `max`.
-- `--max-profile-skills`: limita skills finales del perfil para evitar sobrecarga.
-- `--skill-source`: fuentes de skills (repetible).
-- `--max-auto-skills`: limite de autoseleccion.
-- `--strict`: falla si skills explicitas no existen en fuentes detectadas.
+- `--max-profile-skills`: limits final profile skills to avoid overload.
+- `--skill-source`: skill sources (repeatable).
+- `--max-auto-skills`: auto-selection limit.
+- `--strict`: fails if explicit skills don't exist in detected sources.
 - `--install-target`: `both`, `claude`, `codex`, `none`.
-- `--install-method`: `symlink` (recomendado) o `copy`.
+- `--install-method`: `symlink` (recommended) or `copy`.
 - `--overwrite`, `--dry-run`.
 
-## Recomendacion de equipo
+## Team Recommendations
 
-1. Crear agentes en `agents/` como fuente canonica.
-2. Instalar por `symlink` para que cambios locales impacten ambos ecosistemas.
-3. Versionar `AGENT.md` + `references/skill-index.md`.
-4. Revisar periodicamente skills seleccionadas por el modo `auto`.
+1. Create agents in `agents/` as the canonical source.
+2. Install via `symlink` so local changes propagate to both ecosystems.
+3. Version `AGENT.md` + `references/skill-index.md`.
+4. Periodically review skills selected by `auto` mode.
 
-## Alias de grupo para activacion
+## Group Aliases for Activation
 
-Para activar agentes con nombre de grupo (ej. `ceo-jonatan-agent--...`):
+To activate agents with a group name (e.g. `ceo-jonatan-agent--...`):
 
 ```bash
 python3 scripts/install_agent_group_aliases.py \
@@ -123,65 +123,65 @@ python3 scripts/install_agent_group_aliases.py \
   --overwrite
 ```
 
-Con Makefile:
+With Makefile:
 
 ```bash
 make aliases GROUP_NAME="CEO Jonatan Agent"
 ```
 
-Para mantener los agentes creados en lote en un grupo aparte:
+To keep batch-created agents in a separate group:
 
 ```bash
 make aliases-created
 ```
 
-Esto instala aliases con prefijo:
+This installs aliases with prefix:
 - `ceo-jonatan-creados--<agent>.md`
 
-Para mantener separados los 100 agentes del AI Factory:
+To keep the 100 AI Factory agents separate:
 
 ```bash
 make aliases-ai
 ```
 
-Esto instala aliases con prefijo:
+This installs aliases with prefix:
 - `ceo-jonatan-ai-factory--<agent>.md`
 
 ## CI Quality Gate
 
-Se incluye workflow de GitHub Actions en:
+GitHub Actions workflows are included at:
 
 - `.github/workflows/repository-quality.yml`
 - `.github/workflows/release-bundle.yml`
 
-Este workflow ejecuta:
-1. `py_compile` de scripts principales.
+This workflow runs:
+1. `py_compile` on main scripts.
 2. `python scripts/semantic_version_manager.py --mode check --scope both --strict`.
 3. `python scripts/run_benchmarks.py --strict`.
 4. `python scripts/rebuild_repo_catalog.py --strict`.
 5. `python scripts/build_quality_dashboard.py`.
-6. Publica `catalog/*` como artifact del workflow.
+6. Publishes `catalog/*` as a workflow artifact.
 
-Incluye dashboard visual:
+Includes visual dashboard:
 - `catalog/quality-dashboard.html`
 - `docs/portal/index.html`
 
-Y gobernanza de contribuciones:
+And contribution governance:
 - `CONTRIBUTING.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
 - `docs/governance/review-checklist.md`
 - `docs/governance/definition-of-done.md`
 
-## Versionado semantico de agentes
+## Semantic Versioning for Agents
 
-Para mantener versionado consistente en `AGENT.md` + `agent.meta.json`:
+To maintain consistent versioning in `AGENT.md` + `agent.meta.json`:
 
 ```bash
 python3 scripts/semantic_version_manager.py --mode apply --scope agents
 python3 scripts/semantic_version_manager.py --mode check --scope agents --strict
 ```
 
-Tambien puedes usar:
+You can also use:
 
 ```bash
 make semver-apply

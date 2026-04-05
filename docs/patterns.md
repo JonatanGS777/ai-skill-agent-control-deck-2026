@@ -1,31 +1,31 @@
-# Patrones Recomendados
+# Recommended Patterns
 
-## Skill Pattern: Logica primero
+## Skill Pattern: Logic First
 
-1. Definir objetivo verificable.
-2. Declarar precondiciones y supuestos.
-3. Especificar workflow con pasos finitos.
-4. Forzar validacion final con criterios medibles.
-5. Añadir guardrails de seguridad y alcance.
+1. Define a verifiable objective.
+2. Declare preconditions and assumptions.
+3. Specify a workflow with finite steps.
+4. Enforce final validation with measurable criteria.
+5. Add security and scope guardrails.
 
 ## Agent Pattern: Skill Bootstrap Protocol
 
-1. Interpretar objetivo y restricciones.
-2. Seleccionar skills por dominio.
-3. Fusionar reglas sin contradicciones.
-4. Ejecutar plan por etapas.
-5. Verificar salida contra contrato.
+1. Interpret objective and constraints.
+2. Select skills by domain.
+3. Merge rules without contradictions.
+4. Execute plan in stages.
+5. Verify output against the contract.
 
-## Quality Pattern: Todo medible
+## Quality Pattern: Everything Measurable
 
-1. Publicar score por `logic`, `clarity`, `security`, `utility`.
-2. Mantener regression checks de prompts.
-3. Ejecutar benchmark en CI como gate obligatorio.
-4. Mostrar ranking y KPIs en catalogo/dashboard.
+1. Publish scores for `logic`, `clarity`, `security`, `utility`.
+2. Maintain prompt regression checks.
+3. Run benchmarks in CI as a mandatory gate.
+4. Display rankings and KPIs in the catalog/dashboard.
 
-## Release Pattern: Calidad antes de versionar
+## Release Pattern: Quality Before Versioning
 
-1. Ejecutar `make quality`.
-2. Generar bundle versionado.
-3. Actualizar `CHANGELOG.md` y releases index.
-4. Publicar artifacts con workflow de release.
+1. Run `make quality`.
+2. Generate versioned bundle.
+3. Update `CHANGELOG.md` and releases index.
+4. Publish artifacts with the release workflow.

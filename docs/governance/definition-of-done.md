@@ -1,22 +1,22 @@
 # Definition of Done
 
-Un cambio se considera terminado solo si cumple todo:
+A change is considered complete only when all of the following are met:
 
-1. Funcionalidad
-- La solucion cumple exactamente el objetivo solicitado.
-- Casos borde principales estan cubiertos.
+1. Functionality
+- The solution exactly fulfills the requested objective.
+- Main edge cases are covered.
 
-2. Calidad
-- `make quality` pasa en local.
-- No introduce deuda tecnica critica.
+2. Quality
+- `make quality` passes locally.
+- No critical technical debt is introduced.
 
-3. Observabilidad
-- El impacto es visible en catalog/dashboard/artefactos cuando aplica.
+3. Observability
+- The impact is visible in catalog/dashboard/artifacts where applicable.
 
-4. Documentacion
-- Se actualiza quickstart/patterns/anti-patterns/examples si corresponde.
-- El PR explica alcance, riesgos y validacion.
+4. Documentation
+- quickstart/patterns/anti-patterns/examples are updated if relevant.
+- The PR explains scope, risks, and validation.
 
-5. Gobernanza
-- Checklist de review completado.
-- Cambios listos para auditarse y reproducirse.
+5. Governance
+- Review checklist completed.
+- Changes are ready to be audited and reproduced.
