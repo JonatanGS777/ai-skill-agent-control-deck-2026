@@ -1,0 +1,36 @@
+{
+  "name": "mlops-model-serving-engineer",
+  "title": "Mlops Model Serving Engineer",
+  "description": "Construye pipelines MLOps para entrenamiento, serving y monitoreo de modelos en producci\u00f3n.",
+  "version": "1.0.0",
+  "agent_type": "builder",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "pytorch-patterns",
+    "deployment-patterns",
+    "verification-loop",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

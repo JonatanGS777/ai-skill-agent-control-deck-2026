@@ -1,0 +1,36 @@
+{
+  "name": "discrete-math-formal-logic-specialist",
+  "title": "Discrete Math Formal Logic Specialist",
+  "description": "Especialista en l\u00f3gica formal, razonamiento discreto y validaci\u00f3n de propiedades cr\u00edticas.",
+  "version": "1.0.0",
+  "agent_type": "reviewer",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "verification-loop",
+    "coding-standards",
+    "python-testing",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

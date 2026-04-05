@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repository Control Deck 2026</title>
+  <style>
+    :root {
+      --bg: #f5f8fb;
+      --ink: #081824;
+      --muted: #4a6474;
+      --panel: rgba(255, 255, 255, 0.84);
+      --line: #bdd0dc;
+      --line-strong: #8aa4b4;
+      --accent: #0b9ad1;
+      --accent-strong: #0876a8;
+      --accent-soft: #e3f5fb;
+      --signal: #ff6b3d;
+      --signal-soft: #ffe8df;
+      --ok: #0f7d42;
+      --ok-soft: #e9f9ef;
+      --warn: #9b5f00;
+      --warn-soft: #fff4de;
+      --fail: #b3261e;
+      --fail-soft: #ffe9e8;
+      --shadow: 0 24px 60px rgba(8, 24, 36, 0.1);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: "Space Grotesk", "Sora", "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 100% -10%, #d9f4ff 0%, transparent 65%),
+        radial-gradient(900px 460px at -15% 8%, #ffe8df 0%, transparent 62%),
+        var(--bg);
+      min-height: 100vh;
+      line-height: 1.4;
+    }
+
+    code, pre {
+      font-family: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+    }
+
+    .wrap {
+      width: min(1240px, 92vw);
+      margin: 0 auto;
+      padding: 22px 0 42px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      transition: all .22s ease;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all .22s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(247,252,255,0.82));
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+      animation: fadeUp .55s ease both;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -160px;
+      top: -220px;
+      background: radial-gradient(circle at center, rgba(11,154,209,0.24), rgba(11,154,209,0));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .95fr;
+      gap: 18px;
+      padding: 26px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--signal);
+      box-shadow: 0 0 0 8px rgba(255, 107, 61, 0.15);
+      animation: pulse 2.2s infinite;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Sora", "Space Grotesk", "Avenir Next", sans-serif;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      max-width: 17ch;
+    }
+
+    .title-accent {
+      color: var(--accent-strong);
+    }
+
+    .hero p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 1.4vw, 17px);
+      max-width: 62ch;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+    }
+
+    .hero-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.72);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .hero-card h3 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 16px;
+      color: var(--muted);
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .quick-box {
+      border-radius: 12px;
+      background: #091722;
+      color: #dff3ff;
+      border: 1px solid #203344;
+      padding: 10px;
+      overflow-x: auto;
+      font-size: 12px;
+    }
+
+    .kpi-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(140px, 1fr));
+      gap: 10px;
+      animation: fadeUp .7s ease both;
+    }
+
+    .kpi {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 11px;
+      background: var(--panel);
+      backdrop-filter: blur(6px);
+      min-height: 84px;
+    }
+
+    .kpi-label {
+      margin: 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .kpi-value {
+      margin: 5px 0 0;
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .kpi-meta {
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .quality-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 11px;
+      padding: 4px 10px;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      margin-top: 6px;
+      width: fit-content;
+    }
+
+    .badge-healthy { background: var(--ok-soft); color: var(--ok); border-color: #b9e8ca; }
+    .badge-pass { background: var(--accent-soft); color: var(--accent-strong); border-color: #acdced; }
+    .badge-fail { background: var(--fail-soft); color: var(--fail); border-color: #f2bdb9; }
+    .badge-neutral { background: #eef3f6; color: #49606e; border-color: #ccd8df; }
+
+    section {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      backdrop-filter: blur(7px);
+      box-shadow: 0 14px 30px rgba(8, 24, 36, 0.06);
+      animation: fadeUp .8s ease both;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(18px, 2vw, 24px);
+      letter-spacing: -0.02em;
+    }
+
+    .section-sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 62ch;
+    }
+
+    .section-body {
+      padding: 14px 16px 16px;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 12px;
+    }
+
+    pre {
+      margin: 0;
+      background: #091722;
+      color: #dff3ff;
+      border: 1px solid #203344;
+      border-radius: 12px;
+      padding: 12px;
+      overflow-x: auto;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .flow-list {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .doc-card {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(255,255,255,.78);
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+      min-height: 118px;
+      display: grid;
+      align-content: start;
+      gap: 6px;
+    }
+
+    .doc-card strong {
+      letter-spacing: 0.01em;
+      font-size: 14px;
+    }
+
+    .doc-card span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(120px, 1fr));
+      gap: 8px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255,255,255,.78);
+    }
+
+    .step small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+
+    .step strong {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.82);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 700px;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #eff6fa;
+      color: #2d4758;
+      text-align: left;
+      padding: 8px 8px;
+      border-bottom: 1px solid var(--line-strong);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      z-index: 1;
+    }
+
+    tbody td {
+      border-bottom: 1px solid var(--line);
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #f1f8fc;
+    }
+
+    .artifact-name {
+      font-weight: 700;
+      margin-bottom: 3px;
+      line-height: 1.25;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      padding: 4px 8px;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+    }
+
+    .status-pass { background: var(--ok-soft); color: var(--ok); border-color: #b9e8ca; }
+    .status-fail { background: var(--fail-soft); color: var(--fail); border-color: #f2bdb9; }
+
+    .channel-chip {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid #f3c9b9;
+      background: var(--signal-soft);
+      color: #a04728;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: .05em;
+      font-weight: 700;
+    }
+
+    .meter {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #f7fbfd;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .meter span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #1eb572, #0b9ad1);
+    }
+
+    .tri-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 12px;
+    }
+
+    footer {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.74);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #08131c;
+      --ink: #e4edf5;
+      --muted: #9cb2c3;
+      --panel: rgba(11, 22, 31, 0.84);
+      --line: #244051;
+      --line-strong: #335469;
+      --accent: #22c1ff;
+      --accent-strong: #8bdfff;
+      --accent-soft: rgba(34, 193, 255, 0.13);
+      --signal: #ff8b63;
+      --signal-soft: rgba(255, 139, 99, 0.12);
+      --ok: #52d68f;
+      --ok-soft: rgba(82, 214, 143, 0.14);
+      --fail: #ff8a82;
+      --fail-soft: rgba(255, 138, 130, 0.13);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    html[data-theme="dark"] body {
+      background:
+        radial-gradient(1200px 500px at 100% -10%, rgba(34,193,255,0.16) 0%, transparent 65%),
+        radial-gradient(900px 460px at -15% 8%, rgba(255,139,99,0.12) 0%, transparent 62%),
+        var(--bg);
+    }
+
+    html[data-theme="dark"] .nav-links a,
+    html[data-theme="dark"] .theme-toggle {
+      background: rgba(12, 26, 36, 0.72);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .hero,
+    html[data-theme="dark"] .kpi,
+    html[data-theme="dark"] section,
+    html[data-theme="dark"] .step,
+    html[data-theme="dark"] .doc-card,
+    html[data-theme="dark"] .table-wrap,
+    html[data-theme="dark"] footer {
+      background: rgba(10, 20, 29, 0.78);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .hero-card {
+      background: rgba(11, 23, 33, 0.78);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .quick-box,
+    html[data-theme="dark"] pre {
+      background: #06111a;
+      color: #dbeeff;
+      border-color: #1f394a;
+    }
+
+    html[data-theme="dark"] thead th {
+      background: #10202c;
+      color: #b6cfde;
+      border-bottom-color: var(--line);
+    }
+
+    html[data-theme="dark"] tbody tr:hover {
+      background: #0f1f2a;
+    }
+
+    html[data-theme="dark"] .meter {
+      background: #0a1720;
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .badge-neutral {
+      background: rgba(178, 197, 210, 0.14);
+      color: #b2c5d2;
+      border-color: #3c5465;
+    }
+
+    html[data-theme="dark"] .channel-chip {
+      border-color: #5a3b2f;
+      background: rgba(255, 139, 99, 0.14);
+      color: #ffc0ab;
+    }
+
+    @media (max-width: 1120px) {
+      .kpi-grid { grid-template-columns: repeat(3, minmax(120px, 1fr)); }
+      .docs-grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+      .pipeline { grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .quick-grid,
+      .dual,
+      .tri-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero { border-radius: 16px; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(1240px, 95vw); }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .docs-grid { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .section-head { padding: 12px; }
+      .section-body { padding: 12px; }
+      h1 { max-width: 100%; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: .9; }
+      70% { transform: scale(1.08); opacity: .4; }
+      100% { transform: scale(1); opacity: .9; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">Repository Presentation 2026</div>
+      <nav class="nav-links">
+        <a href="#quickstart">Quickstart</a>
+        <a href="#docs">Docs</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#rankings">Rankings</a>
+        <a href="#ops">Operations</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Live Quality Deck</div>
+          <h1>Your AI Skill + Agent <span class="title-accent">Control Deck</span></h1>
+          <p>
+            A focused presentation layer for benchmark health, release readiness, and contribution governance.
+            The goal: make quality decisions faster and with zero ambiguity.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Benchmark-driven</span>
+            <span class="chip">Regression-safe</span>
+            <span class="chip">Release-ready</span>
+            <span class="chip">Governance-first</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Command Center</h3>
+          <ul>
+            <li>Run one command to validate full repository quality.</li>
+            <li>Generate visual dashboard + docs portal in sync.</li>
+            <li>Ship strict release bundles with changelog automation.</li>
+          </ul>
+          <div class="quick-box"><code>make quality
+make release-auto</code></div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="kpi-grid">
+      <article class="kpi">
+        <p class="kpi-label">Quality Status</p>
+        <div class="quality-badge badge-healthy">healthy</div>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label">Skills</p>
+        <p class="kpi-value">203</p>
+        <p class="kpi-meta">Failed: 0</p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label">Agents</p>
+        <p class="kpi-value">196</p>
+        <p class="kpi-meta">Failed: 0</p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label">Pass Rate</p>
+        <p class="kpi-value">100.00%</p>
+        <p class="kpi-meta">Global benchmark</p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label">Average Score</p>
+        <p class="kpi-value">93.26</p>
+        <p class="kpi-meta">Logic + Clarity + Security + Utility</p>
+      </article>
+      <article class="kpi">
+        <p class="kpi-label">Release Stream</p>
+        <p class="kpi-value">1</p>
+        <p class="kpi-meta">Latest: v1.0.0</p>
+      </article>
+    </div>
+
+    <section id="quickstart">
+      <div class="section-head">
+        <h2>Quickstart Playbook</h2>
+        <p class="section-sub">Use this sequence to keep your repository healthy and release-ready every cycle.</p>
+      </div>
+      <div class="section-body quick-grid">
+        <pre><code>make quality
+make dashboard
+make docs-portal
+make release-auto
+
+# Optional explicit release
+make release \
+  RELEASE_VERSION=v1.1.0 \
+  RELEASE_CHANNEL=stable \
+  RELEASE_NOTES="Quality uplift + new packs"</code></pre>
+        <ol class="flow-list">
+          <li>Compile + semver + benchmark + catalog + dashboards.</li>
+          <li>Review rankings and domain KPI deltas.</li>
+          <li>Check governance docs and PR checklist alignment.</li>
+          <li>Create strict release bundle + changelog entry.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="docs">
+      <div class="section-head">
+        <h2>Documentation Hub</h2>
+        <p class="section-sub">Everything organized by onboarding, quality architecture, and contribution governance.</p>
+      </div>
+      <div class="section-body docs-grid">
+        <a class="doc-card" href="../quickstart.md"><strong>Quickstart Guide</strong><span>Bootstrapping and daily execution standards.</span></a>
+        <a class="doc-card" href="../patterns.md"><strong>Patterns</strong><span>Reliable design and implementation patterns.</span></a>
+        <a class="doc-card" href="../anti-patterns.md"><strong>Anti-patterns</strong><span>Risky shortcuts to avoid from day one.</span></a>
+        <a class="doc-card" href="../examples-top.md"><strong>Top Examples</strong><span>Reference artifacts with high benchmark quality.</span></a>
+        <a class="doc-card" href="../governance/review-checklist.md"><strong>Review Checklist</strong><span>PR review controls and approval criteria.</span></a>
+        <a class="doc-card" href="../governance/definition-of-done.md"><strong>Definition of Done</strong><span>The exact gate before merge and release.</span></a>
+        <a class="doc-card" href="../../CONTRIBUTING.md"><strong>Contributing</strong><span>Contribution workflow, coding standards, and validation.</span></a>
+        <a class="doc-card" href="../../.github/PULL_REQUEST_TEMPLATE.md"><strong>PR Template</strong><span>Mandatory structure for clear, auditable pull requests.</span></a>
+      </div>
+    </section>
+
+    <section id="pipeline">
+      <div class="section-head">
+        <h2>Quality Pipeline</h2>
+        <p class="section-sub">Top 7 impact path from correctness to publication.</p>
+      </div>
+      <div class="section-body pipeline">
+        <div class="step"><small>01</small><strong>Benchmark Suite</strong></div>
+        <div class="step"><small>02</small><strong>Auto Evaluator</strong></div>
+        <div class="step"><small>03</small><strong>Regression Tests</strong></div>
+        <div class="step"><small>04</small><strong>Quality Ranking</strong></div>
+        <div class="step"><small>05</small><strong>Versioned Releases</strong></div>
+        <div class="step"><small>06</small><strong>Docs Portal</strong></div>
+        <div class="step"><small>07</small><strong>Contribution Governance</strong></div>
+      </div>
+    </section>
+
+    <section id="rankings">
+      <div class="section-head">
+        <h2>Top Rankings</h2>
+        <p class="section-sub">Live quality leaderboard extracted from benchmark outputs.</p>
+      </div>
+      <div class="section-body dual">
+        <div>
+          <h3>Top Skills</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th><th>Skill</th><th>Total</th><th>Logic</th><th>Clarity</th><th>Security</th><th>Utility</th><th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><div class='artifact-name'>Fullstack Ultramodern 2026</div><code>fullstack-ultramodern-2026</code></td><td><strong>98.6</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>93.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>2</td><td><div class='artifact-name'>Ai Domain Agritech Decision Intelligence Skill 2026</div><code>ai-domain-agritech-decision-intelligence-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>3</td><td><div class='artifact-name'>Ai Domain Biotech Research Acceleration Skill 2026</div><code>ai-domain-biotech-research-acceleration-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>4</td><td><div class='artifact-name'>Ai Domain Climate Risk Analytics Skill 2026</div><code>ai-domain-climate-risk-analytics-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>5</td><td><div class='artifact-name'>Ai Domain Customer Success Ai Operations Skill 2026</div><code>ai-domain-customer-success-ai-operations-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>6</td><td><div class='artifact-name'>Ai Domain Cybersecurity Operations Ai Skill 2026</div><code>ai-domain-cybersecurity-operations-ai-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>7</td><td><div class='artifact-name'>Ai Domain Ecommerce Conversion Intelligence Skill 2026</div><code>ai-domain-ecommerce-conversion-intelligence-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>8</td><td><div class='artifact-name'>Ai Domain Education Tutoring Platforms Skill 2026</div><code>ai-domain-education-tutoring-platforms-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>9</td><td><div class='artifact-name'>Ai Domain Energy Demand Forecasting Skill 2026</div><code>ai-domain-energy-demand-forecasting-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>10</td><td><div class='artifact-name'>Ai Domain Entertainment Production Ai Skill 2026</div><code>ai-domain-entertainment-production-ai-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>11</td><td><div class='artifact-name'>Ai Domain Finance Analysis Copilots Skill 2026</div><code>ai-domain-finance-analysis-copilots-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>12</td><td><div class='artifact-name'>Ai Domain Government Service Automation Skill 2026</div><code>ai-domain-government-service-automation-skill-2026</code></td><td><strong>97.0</strong></td><td>95.0</td><td>100.0</td><td>100.0</td><td>94.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h3>Top Agents</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th><th>Agent</th><th>Total</th><th>Logic</th><th>Clarity</th><th>Security</th><th>Utility</th><th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><div class='artifact-name'>Ai Climate Risk Analytics Strategist Ai Agent 2026</div><code>ai-climate-risk-analytics-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>2</td><td><div class='artifact-name'>Ai Ecommerce Conversion Intelligence Strategist Ai Agent 2026</div><code>ai-ecommerce-conversion-intelligence-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>3</td><td><div class='artifact-name'>Ai Energy Demand Forecasting Strategist Ai Agent 2026</div><code>ai-energy-demand-forecasting-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>4</td><td><div class='artifact-name'>Ai Entertainment Production Ai Strategist Ai Agent 2026</div><code>ai-entertainment-production-ai-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>5</td><td><div class='artifact-name'>Ai Finance Analysis Copilots Strategist Ai Agent 2026</div><code>ai-finance-analysis-copilots-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>6</td><td><div class='artifact-name'>Ai Healthcare Assistant Systems Strategist Ai Agent 2026</div><code>ai-healthcare-assistant-systems-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>7</td><td><div class='artifact-name'>Ai Manufacturing Quality Intelligence Strategist Ai Agent 2026</div><code>ai-manufacturing-quality-intelligence-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>8</td><td><div class='artifact-name'>Ai Marketing Campaign Intelligence Strategist Ai Agent 2026</div><code>ai-marketing-campaign-intelligence-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>9</td><td><div class='artifact-name'>Ai Nonprofit Impact Analytics Strategist Ai Agent 2026</div><code>ai-nonprofit-impact-analytics-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>10</td><td><div class='artifact-name'>Ai Real Estate Market Intelligence Strategist Ai Agent 2026</div><code>ai-real-estate-market-intelligence-strategist-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>11</td><td><div class='artifact-name'>Automation Api Integration Automation Orchestrator Ai Agent 2026</div><code>automation-api-integration-automation-orchestrator-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+<tr><td>12</td><td><div class='artifact-name'>Automation Automation Risk Controls Orchestrator Ai Agent 2026</div><code>automation-automation-risk-controls-orchestrator-ai-agent-2026</code></td><td><strong>98.2</strong></td><td>100.0</td><td>100.0</td><td>100.0</td><td>91.0</td><td><span class='status-chip status-pass'>PASS</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ops">
+      <div class="section-head">
+        <h2>Domain + Release Operations</h2>
+        <p class="section-sub">Execution KPIs by domain and audited release stream.</p>
+      </div>
+      <div class="section-body tri-grid">
+        <div>
+          <h3>Domain KPIs</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Domain</th><th>Total</th><th>Skills</th><th>Agents</th><th>Avg Score</th><th>Pass Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>fullstack</td><td>1</td><td>1</td><td>0</td><td><strong>98.60</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>domain-ai</td><td>30</td><td>30</td><td>0</td><td><strong>97.05</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>frontend</td><td>1</td><td>1</td><td>0</td><td><strong>96.85</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>orchestrator</td><td>48</td><td>0</td><td>48</td><td><strong>96.85</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>programming</td><td>33</td><td>33</td><td>0</td><td><strong>96.84</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>chatbot-ai</td><td>20</td><td>20</td><td>0</td><td><strong>96.65</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>automation-ai</td><td>20</td><td>20</td><td>0</td><td><strong>96.35</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>debugger</td><td>30</td><td>0</td><td>30</td><td><strong>95.21</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>reviewer</td><td>27</td><td>0</td><td>27</td><td><strong>94.93</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>builder</td><td>50</td><td>0</td><td>50</td><td><strong>93.82</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>specialist</td><td>41</td><td>0</td><td>41</td><td><strong>93.36</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>visual-architecture</td><td>1</td><td>1</td><td>0</td><td><strong>91.90</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>robotics</td><td>33</td><td>33</td><td>0</td><td><strong>90.11</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>mathematics</td><td>34</td><td>34</td><td>0</td><td><strong>90.05</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+<tr><td>math-programming-logic</td><td>30</td><td>30</td><td>0</td><td><strong>77.80</strong></td><td><div class='meter'><span style='width:100.00%'></span></div><small>100.00%</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h3>Release Stream</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Version</th><th>Channel</th><th>Repo Quality</th><th>Benchmark</th><th>Released At (UTC)</th><th>Bundle Path</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>v1.0.0</strong></td><td><span class='channel-chip'>stable</span></td><td>healthy</td><td>healthy</td><td><code>2026-04-05T02:30:16.073943+00:00</code></td><td><code>catalog/releases/v1.0.0</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Generated at <code>2026-04-05T02:47:36.189100+00:00</code></span>
+      <span>Source: benchmark + catalog + releases index</span>
+    </footer>
+  </div>
+  <script>
+    (() => {
+      const storageKey = "control-deck-theme";
+      const docEl = document.documentElement;
+      const toggle = document.getElementById("themeToggle");
+      if (!toggle) return;
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          docEl.setAttribute("data-theme", "dark");
+          toggle.textContent = "Light";
+          toggle.setAttribute("aria-pressed", "true");
+        } else {
+          docEl.removeAttribute("data-theme");
+          toggle.textContent = "Dark";
+          toggle.setAttribute("aria-pressed", "false");
+        }
+      }
+
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const stored = window.localStorage.getItem(storageKey);
+      const initial = stored || (prefersDark ? "dark" : "light");
+      applyTheme(initial === "dark" ? "dark" : "light");
+
+      toggle.addEventListener("click", () => {
+        const active = docEl.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const next = active === "dark" ? "light" : "dark";
+        window.localStorage.setItem(storageKey, next);
+        applyTheme(next);
+      });
+    })();
+  </script>
+</body>
+</html>

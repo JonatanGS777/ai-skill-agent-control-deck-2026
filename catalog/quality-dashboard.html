@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repository Quality Control Deck 2026</title>
+  <style>
+    :root {
+      --bg: #f5f8fb;
+      --ink: #081824;
+      --muted: #4a6474;
+      --panel: rgba(255, 255, 255, 0.84);
+      --line: #bdd0dc;
+      --line-strong: #8aa4b4;
+      --accent: #0b9ad1;
+      --accent-strong: #0876a8;
+      --accent-soft: #e3f5fb;
+      --signal: #ff6b3d;
+      --signal-soft: #ffe8df;
+      --ok: #0f7d42;
+      --ok-soft: #e9f9ef;
+      --fail: #b3261e;
+      --fail-soft: #ffe9e8;
+      --shadow: 0 24px 60px rgba(8, 24, 36, 0.1);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: "Space Grotesk", "Sora", "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 100% -10%, #d9f4ff 0%, transparent 65%),
+        radial-gradient(900px 460px at -15% 8%, #ffe8df 0%, transparent 62%),
+        var(--bg);
+      min-height: 100vh;
+      line-height: 1.4;
+    }
+
+    code, pre {
+      font-family: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+    }
+
+    .wrap {
+      width: min(1280px, 92vw);
+      margin: 0 auto;
+      padding: 22px 0 40px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      transition: all .2s ease;
+    }
+
+    .nav a:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(247,252,255,0.82));
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+      padding: 24px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -180px;
+      top: -240px;
+      background: radial-gradient(circle at center, rgba(11,154,209,0.24), rgba(11,154,209,0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--signal);
+      box-shadow: 0 0 0 8px rgba(255, 107, 61, 0.15);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: "Sora", "Space Grotesk", "Avenir Next", sans-serif;
+      font-size: clamp(30px, 5vw, 46px);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      max-width: 18ch;
+    }
+
+    .hero h1 span {
+      color: var(--accent-strong);
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .hero-chip {
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+    }
+
+    .grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 11px;
+      background: var(--panel);
+      backdrop-filter: blur(6px);
+      min-height: 84px;
+    }
+
+    .k {
+      margin: 0;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .v {
+      margin: 6px 0 0;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .sub {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .quality-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      border: 1px solid transparent;
+      margin-top: 6px;
+      width: fit-content;
+    }
+
+    .status-healthy { background: var(--ok-soft); color: var(--ok); border-color: #b9e8ca; }
+    .status-pass { background: var(--accent-soft); color: var(--accent-strong); border-color: #acdced; }
+    .status-fail { background: var(--fail-soft); color: var(--fail); border-color: #f2bdb9; }
+    .status-neutral { background: #eef3f6; color: #49606e; border-color: #ccd8df; }
+
+    .panel {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      backdrop-filter: blur(7px);
+      box-shadow: 0 14px 30px rgba(8, 24, 36, 0.06);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: clamp(18px, 2vw, 24px);
+      letter-spacing: -0.02em;
+    }
+
+    .panel-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 64ch;
+    }
+
+    .panel-body {
+      padding: 14px 16px 16px;
+    }
+
+    .executive-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 12px;
+    }
+
+    .exec-panel {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.82);
+      padding: 10px;
+    }
+
+    .panel-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    #trendSvg {
+      width: 100%;
+      height: 220px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid #edf2f8;
+    }
+
+    .legend {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .legend .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      margin-right: 4px;
+    }
+
+    .domain-table-wrap {
+      max-height: 260px;
+      overflow: auto;
+      border: 1px solid #edf2f8;
+      border-radius: 10px;
+    }
+
+    .domain-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 430px;
+    }
+
+    .domain-table th,
+    .domain-table td {
+      padding: 8px;
+      border-bottom: 1px solid #edf2f8;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .domain-table th {
+      position: sticky;
+      top: 0;
+      background: #f9fbff;
+      color: #334155;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: 11px;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      align-items: end;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      padding: 9px 10px;
+      font-size: 14px;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent-strong);
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.82);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 980px;
+    }
+
+    thead th {
+      text-align: left;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #eff6fa;
+      color: #2d4758;
+      border-bottom: 1px solid var(--line-strong);
+      padding: 9px 8px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: 11px;
+    }
+
+    tbody td {
+      border-bottom: 1px solid #edf2f8;
+      padding: 9px 8px;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #f1f8fc;
+    }
+
+    .slug {
+      font-weight: 600;
+      line-height: 1.3;
+      word-break: break-word;
+      max-width: 460px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      border: 1px solid #c8deea;
+      background: #eaf6fc;
+      color: #0a5271;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border: 1px solid transparent;
+    }
+
+    .status.pass {
+      color: var(--ok);
+      border-color: #b9e8ca;
+      background: var(--ok-soft);
+    }
+
+    .status.fail {
+      color: var(--fail);
+      border-color: #f2bdb9;
+      background: var(--fail-soft);
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,.72);
+      padding: 10px 12px;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #08131c;
+      --ink: #e4edf5;
+      --muted: #9cb2c3;
+      --panel: rgba(11, 22, 31, 0.84);
+      --line: #244051;
+      --line-strong: #335469;
+      --accent: #22c1ff;
+      --accent-strong: #8bdfff;
+      --accent-soft: rgba(34, 193, 255, 0.13);
+      --signal: #ff8b63;
+      --signal-soft: rgba(255, 139, 99, 0.12);
+      --ok: #52d68f;
+      --ok-soft: rgba(82, 214, 143, 0.14);
+      --fail: #ff8a82;
+      --fail-soft: rgba(255, 138, 130, 0.13);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    html[data-theme="dark"] body {
+      background:
+        radial-gradient(1200px 500px at 100% -10%, rgba(34,193,255,0.16) 0%, transparent 65%),
+        radial-gradient(900px 460px at -15% 8%, rgba(255,139,99,0.12) 0%, transparent 62%),
+        var(--bg);
+    }
+
+    html[data-theme="dark"] .nav a,
+    html[data-theme="dark"] .theme-toggle {
+      background: rgba(12, 26, 36, 0.72);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .hero,
+    html[data-theme="dark"] .card,
+    html[data-theme="dark"] .panel,
+    html[data-theme="dark"] .exec-panel,
+    html[data-theme="dark"] .table-wrap,
+    html[data-theme="dark"] .footer {
+      background: rgba(10, 20, 29, 0.78);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] #trendSvg {
+      background: linear-gradient(180deg, #0a1721 0%, #0d1c28 100%);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] input[type="text"],
+    html[data-theme="dark"] select {
+      background: #0c1d2a;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .domain-table-wrap {
+      border-color: var(--line);
+    }
+
+    html[data-theme="dark"] .domain-table th,
+    html[data-theme="dark"] thead th {
+      background: #10202c;
+      color: #b6cfde;
+      border-bottom-color: var(--line);
+    }
+
+    html[data-theme="dark"] tbody tr:hover {
+      background: #0f1f2a;
+    }
+
+    html[data-theme="dark"] .chip {
+      border-color: #2f5a70;
+      background: rgba(11, 154, 209, 0.14);
+      color: #9adfff;
+    }
+
+    @media (max-width: 1120px) {
+      .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .executive-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .filters { grid-template-columns: 1fr; }
+      .hero { padding: 18px; }
+      .hero h1 { font-size: 30px; }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(1280px, 95vw); }
+      .grid { grid-template-columns: 1fr; }
+      .panel-head, .panel-body { padding-left: 12px; padding-right: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Quality Dashboard 2026</div>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#executive">Executive</a>
+        <a href="#filters">Filters</a>
+        <a href="#leaderboard">Leaderboard</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark</button>
+    </header>
+
+    <section class="hero" id="overview">
+      <div class="eyebrow">Live Benchmark Monitor</div>
+      <h1>Repository Quality <span>Control Deck</span></h1>
+      <p>Interactive benchmark leaderboard for skills and agents with logic, clarity, security, and utility scoring.</p>
+      <div class="hero-chips">
+        <span class="hero-chip">Benchmark-driven</span>
+        <span class="hero-chip">Regression-safe</span>
+        <span class="hero-chip">Release-aware</span>
+        <span class="hero-chip">Governance-ready</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="card"><p class="k">Status</p><div id="statusValue" class="quality-pill status-neutral">-</div><div class="sub">Benchmark suite</div></div>
+      <div class="card"><p class="k">Total</p><div class="v" id="totalValue">-</div><div class="sub">Artifacts scored</div></div>
+      <div class="card"><p class="k">Skills</p><div class="v" id="skillsValue">-</div><div class="sub">Scored skills</div></div>
+      <div class="card"><p class="k">Agents</p><div class="v" id="agentsValue">-</div><div class="sub">Scored agents</div></div>
+      <div class="card"><p class="k">Pass / Fail</p><div class="v" id="passFailValue">-</div><div class="sub">Threshold checks</div></div>
+      <div class="card"><p class="k">Average</p><div class="v" id="avgValue">-</div><div class="sub">Global score</div></div>
+    </div>
+
+    <section class="panel" id="executive">
+      <div class="panel-head">
+        <h2>Executive View</h2>
+        <p>Historical trend lines and domain-level KPIs from the current benchmark run.</p>
+      </div>
+      <div class="panel-body">
+        <div class="executive-grid">
+          <div class="exec-panel">
+            <div class="panel-title">Historical Trend (By Run)</div>
+            <svg id="trendSvg" viewBox="0 0 920 220" preserveAspectRatio="none"></svg>
+            <div class="legend">
+              <span><span class="dot" style="background:#0b9ad1"></span>Average All</span>
+              <span><span class="dot" style="background:#0f7d42"></span>Average Skills</span>
+              <span><span class="dot" style="background:#ff6b3d"></span>Average Agents</span>
+            </div>
+          </div>
+          <div class="exec-panel">
+            <div class="panel-title">Domain KPIs (Current Run)</div>
+            <div class="domain-table-wrap">
+              <table class="domain-table">
+                <thead>
+                  <tr>
+                    <th>Domain</th>
+                    <th>Avg</th>
+                    <th>Pass%</th>
+                    <th>Total</th>
+                    <th>S</th>
+                    <th>A</th>
+                  </tr>
+                </thead>
+                <tbody id="domainRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="filters">
+      <div class="panel-head">
+        <h2>Filter Controls</h2>
+        <p>Slice leaderboard data by artifact type, status, domain, and score threshold.</p>
+      </div>
+      <div class="panel-body">
+        <div class="filters">
+          <div>
+            <label for="search">Search</label>
+            <input id="search" type="text" placeholder="slug, domain, category">
+          </div>
+          <div>
+            <label for="kind">Kind</label>
+            <select id="kind">
+              <option value="all">All</option>
+              <option value="skill">Skill</option>
+              <option value="agent">Agent</option>
+            </select>
+          </div>
+          <div>
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="all">All</option>
+              <option value="pass">Pass</option>
+              <option value="fail">Fail</option>
+            </select>
+          </div>
+          <div>
+            <label for="domain">Domain / Agent Type</label>
+            <select id="domain"></select>
+          </div>
+          <div>
+            <label for="sort">Sort</label>
+            <select id="sort">
+              <option value="score_desc">Score ↓</option>
+              <option value="score_asc">Score ↑</option>
+              <option value="logic_desc">Logic ↓</option>
+              <option value="security_desc">Security ↓</option>
+              <option value="name_asc">Name A-Z</option>
+              <option value="name_desc">Name Z-A</option>
+            </select>
+          </div>
+          <div>
+            <label for="minScore">Min Score <span id="minScoreValue">0</span></label>
+            <input id="minScore" type="range" min="0" max="100" step="1" value="0">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="leaderboard">
+      <div class="panel-head">
+        <h2>Leaderboard</h2>
+        <p>Sortable quality table across all scored skills and agents.</p>
+      </div>
+      <div class="panel-body">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Artifact</th>
+                <th>Kind</th>
+                <th>Status</th>
+                <th>Score</th>
+                <th>Logic</th>
+                <th>Clarity</th>
+                <th>Security</th>
+                <th>Utility</th>
+                <th>Domain / Type</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer" id="footerText"></div>
+  </div>
+
+  <script>
+    const DATA = {"summary": {"status": "healthy", "generated_at": "2026-04-05T02:47:35.763545+00:00", "total_entries": 399, "skills_total": 203, "agents_total": 196, "passed_total": 399, "failed_total": 0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass", "history_points": 7}, "entries": [{"slug": "fullstack-ultramodern-2026", "kind": "skill", "score": 98.6, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 93.0, "pass": true, "domain": "fullstack", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/fullstack-ultramodern-2026"}, {"slug": "ai-climate-risk-analytics-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-climate-risk-analytics-strategist-ai-agent-2026"}, {"slug": "ai-ecommerce-conversion-intelligence-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-ecommerce-conversion-intelligence-strategist-ai-agent-2026"}, {"slug": "ai-energy-demand-forecasting-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-energy-demand-forecasting-strategist-ai-agent-2026"}, {"slug": "ai-entertainment-production-ai-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-entertainment-production-ai-strategist-ai-agent-2026"}, {"slug": "ai-finance-analysis-copilots-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-finance-analysis-copilots-strategist-ai-agent-2026"}, {"slug": "ai-healthcare-assistant-systems-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-healthcare-assistant-systems-strategist-ai-agent-2026"}, {"slug": "ai-manufacturing-quality-intelligence-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-manufacturing-quality-intelligence-strategist-ai-agent-2026"}, {"slug": "ai-marketing-campaign-intelligence-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-marketing-campaign-intelligence-strategist-ai-agent-2026"}, {"slug": "ai-nonprofit-impact-analytics-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-nonprofit-impact-analytics-strategist-ai-agent-2026"}, {"slug": "ai-real-estate-market-intelligence-strategist-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-real-estate-market-intelligence-strategist-ai-agent-2026"}, {"slug": "automation-api-integration-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-api-integration-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-automation-risk-controls-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-automation-risk-controls-orchestrator-ai-agent-2026"}, {"slug": "automation-crm-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-crm-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-data-pipeline-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-data-pipeline-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-devops-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-devops-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-document-processing-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-document-processing-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-enterprise-policy-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-enterprise-policy-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-etl-observability-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-etl-observability-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-event-driven-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-event-driven-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-finance-ops-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-finance-ops-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-hr-ops-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-hr-ops-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-incident-response-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-incident-response-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-no-code-automation-architecture-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-no-code-automation-architecture-orchestrator-ai-agent-2026"}, {"slug": "automation-process-mining-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-process-mining-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-qa-automation-systems-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-qa-automation-systems-orchestrator-ai-agent-2026"}, {"slug": "automation-rpa-pipeline-design-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-rpa-pipeline-design-orchestrator-ai-agent-2026"}, {"slug": "automation-sales-funnel-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-sales-funnel-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-task-prioritization-engines-orchestrator-ai-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-task-prioritization-engines-orchestrator-ai-agent-2026"}, {"slug": "programming-advanced-data-structures-exceptional-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-advanced-data-structures-exceptional-agent-2026"}, {"slug": "programming-authentication-authorization-flows-exceptional-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-authentication-authorization-flows-exceptional-agent-2026"}, {"slug": "programming-continuous-delivery-architecture-exceptional-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-continuous-delivery-architecture-exceptional-agent-2026"}, {"slug": "programming-memory-model-practice-exceptional-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-memory-model-practice-exceptional-agent-2026"}, {"slug": "programming-program-analysis-correctness-exceptional-agent-2026", "kind": "agent", "score": 98.2, "logic": 100.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-program-analysis-correctness-exceptional-agent-2026"}, {"slug": "ai-domain-agritech-decision-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-agritech-decision-intelligence-skill-2026"}, {"slug": "ai-domain-biotech-research-acceleration-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-biotech-research-acceleration-skill-2026"}, {"slug": "ai-domain-climate-risk-analytics-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-climate-risk-analytics-skill-2026"}, {"slug": "ai-domain-customer-success-ai-operations-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-customer-success-ai-operations-skill-2026"}, {"slug": "ai-domain-cybersecurity-operations-ai-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-cybersecurity-operations-ai-skill-2026"}, {"slug": "ai-domain-ecommerce-conversion-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-ecommerce-conversion-intelligence-skill-2026"}, {"slug": "ai-domain-education-tutoring-platforms-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-education-tutoring-platforms-skill-2026"}, {"slug": "ai-domain-energy-demand-forecasting-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-energy-demand-forecasting-skill-2026"}, {"slug": "ai-domain-entertainment-production-ai-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-entertainment-production-ai-skill-2026"}, {"slug": "ai-domain-finance-analysis-copilots-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-finance-analysis-copilots-skill-2026"}, {"slug": "ai-domain-government-service-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-government-service-automation-skill-2026"}, {"slug": "ai-domain-healthcare-assistant-systems-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-healthcare-assistant-systems-skill-2026"}, {"slug": "ai-domain-hospitality-service-assistants-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-hospitality-service-assistants-skill-2026"}, {"slug": "ai-domain-hr-recruiting-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-hr-recruiting-intelligence-skill-2026"}, {"slug": "ai-domain-insurance-claims-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-insurance-claims-automation-skill-2026"}, {"slug": "ai-domain-legal-research-assistants-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-legal-research-assistants-skill-2026"}, {"slug": "ai-domain-logistics-optimization-control-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-logistics-optimization-control-skill-2026"}, {"slug": "ai-domain-manufacturing-quality-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-manufacturing-quality-intelligence-skill-2026"}, {"slug": "ai-domain-marketing-campaign-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-marketing-campaign-intelligence-skill-2026"}, {"slug": "ai-domain-media-content-studio-ai-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-media-content-studio-ai-skill-2026"}, {"slug": "ai-domain-mobility-routing-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-mobility-routing-intelligence-skill-2026"}, {"slug": "ai-domain-nonprofit-impact-analytics-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-nonprofit-impact-analytics-skill-2026"}, {"slug": "ai-domain-product-management-copilot-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-product-management-copilot-skill-2026"}, {"slug": "ai-domain-public-safety-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-public-safety-intelligence-skill-2026"}, {"slug": "ai-domain-real-estate-market-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-real-estate-market-intelligence-skill-2026"}, {"slug": "ai-domain-research-lab-orchestration-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-research-lab-orchestration-skill-2026"}, {"slug": "ai-domain-retail-personalization-engines-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-retail-personalization-engines-skill-2026"}, {"slug": "ai-domain-sports-performance-intelligence-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-sports-performance-intelligence-skill-2026"}, {"slug": "ai-domain-supply-chain-control-tower-ai-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-supply-chain-control-tower-ai-skill-2026"}, {"slug": "ai-domain-travel-planning-assistants-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "domain-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/ai-domain-travel-planning-assistants-skill-2026"}, {"slug": "automation-api-integration-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-api-integration-automation-skill-2026"}, {"slug": "automation-automation-risk-controls-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-automation-risk-controls-skill-2026"}, {"slug": "automation-crm-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-crm-automation-skill-2026"}, {"slug": "automation-data-pipeline-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-data-pipeline-automation-skill-2026"}, {"slug": "automation-devops-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-devops-automation-skill-2026"}, {"slug": "automation-document-processing-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-document-processing-automation-skill-2026"}, {"slug": "automation-enterprise-policy-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-enterprise-policy-automation-skill-2026"}, {"slug": "automation-etl-observability-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-etl-observability-automation-skill-2026"}, {"slug": "automation-event-driven-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-event-driven-automation-skill-2026"}, {"slug": "automation-finance-ops-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-finance-ops-automation-skill-2026"}, {"slug": "automation-hr-ops-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-hr-ops-automation-skill-2026"}, {"slug": "automation-incident-response-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-incident-response-automation-skill-2026"}, {"slug": "automation-no-code-automation-architecture-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-no-code-automation-architecture-skill-2026"}, {"slug": "automation-process-mining-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-process-mining-automation-skill-2026"}, {"slug": "automation-qa-automation-systems-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-qa-automation-systems-skill-2026"}, {"slug": "automation-rpa-pipeline-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-rpa-pipeline-design-skill-2026"}, {"slug": "automation-sales-funnel-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-sales-funnel-automation-skill-2026"}, {"slug": "automation-task-prioritization-engines-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-task-prioritization-engines-skill-2026"}, {"slug": "chatbot-chatbot-ab-testing-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-chatbot-ab-testing-skill-2026"}, {"slug": "chatbot-chatbot-analytics-pipeline-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-chatbot-analytics-pipeline-skill-2026"}, {"slug": "chatbot-chatbot-evaluation-metrics-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-chatbot-evaluation-metrics-skill-2026"}, {"slug": "chatbot-chatbot-fallback-escalation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-chatbot-fallback-escalation-skill-2026"}, {"slug": "chatbot-chatbot-security-hardening-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-chatbot-security-hardening-skill-2026"}, {"slug": "chatbot-conversational-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-conversational-design-skill-2026"}, {"slug": "chatbot-enterprise-knowledge-chatbots-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-enterprise-knowledge-chatbots-skill-2026"}, {"slug": "chatbot-multi-turn-memory-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-multi-turn-memory-skill-2026"}, {"slug": "chatbot-multilingual-chatbot-systems-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-multilingual-chatbot-systems-skill-2026"}, {"slug": "chatbot-omnichannel-chat-platform-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-omnichannel-chat-platform-skill-2026"}, {"slug": "chatbot-persona-consistency-engine-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-persona-consistency-engine-skill-2026"}, {"slug": "chatbot-prompt-routing-strategies-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-prompt-routing-strategies-skill-2026"}, {"slug": "chatbot-realtime-chat-infrastructure-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-realtime-chat-infrastructure-skill-2026"}, {"slug": "chatbot-retrieval-augmented-chat-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-retrieval-augmented-chat-skill-2026"}, {"slug": "chatbot-sales-chatbot-operations-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-sales-chatbot-operations-skill-2026"}, {"slug": "chatbot-sentiment-aware-dialog-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-sentiment-aware-dialog-skill-2026"}, {"slug": "chatbot-support-chatbot-operations-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-support-chatbot-operations-skill-2026"}, {"slug": "chatbot-tool-calling-orchestration-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-tool-calling-orchestration-skill-2026"}, {"slug": "chatbot-voice-chatbot-orchestration-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-voice-chatbot-orchestration-skill-2026"}, {"slug": "programming-advanced-data-structures-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-advanced-data-structures-skill-2026"}, {"slug": "programming-ai-assisted-software-delivery-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-ai-assisted-software-delivery-skill-2026"}, {"slug": "programming-algorithm-design-architectures-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-algorithm-design-architectures-skill-2026"}, {"slug": "programming-api-contract-governance-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-api-contract-governance-skill-2026"}, {"slug": "programming-authentication-authorization-flows-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-authentication-authorization-flows-skill-2026"}, {"slug": "programming-ci-cd-quality-automation-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-ci-cd-quality-automation-skill-2026"}, {"slug": "programming-cloud-native-service-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-cloud-native-service-design-skill-2026"}, {"slug": "programming-compiler-pipeline-construction-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-compiler-pipeline-construction-skill-2026"}, {"slug": "programming-concurrency-safe-programming-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-concurrency-safe-programming-skill-2026"}, {"slug": "programming-continuous-delivery-architecture-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-continuous-delivery-architecture-skill-2026"}, {"slug": "programming-database-system-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-database-system-design-skill-2026"}, {"slug": "programming-distributed-backend-patterns-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-distributed-backend-patterns-skill-2026"}, {"slug": "programming-event-driven-system-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-event-driven-system-design-skill-2026"}, {"slug": "programming-fullstack-product-engineering-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-fullstack-product-engineering-skill-2026"}, {"slug": "programming-high-performance-computing-patterns-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-high-performance-computing-patterns-skill-2026"}, {"slug": "programming-infrastructure-as-code-patterns-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-infrastructure-as-code-patterns-skill-2026"}, {"slug": "programming-legacy-modernization-tactics-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-legacy-modernization-tactics-skill-2026"}, {"slug": "programming-memory-model-practice-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-memory-model-practice-skill-2026"}, {"slug": "programming-microservices-resilience-patterns-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-microservices-resilience-patterns-skill-2026"}, {"slug": "programming-observability-driven-debugging-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-observability-driven-debugging-skill-2026"}, {"slug": "programming-parser-and-ast-engineering-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-parser-and-ast-engineering-skill-2026"}, {"slug": "programming-program-analysis-correctness-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-program-analysis-correctness-skill-2026"}, {"slug": "programming-property-based-testing-engineering-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-property-based-testing-engineering-skill-2026"}, {"slug": "programming-query-optimization-practice-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-query-optimization-practice-skill-2026"}, {"slug": "programming-react-typescript-architecture-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-react-typescript-architecture-skill-2026"}, {"slug": "programming-refactoring-large-codebases-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-refactoring-large-codebases-skill-2026"}, {"slug": "programming-reliability-engineering-for-services-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-reliability-engineering-for-services-skill-2026"}, {"slug": "programming-secure-coding-and-hardening-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-secure-coding-and-hardening-skill-2026"}, {"slug": "programming-static-analysis-frameworks-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-static-analysis-frameworks-skill-2026"}, {"slug": "programming-tailwind-design-system-engineering-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-tailwind-design-system-engineering-skill-2026"}, {"slug": "programming-testing-strategy-at-scale-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-testing-strategy-at-scale-skill-2026"}, {"slug": "programming-type-system-driven-design-skill-2026", "kind": "skill", "score": 97.05, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-type-system-driven-design-skill-2026"}, {"slug": "frontend-ultramodern-2026", "kind": "skill", "score": 96.85, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 93.0, "pass": true, "domain": "frontend", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/frontend-ultramodern-2026"}, {"slug": "ai-agritech-decision-intelligence-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-agritech-decision-intelligence-auditor-ai-agent-2026"}, {"slug": "ai-biotech-research-acceleration-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-biotech-research-acceleration-builder-ai-agent-2026"}, {"slug": "ai-customer-success-ai-operations-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-customer-success-ai-operations-auditor-ai-agent-2026"}, {"slug": "ai-cybersecurity-operations-ai-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-cybersecurity-operations-ai-builder-ai-agent-2026"}, {"slug": "ai-education-tutoring-platforms-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-education-tutoring-platforms-auditor-ai-agent-2026"}, {"slug": "ai-government-service-automation-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-government-service-automation-builder-ai-agent-2026"}, {"slug": "ai-hospitality-service-assistants-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-hospitality-service-assistants-auditor-ai-agent-2026"}, {"slug": "ai-hr-recruiting-intelligence-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-hr-recruiting-intelligence-auditor-ai-agent-2026"}, {"slug": "ai-insurance-claims-automation-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-insurance-claims-automation-auditor-ai-agent-2026"}, {"slug": "ai-legal-research-assistants-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-legal-research-assistants-builder-ai-agent-2026"}, {"slug": "ai-logistics-optimization-control-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-logistics-optimization-control-auditor-ai-agent-2026"}, {"slug": "ai-media-content-studio-ai-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-media-content-studio-ai-auditor-ai-agent-2026"}, {"slug": "ai-mobility-routing-intelligence-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-mobility-routing-intelligence-auditor-ai-agent-2026"}, {"slug": "ai-product-management-copilot-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-product-management-copilot-builder-ai-agent-2026"}, {"slug": "ai-public-safety-intelligence-auditor-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-public-safety-intelligence-auditor-ai-agent-2026"}, {"slug": "ai-research-lab-orchestration-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-research-lab-orchestration-builder-ai-agent-2026"}, {"slug": "ai-retail-personalization-engines-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-retail-personalization-engines-builder-ai-agent-2026"}, {"slug": "ai-sports-performance-intelligence-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-sports-performance-intelligence-builder-ai-agent-2026"}, {"slug": "ai-supply-chain-control-tower-ai-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-supply-chain-control-tower-ai-builder-ai-agent-2026"}, {"slug": "ai-travel-planning-assistants-builder-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/ai-travel-planning-assistants-builder-ai-agent-2026"}, {"slug": "chatbot-chatbot-evaluation-metrics-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-chatbot-evaluation-metrics-operator-ai-agent-2026"}, {"slug": "chatbot-chatbot-fallback-escalation-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-chatbot-fallback-escalation-operator-ai-agent-2026"}, {"slug": "chatbot-conversational-design-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-conversational-design-operator-ai-agent-2026"}, {"slug": "chatbot-multi-turn-memory-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-multi-turn-memory-operator-ai-agent-2026"}, {"slug": "chatbot-multilingual-chatbot-systems-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-multilingual-chatbot-systems-operator-ai-agent-2026"}, {"slug": "chatbot-omnichannel-chat-platform-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-omnichannel-chat-platform-operator-ai-agent-2026"}, {"slug": "chatbot-persona-consistency-engine-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-persona-consistency-engine-operator-ai-agent-2026"}, {"slug": "chatbot-prompt-routing-strategies-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-prompt-routing-strategies-operator-ai-agent-2026"}, {"slug": "chatbot-retrieval-augmented-chat-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-retrieval-augmented-chat-operator-ai-agent-2026"}, {"slug": "chatbot-sales-chatbot-operations-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-sales-chatbot-operations-operator-ai-agent-2026"}, {"slug": "chatbot-sentiment-aware-dialog-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-sentiment-aware-dialog-operator-ai-agent-2026"}, {"slug": "chatbot-support-chatbot-operations-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-support-chatbot-operations-operator-ai-agent-2026"}, {"slug": "chatbot-tool-calling-orchestration-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-tool-calling-orchestration-operator-ai-agent-2026"}, {"slug": "chatbot-voice-chatbot-orchestration-operator-ai-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-voice-chatbot-orchestration-operator-ai-agent-2026"}, {"slug": "programming-algorithm-design-architectures-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-algorithm-design-architectures-exceptional-agent-2026"}, {"slug": "programming-api-contract-governance-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-api-contract-governance-exceptional-agent-2026"}, {"slug": "programming-ci-cd-quality-automation-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-ci-cd-quality-automation-exceptional-agent-2026"}, {"slug": "programming-cloud-native-service-design-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-cloud-native-service-design-exceptional-agent-2026"}, {"slug": "programming-compiler-pipeline-construction-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-compiler-pipeline-construction-exceptional-agent-2026"}, {"slug": "programming-concurrency-safe-programming-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-concurrency-safe-programming-exceptional-agent-2026"}, {"slug": "programming-database-system-design-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-database-system-design-exceptional-agent-2026"}, {"slug": "programming-distributed-backend-patterns-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-distributed-backend-patterns-exceptional-agent-2026"}, {"slug": "programming-event-driven-system-design-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-event-driven-system-design-exceptional-agent-2026"}, {"slug": "programming-high-performance-computing-patterns-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-high-performance-computing-patterns-exceptional-agent-2026"}, {"slug": "programming-infrastructure-as-code-patterns-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-infrastructure-as-code-patterns-exceptional-agent-2026"}, {"slug": "programming-observability-driven-debugging-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-observability-driven-debugging-exceptional-agent-2026"}, {"slug": "programming-parser-and-ast-engineering-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-parser-and-ast-engineering-exceptional-agent-2026"}, {"slug": "programming-property-based-testing-engineering-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-property-based-testing-engineering-exceptional-agent-2026"}, {"slug": "programming-query-optimization-practice-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-query-optimization-practice-exceptional-agent-2026"}, {"slug": "programming-reliability-engineering-for-services-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-reliability-engineering-for-services-exceptional-agent-2026"}, {"slug": "programming-secure-coding-and-hardening-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-secure-coding-and-hardening-exceptional-agent-2026"}, {"slug": "programming-static-analysis-frameworks-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-static-analysis-frameworks-exceptional-agent-2026"}, {"slug": "programming-testing-strategy-at-scale-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-testing-strategy-at-scale-exceptional-agent-2026"}, {"slug": "programming-type-system-driven-design-exceptional-agent-2026", "kind": "agent", "score": 96.45, "logic": 95.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/programming-type-system-driven-design-exceptional-agent-2026"}, {"slug": "mathematics-eigen-structure-analysis-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-eigen-structure-analysis-exceptional-agent-2026"}, {"slug": "mathematics-information-theory-foundations-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-information-theory-foundations-exceptional-agent-2026"}, {"slug": "mathematics-predicate-logic-modeling-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-predicate-logic-modeling-exceptional-agent-2026"}, {"slug": "mathematics-recurrence-relation-solving-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-recurrence-relation-solving-exceptional-agent-2026"}, {"slug": "mathematics-statistical-estimation-rigour-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-statistical-estimation-rigour-exceptional-agent-2026"}, {"slug": "robotics-autonomous-mission-orchestration-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-autonomous-mission-orchestration-exceptional-agent-2026"}, {"slug": "robotics-lidar-perception-pipelines-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-lidar-perception-pipelines-exceptional-agent-2026"}, {"slug": "robotics-nonlinear-control-robotics-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-nonlinear-control-robotics-exceptional-agent-2026"}, {"slug": "robotics-robot-kinematics-modeling-exceptional-agent-2026", "kind": "agent", "score": 95.2, "logic": 100.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-robot-kinematics-modeling-exceptional-agent-2026"}, {"slug": "automation-api-integration-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-api-integration-automation-executor-ai-agent-2026"}, {"slug": "automation-automation-risk-controls-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-automation-risk-controls-executor-ai-agent-2026"}, {"slug": "automation-crm-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-crm-automation-executor-ai-agent-2026"}, {"slug": "automation-data-pipeline-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-data-pipeline-automation-executor-ai-agent-2026"}, {"slug": "automation-devops-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-devops-automation-executor-ai-agent-2026"}, {"slug": "automation-document-processing-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-document-processing-automation-executor-ai-agent-2026"}, {"slug": "automation-enterprise-policy-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-enterprise-policy-automation-executor-ai-agent-2026"}, {"slug": "automation-etl-observability-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-etl-observability-automation-executor-ai-agent-2026"}, {"slug": "automation-event-driven-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-event-driven-automation-executor-ai-agent-2026"}, {"slug": "automation-finance-ops-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-finance-ops-automation-executor-ai-agent-2026"}, {"slug": "automation-hr-ops-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-hr-ops-automation-executor-ai-agent-2026"}, {"slug": "automation-incident-response-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-incident-response-automation-executor-ai-agent-2026"}, {"slug": "automation-no-code-automation-architecture-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-no-code-automation-architecture-executor-ai-agent-2026"}, {"slug": "automation-process-mining-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-process-mining-automation-executor-ai-agent-2026"}, {"slug": "automation-qa-automation-systems-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-qa-automation-systems-executor-ai-agent-2026"}, {"slug": "automation-rpa-pipeline-design-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-rpa-pipeline-design-executor-ai-agent-2026"}, {"slug": "automation-sales-funnel-automation-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-sales-funnel-automation-executor-ai-agent-2026"}, {"slug": "automation-task-prioritization-engines-executor-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-task-prioritization-engines-executor-ai-agent-2026"}, {"slug": "chatbot-chatbot-evaluation-metrics-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-chatbot-evaluation-metrics-designer-ai-agent-2026"}, {"slug": "chatbot-chatbot-fallback-escalation-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-chatbot-fallback-escalation-designer-ai-agent-2026"}, {"slug": "chatbot-conversational-design-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-conversational-design-designer-ai-agent-2026"}, {"slug": "chatbot-multi-turn-memory-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-multi-turn-memory-designer-ai-agent-2026"}, {"slug": "chatbot-multilingual-chatbot-systems-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-multilingual-chatbot-systems-designer-ai-agent-2026"}, {"slug": "chatbot-omnichannel-chat-platform-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-omnichannel-chat-platform-designer-ai-agent-2026"}, {"slug": "chatbot-persona-consistency-engine-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-persona-consistency-engine-designer-ai-agent-2026"}, {"slug": "chatbot-prompt-routing-strategies-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-prompt-routing-strategies-designer-ai-agent-2026"}, {"slug": "chatbot-retrieval-augmented-chat-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-retrieval-augmented-chat-designer-ai-agent-2026"}, {"slug": "chatbot-sales-chatbot-operations-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-sales-chatbot-operations-designer-ai-agent-2026"}, {"slug": "chatbot-sentiment-aware-dialog-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-sentiment-aware-dialog-designer-ai-agent-2026"}, {"slug": "chatbot-support-chatbot-operations-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-support-chatbot-operations-designer-ai-agent-2026"}, {"slug": "chatbot-tool-calling-orchestration-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-tool-calling-orchestration-designer-ai-agent-2026"}, {"slug": "chatbot-voice-chatbot-orchestration-designer-ai-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-voice-chatbot-orchestration-designer-ai-agent-2026"}, {"slug": "mathematics-axiomatic-set-reasoning-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-axiomatic-set-reasoning-exceptional-agent-2026"}, {"slug": "mathematics-bayesian-inference-systems-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-bayesian-inference-systems-exceptional-agent-2026"}, {"slug": "mathematics-combinatorial-optimization-design-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-combinatorial-optimization-design-exceptional-agent-2026"}, {"slug": "mathematics-convex-optimization-toolkit-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-convex-optimization-toolkit-exceptional-agent-2026"}, {"slug": "mathematics-diophantine-equation-logic-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-diophantine-equation-logic-exceptional-agent-2026"}, {"slug": "mathematics-discrete-probability-modeling-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-discrete-probability-modeling-exceptional-agent-2026"}, {"slug": "mathematics-dynamic-programming-math-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-dynamic-programming-math-exceptional-agent-2026"}, {"slug": "mathematics-entropy-and-divergence-analysis-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-entropy-and-divergence-analysis-exceptional-agent-2026"}, {"slug": "mathematics-formal-proof-strategy-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-formal-proof-strategy-exceptional-agent-2026"}, {"slug": "mathematics-graph-spectral-analysis-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-graph-spectral-analysis-exceptional-agent-2026"}, {"slug": "mathematics-hypothesis-testing-design-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-hypothesis-testing-design-exceptional-agent-2026"}, {"slug": "mathematics-induction-proof-engineering-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-induction-proof-engineering-exceptional-agent-2026"}, {"slug": "mathematics-linear-algebraic-transforms-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-linear-algebraic-transforms-exceptional-agent-2026"}, {"slug": "mathematics-matrix-factorization-reasoning-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-matrix-factorization-reasoning-exceptional-agent-2026"}, {"slug": "mathematics-measure-theory-for-engineers-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-measure-theory-for-engineers-exceptional-agent-2026"}, {"slug": "mathematics-modular-arithmetic-design-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-modular-arithmetic-design-exceptional-agent-2026"}, {"slug": "mathematics-nonlinear-programming-analysis-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-nonlinear-programming-analysis-exceptional-agent-2026"}, {"slug": "mathematics-number-theory-algorithms-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-number-theory-algorithms-exceptional-agent-2026"}, {"slug": "mathematics-numerical-method-stability-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-numerical-method-stability-exceptional-agent-2026"}, {"slug": "mathematics-stochastic-process-derivation-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mathematics-stochastic-process-derivation-exceptional-agent-2026"}, {"slug": "robotics-computer-vision-for-robotics-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-computer-vision-for-robotics-exceptional-agent-2026"}, {"slug": "robotics-grasp-synthesis-methods-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-grasp-synthesis-methods-exceptional-agent-2026"}, {"slug": "robotics-humanoid-motion-intelligence-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-humanoid-motion-intelligence-exceptional-agent-2026"}, {"slug": "robotics-legged-robot-stability-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-legged-robot-stability-exceptional-agent-2026"}, {"slug": "robotics-motion-planning-search-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-motion-planning-search-exceptional-agent-2026"}, {"slug": "robotics-multi-robot-coordination-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-multi-robot-coordination-exceptional-agent-2026"}, {"slug": "robotics-optimal-control-robotics-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-optimal-control-robotics-exceptional-agent-2026"}, {"slug": "robotics-robot-dynamics-simulation-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-robot-dynamics-simulation-exceptional-agent-2026"}, {"slug": "robotics-robot-manipulation-planning-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-robot-manipulation-planning-exceptional-agent-2026"}, {"slug": "robotics-robot-navigation-stack-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-robot-navigation-stack-exceptional-agent-2026"}, {"slug": "robotics-sensor-fusion-pipelines-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-sensor-fusion-pipelines-exceptional-agent-2026"}, {"slug": "robotics-slam-system-architecture-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-slam-system-architecture-exceptional-agent-2026"}, {"slug": "robotics-state-estimation-and-filtering-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-state-estimation-and-filtering-exceptional-agent-2026"}, {"slug": "robotics-swarm-robotics-protocols-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-swarm-robotics-protocols-exceptional-agent-2026"}, {"slug": "robotics-trajectory-planning-systems-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-trajectory-planning-systems-exceptional-agent-2026"}, {"slug": "robotics-visual-slam-engineering-exceptional-agent-2026", "kind": "agent", "score": 93.45, "logic": 95.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/robotics-visual-slam-engineering-exceptional-agent-2026"}, {"slug": "cloud-native-systems-architect", "kind": "agent", "score": 93.15, "logic": 97.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/cloud-native-systems-architect"}, {"slug": "distributed-systems-consistency-architect", "kind": "agent", "score": 93.15, "logic": 97.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/distributed-systems-consistency-architect"}, {"slug": "fullstack-research-prototype-architect", "kind": "agent", "score": 93.15, "logic": 97.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/fullstack-research-prototype-architect"}, {"slug": "llm-systems-architect", "kind": "agent", "score": 93.15, "logic": 97.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/llm-systems-architect"}, {"slug": "algorithmic-complexity-scientist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/algorithmic-complexity-scientist"}, {"slug": "applied-cryptography-engineer", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/applied-cryptography-engineer"}, {"slug": "compiler-and-language-tooling-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/compiler-and-language-tooling-specialist"}, {"slug": "computer-vision-pipeline-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/computer-vision-pipeline-specialist"}, {"slug": "control-systems-signal-processing-engineer", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/control-systems-signal-processing-engineer"}, {"slug": "cybersecurity-threat-modeler", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/cybersecurity-threat-modeler"}, {"slug": "database-query-optimization-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/database-query-optimization-specialist"}, {"slug": "graph-theory-algorithms-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/graph-theory-algorithms-specialist"}, {"slug": "linkedin-svg-architecture-specialist-2026", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/linkedin-svg-architecture-specialist-2026"}, {"slug": "nlp-information-retrieval-scientist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/nlp-information-retrieval-scientist"}, {"slug": "optimization-operations-research-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/optimization-operations-research-specialist"}, {"slug": "probability-statistical-inference-specialist", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/probability-statistical-inference-specialist"}, {"slug": "quantum-computing-algorithm-researcher", "kind": "agent", "score": 92.4, "logic": 92.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/quantum-computing-algorithm-researcher"}, {"slug": "robotics-mobile-robot-safety-skill-2026", "kind": "skill", "score": 92.05, "logic": 95.0, "clarity": 100.0, "security": 75.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-mobile-robot-safety-skill-2026"}, {"slug": "svg-architecture-linkedin-2026", "kind": "skill", "score": 91.9, "logic": 90.0, "clarity": 100.0, "security": 90.0, "utility": 87.0, "pass": true, "domain": "visual-architecture", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/svg-architecture-linkedin-2026"}, {"slug": "chatbot-compliance-chatbot-guardrails-operator-ai-agent-2026", "kind": "agent", "score": 91.45, "logic": 95.0, "clarity": 100.0, "security": 75.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-compliance-chatbot-guardrails-operator-ai-agent-2026"}, {"slug": "computational-geometry-visualization-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/computational-geometry-visualization-engineer"}, {"slug": "data-structures-performance-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/data-structures-performance-engineer"}, {"slug": "discrete-math-formal-logic-specialist", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/discrete-math-formal-logic-specialist"}, {"slug": "linear-algebra-numerical-methods-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/linear-algebra-numerical-methods-engineer"}, {"slug": "mlops-model-serving-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/mlops-model-serving-engineer"}, {"slug": "network-protocol-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/network-protocol-engineer"}, {"slug": "operating-systems-concurrency-debugger", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "debugger", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/operating-systems-concurrency-debugger"}, {"slug": "sre-reliability-observability-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "reviewer", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/sre-reliability-observability-engineer"}, {"slug": "stochastic-simulation-monte-carlo-engineer", "kind": "agent", "score": 91.4, "logic": 92.0, "clarity": 100.0, "security": 80.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "standard", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/stochastic-simulation-monte-carlo-engineer"}, {"slug": "automation-agentic-workflow-automation-skill-2026", "kind": "skill", "score": 90.05, "logic": 75.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-agentic-workflow-automation-skill-2026"}, {"slug": "automation-workflow-orchestration-skill-2026", "kind": "skill", "score": 90.05, "logic": 75.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "automation-ai", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/automation-workflow-orchestration-skill-2026"}, {"slug": "mathematics-axiomatic-set-reasoning-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-axiomatic-set-reasoning-skill-2026"}, {"slug": "mathematics-bayesian-inference-systems-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-bayesian-inference-systems-skill-2026"}, {"slug": "mathematics-calculus-of-variations-core-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-calculus-of-variations-core-skill-2026"}, {"slug": "mathematics-category-theory-programming-bridge-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-category-theory-programming-bridge-skill-2026"}, {"slug": "mathematics-combinatorial-optimization-design-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-combinatorial-optimization-design-skill-2026"}, {"slug": "mathematics-control-theoretic-math-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-control-theoretic-math-skill-2026"}, {"slug": "mathematics-convex-optimization-toolkit-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-convex-optimization-toolkit-skill-2026"}, {"slug": "mathematics-differential-equation-modeling-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-differential-equation-modeling-skill-2026"}, {"slug": "mathematics-diophantine-equation-logic-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-diophantine-equation-logic-skill-2026"}, {"slug": "mathematics-discrete-probability-modeling-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-discrete-probability-modeling-skill-2026"}, {"slug": "mathematics-dynamic-programming-math-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-dynamic-programming-math-skill-2026"}, {"slug": "mathematics-eigen-structure-analysis-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-eigen-structure-analysis-skill-2026"}, {"slug": "mathematics-entropy-and-divergence-analysis-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-entropy-and-divergence-analysis-skill-2026"}, {"slug": "mathematics-formal-proof-strategy-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-formal-proof-strategy-skill-2026"}, {"slug": "mathematics-formal-verification-mathematics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-formal-verification-mathematics-skill-2026"}, {"slug": "mathematics-geometric-computation-math-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-geometric-computation-math-skill-2026"}, {"slug": "mathematics-graph-spectral-analysis-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-graph-spectral-analysis-skill-2026"}, {"slug": "mathematics-hypothesis-testing-design-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-hypothesis-testing-design-skill-2026"}, {"slug": "mathematics-induction-proof-engineering-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-induction-proof-engineering-skill-2026"}, {"slug": "mathematics-information-theory-foundations-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-information-theory-foundations-skill-2026"}, {"slug": "mathematics-linear-algebraic-transforms-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-linear-algebraic-transforms-skill-2026"}, {"slug": "mathematics-mathematical-model-audit-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-mathematical-model-audit-skill-2026"}, {"slug": "mathematics-matrix-factorization-reasoning-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-matrix-factorization-reasoning-skill-2026"}, {"slug": "mathematics-measure-theory-for-engineers-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-measure-theory-for-engineers-skill-2026"}, {"slug": "mathematics-modular-arithmetic-design-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-modular-arithmetic-design-skill-2026"}, {"slug": "mathematics-nonlinear-programming-analysis-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-nonlinear-programming-analysis-skill-2026"}, {"slug": "mathematics-number-theory-algorithms-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-number-theory-algorithms-skill-2026"}, {"slug": "mathematics-numerical-method-stability-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-numerical-method-stability-skill-2026"}, {"slug": "mathematics-predicate-logic-modeling-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-predicate-logic-modeling-skill-2026"}, {"slug": "mathematics-recurrence-relation-solving-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-recurrence-relation-solving-skill-2026"}, {"slug": "mathematics-signal-processing-mathematics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-signal-processing-mathematics-skill-2026"}, {"slug": "mathematics-statistical-estimation-rigour-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-statistical-estimation-rigour-skill-2026"}, {"slug": "mathematics-stochastic-process-derivation-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-stochastic-process-derivation-skill-2026"}, {"slug": "mathematics-topological-data-insight-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "mathematics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/mathematics-topological-data-insight-skill-2026"}, {"slug": "programming-domain-driven-design-workflows-skill-2026", "kind": "skill", "score": 90.05, "logic": 75.0, "clarity": 100.0, "security": 100.0, "utility": 94.0, "pass": true, "domain": "programming", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/programming-domain-driven-design-workflows-skill-2026"}, {"slug": "robotics-autonomous-mission-orchestration-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-autonomous-mission-orchestration-skill-2026"}, {"slug": "robotics-computer-vision-for-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-computer-vision-for-robotics-skill-2026"}, {"slug": "robotics-digital-twin-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-digital-twin-robotics-skill-2026"}, {"slug": "robotics-edge-compute-for-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-edge-compute-for-robotics-skill-2026"}, {"slug": "robotics-embedded-ai-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-embedded-ai-robotics-skill-2026"}, {"slug": "robotics-ethical-robotic-deployment-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-ethical-robotic-deployment-skill-2026"}, {"slug": "robotics-fault-tolerant-robot-control-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-fault-tolerant-robot-control-skill-2026"}, {"slug": "robotics-grasp-synthesis-methods-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-grasp-synthesis-methods-skill-2026"}, {"slug": "robotics-human-robot-interaction-design-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-human-robot-interaction-design-skill-2026"}, {"slug": "robotics-humanoid-motion-intelligence-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-humanoid-motion-intelligence-skill-2026"}, {"slug": "robotics-industrial-robot-automation-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-industrial-robot-automation-skill-2026"}, {"slug": "robotics-legged-robot-stability-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-legged-robot-stability-skill-2026"}, {"slug": "robotics-lidar-perception-pipelines-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-lidar-perception-pipelines-skill-2026"}, {"slug": "robotics-motion-planning-search-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-motion-planning-search-skill-2026"}, {"slug": "robotics-multi-robot-coordination-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-multi-robot-coordination-skill-2026"}, {"slug": "robotics-nonlinear-control-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-nonlinear-control-robotics-skill-2026"}, {"slug": "robotics-optimal-control-robotics-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-optimal-control-robotics-skill-2026"}, {"slug": "robotics-real-time-robotic-systems-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-real-time-robotic-systems-skill-2026"}, {"slug": "robotics-robot-dynamics-simulation-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robot-dynamics-simulation-skill-2026"}, {"slug": "robotics-robot-kinematics-modeling-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robot-kinematics-modeling-skill-2026"}, {"slug": "robotics-robot-manipulation-planning-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robot-manipulation-planning-skill-2026"}, {"slug": "robotics-robot-navigation-stack-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robot-navigation-stack-skill-2026"}, {"slug": "robotics-robotics-performance-benchmarking-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robotics-performance-benchmarking-skill-2026"}, {"slug": "robotics-robotics-systems-integration-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robotics-systems-integration-skill-2026"}, {"slug": "robotics-robotics-testing-verification-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-robotics-testing-verification-skill-2026"}, {"slug": "robotics-ros2-architecture-practice-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-ros2-architecture-practice-skill-2026"}, {"slug": "robotics-sensor-fusion-pipelines-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-sensor-fusion-pipelines-skill-2026"}, {"slug": "robotics-slam-system-architecture-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-slam-system-architecture-skill-2026"}, {"slug": "robotics-state-estimation-and-filtering-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-state-estimation-and-filtering-skill-2026"}, {"slug": "robotics-swarm-robotics-protocols-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-swarm-robotics-protocols-skill-2026"}, {"slug": "robotics-trajectory-planning-systems-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-trajectory-planning-systems-skill-2026"}, {"slug": "robotics-visual-slam-engineering-skill-2026", "kind": "skill", "score": 90.05, "logic": 95.0, "clarity": 100.0, "security": 65.0, "utility": 94.0, "pass": true, "domain": "robotics", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/robotics-visual-slam-engineering-skill-2026"}, {"slug": "automation-agentic-workflow-automation-orchestrator-ai-agent-2026", "kind": "agent", "score": 89.45, "logic": 75.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-agentic-workflow-automation-orchestrator-ai-agent-2026"}, {"slug": "automation-workflow-orchestration-orchestrator-ai-agent-2026", "kind": "agent", "score": 89.45, "logic": 75.0, "clarity": 100.0, "security": 100.0, "utility": 91.0, "pass": true, "domain": "orchestrator", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-workflow-orchestration-orchestrator-ai-agent-2026"}, {"slug": "chatbot-compliance-chatbot-guardrails-skill-2026", "kind": "skill", "score": 89.05, "logic": 95.0, "clarity": 100.0, "security": 60.0, "utility": 94.0, "pass": true, "domain": "chatbot-ai", "category": "advanced", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/chatbot-compliance-chatbot-guardrails-skill-2026"}, {"slug": "chatbot-compliance-chatbot-guardrails-designer-ai-agent-2026", "kind": "agent", "score": 87.45, "logic": 95.0, "clarity": 100.0, "security": 55.0, "utility": 91.0, "pass": true, "domain": "specialist", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/chatbot-compliance-chatbot-guardrails-designer-ai-agent-2026"}, {"slug": "automation-agentic-workflow-automation-executor-ai-agent-2026", "kind": "agent", "score": 86.45, "logic": 75.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-agentic-workflow-automation-executor-ai-agent-2026"}, {"slug": "automation-workflow-orchestration-executor-ai-agent-2026", "kind": "agent", "score": 86.45, "logic": 75.0, "clarity": 100.0, "security": 85.0, "utility": 91.0, "pass": true, "domain": "builder", "category": "max", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/agents/automation-workflow-orchestration-executor-ai-agent-2026"}, {"slug": "cryptography-primitives-foundations", "kind": "skill", "score": 78.7, "logic": 70.0, "clarity": 100.0, "security": 65.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/cryptography-primitives-foundations"}, {"slug": "logic-of-programs-hoare", "kind": "skill", "score": 78.7, "logic": 70.0, "clarity": 100.0, "security": 65.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/logic-of-programs-hoare"}, {"slug": "security-threat-modeling-foundations", "kind": "skill", "score": 78.7, "logic": 70.0, "clarity": 100.0, "security": 65.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/security-threat-modeling-foundations"}, {"slug": "algorithm-correctness-invariants", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/algorithm-correctness-invariants"}, {"slug": "combinatorics-counting-principles", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/combinatorics-counting-principles"}, {"slug": "complexity-analysis-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/complexity-analysis-foundations"}, {"slug": "computability-decidability", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/computability-decidability"}, {"slug": "concurrency-memory-model-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/concurrency-memory-model-foundations"}, {"slug": "data-structures-invariants", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/data-structures-invariants"}, {"slug": "database-theory-normalization", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/database-theory-normalization"}, {"slug": "debugging-causal-reasoning-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/debugging-causal-reasoning-foundations"}, {"slug": "discrete-structures-core", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/discrete-structures-core"}, {"slug": "distributed-systems-consistency-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/distributed-systems-consistency-foundations"}, {"slug": "formal-languages-automata", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/formal-languages-automata"}, {"slug": "functional-programming-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/functional-programming-foundations"}, {"slug": "graph-theory-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/graph-theory-foundations"}, {"slug": "linear-algebra-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/linear-algebra-foundations"}, {"slug": "logic-predicate-quantifiers", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/logic-predicate-quantifiers"}, {"slug": "logic-proof-strategies", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/logic-proof-strategies"}, {"slug": "logic-propositional-reasoning", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/logic-propositional-reasoning"}, {"slug": "number-theory-modular-arithmetic", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/number-theory-modular-arithmetic"}, {"slug": "numerical-stability-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/numerical-stability-foundations"}, {"slug": "optimization-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/optimization-foundations"}, {"slug": "probability-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/probability-foundations"}, {"slug": "recursion-induction-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/recursion-induction-foundations"}, {"slug": "relations-functions-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/relations-functions-foundations"}, {"slug": "set-theory-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/set-theory-foundations"}, {"slug": "statistics-inference-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/statistics-inference-foundations"}, {"slug": "testing-verification-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/testing-verification-foundations"}, {"slug": "type-systems-foundations", "kind": "skill", "score": 77.7, "logic": 70.0, "clarity": 100.0, "security": 60.0, "utility": 81.0, "pass": true, "domain": "math-programming-logic", "category": "expert", "path": "/Users/yonatanguerrerosoriano/Downloads/Guia de Claude NEW/skills/type-systems-foundations"}], "history": [{"generated_at": "2026-04-05T02:15:42.086412+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:30:10.679953+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:30:15.576490+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:30:38.960468+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:36:47.139323+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:43:01.502511+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}, {"generated_at": "2026-04-05T02:47:35.763545+00:00", "status": "healthy", "skills_total": 203, "skills_passed": 203, "agents_total": 196, "agents_passed": 196, "overall_pass_rate_percent": 100.0, "average_score_all": 93.26, "average_score_skills": 91.74, "average_score_agents": 94.83, "regression_status": "pass", "coverage_status": "pass"}], "domain_kpis": [{"domain": "fullstack", "total": 1, "passed": 1, "failed": 0, "skills": 1, "agents": 0, "average_score": 98.6, "pass_rate_percent": 100.0}, {"domain": "domain-ai", "total": 30, "passed": 30, "failed": 0, "skills": 30, "agents": 0, "average_score": 97.05, "pass_rate_percent": 100.0}, {"domain": "frontend", "total": 1, "passed": 1, "failed": 0, "skills": 1, "agents": 0, "average_score": 96.85, "pass_rate_percent": 100.0}, {"domain": "orchestrator", "total": 48, "passed": 48, "failed": 0, "skills": 0, "agents": 48, "average_score": 96.85, "pass_rate_percent": 100.0}, {"domain": "programming", "total": 33, "passed": 33, "failed": 0, "skills": 33, "agents": 0, "average_score": 96.84, "pass_rate_percent": 100.0}, {"domain": "chatbot-ai", "total": 20, "passed": 20, "failed": 0, "skills": 20, "agents": 0, "average_score": 96.65, "pass_rate_percent": 100.0}, {"domain": "automation-ai", "total": 20, "passed": 20, "failed": 0, "skills": 20, "agents": 0, "average_score": 96.35, "pass_rate_percent": 100.0}, {"domain": "debugger", "total": 30, "passed": 30, "failed": 0, "skills": 0, "agents": 30, "average_score": 95.21, "pass_rate_percent": 100.0}, {"domain": "reviewer", "total": 27, "passed": 27, "failed": 0, "skills": 0, "agents": 27, "average_score": 94.93, "pass_rate_percent": 100.0}, {"domain": "builder", "total": 50, "passed": 50, "failed": 0, "skills": 0, "agents": 50, "average_score": 93.82, "pass_rate_percent": 100.0}, {"domain": "specialist", "total": 41, "passed": 41, "failed": 0, "skills": 0, "agents": 41, "average_score": 93.36, "pass_rate_percent": 100.0}, {"domain": "visual-architecture", "total": 1, "passed": 1, "failed": 0, "skills": 1, "agents": 0, "average_score": 91.9, "pass_rate_percent": 100.0}, {"domain": "robotics", "total": 33, "passed": 33, "failed": 0, "skills": 33, "agents": 0, "average_score": 90.11, "pass_rate_percent": 100.0}, {"domain": "mathematics", "total": 34, "passed": 34, "failed": 0, "skills": 34, "agents": 0, "average_score": 90.05, "pass_rate_percent": 100.0}, {"domain": "math-programming-logic", "total": 30, "passed": 30, "failed": 0, "skills": 30, "agents": 0, "average_score": 77.8, "pass_rate_percent": 100.0}]};
+    const state = {
+      search: "",
+      kind: "all",
+      status: "all",
+      domain: "all",
+      sort: "score_desc",
+      minScore: 0
+    };
+
+    const els = {
+      statusValue: document.getElementById("statusValue"),
+      totalValue: document.getElementById("totalValue"),
+      skillsValue: document.getElementById("skillsValue"),
+      agentsValue: document.getElementById("agentsValue"),
+      passFailValue: document.getElementById("passFailValue"),
+      avgValue: document.getElementById("avgValue"),
+      search: document.getElementById("search"),
+      kind: document.getElementById("kind"),
+      status: document.getElementById("status"),
+      domain: document.getElementById("domain"),
+      sort: document.getElementById("sort"),
+      minScore: document.getElementById("minScore"),
+      minScoreValue: document.getElementById("minScoreValue"),
+      domainRows: document.getElementById("domainRows"),
+      rows: document.getElementById("rows"),
+      footerText: document.getElementById("footerText"),
+      themeToggle: document.getElementById("themeToggle")
+    };
+
+    function statusClass(raw) {
+      const value = String(raw || "").toLowerCase();
+      if (value === "healthy") return "status-healthy";
+      if (value === "pass" || value === "ok") return "status-pass";
+      if (value === "fail" || value === "failed") return "status-fail";
+      return "status-neutral";
+    }
+
+    function isDarkTheme() {
+      return document.documentElement.getAttribute("data-theme") === "dark";
+    }
+
+    function trendPalette() {
+      if (isDarkTheme()) {
+        return {
+          average_score_all: "#22c1ff",
+          average_score_skills: "#52d68f",
+          average_score_agents: "#ff8b63",
+          grid: "#2a4152",
+          text: "#9cb2c3",
+        };
+      }
+      return {
+        average_score_all: "#0b9ad1",
+        average_score_skills: "#0f7d42",
+        average_score_agents: "#ff6b3d",
+        grid: "#e2e8f0",
+        text: "#64748b",
+      };
+    }
+
+    function fillSummary() {
+      const s = DATA.summary;
+      const statusRaw = String(s.status || "unknown");
+      els.statusValue.textContent = statusRaw.replaceAll("_", " ");
+      els.statusValue.className = `quality-pill ${statusClass(statusRaw)}`;
+      els.totalValue.textContent = String(s.total_entries || 0);
+      els.skillsValue.textContent = String(s.skills_total || 0);
+      els.agentsValue.textContent = String(s.agents_total || 0);
+      els.passFailValue.textContent = `${s.passed_total || 0} / ${s.failed_total || 0}`;
+      els.avgValue.textContent = String(s.average_score_all || 0);
+    }
+
+    function fillDomainOptions() {
+      const domainSet = new Set();
+      for (const item of DATA.entries) {
+        domainSet.add(item.domain || "unknown");
+      }
+      const domains = Array.from(domainSet).sort((a, b) => a.localeCompare(b));
+      els.domain.innerHTML = "";
+      const base = document.createElement("option");
+      base.value = "all";
+      base.textContent = "All";
+      els.domain.appendChild(base);
+      for (const domain of domains) {
+        const opt = document.createElement("option");
+        opt.value = domain;
+        opt.textContent = domain;
+        els.domain.appendChild(opt);
+      }
+    }
+
+    function renderDomainKpis() {
+      const rows = Array.isArray(DATA.domain_kpis) ? DATA.domain_kpis : [];
+      els.domainRows.innerHTML = "";
+      for (const item of rows.slice(0, 24)) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${item.domain}</td>
+          <td>${Number(item.average_score || 0).toFixed(2)}</td>
+          <td>${Number(item.pass_rate_percent || 0).toFixed(2)}%</td>
+          <td>${item.total || 0}</td>
+          <td>${item.skills || 0}</td>
+          <td>${item.agents || 0}</td>
+        `;
+        els.domainRows.appendChild(tr);
+      }
+    }
+
+    function renderTrend() {
+      const svg = document.getElementById("trendSvg");
+      const history = Array.isArray(DATA.history) ? DATA.history : [];
+      const palette = trendPalette();
+      svg.innerHTML = "";
+      if (history.length < 2) {
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", "18");
+        text.setAttribute("y", "38");
+        text.setAttribute("fill", palette.text);
+        text.setAttribute("font-size", "12");
+        text.textContent = "Not enough history points yet.";
+        svg.appendChild(text);
+        return;
+      }
+
+      const W = 920;
+      const H = 220;
+      const padLeft = 38;
+      const padRight = 20;
+      const padTop = 14;
+      const padBottom = 26;
+      const points = history.slice(-80);
+      const scoreKeys = ["average_score_all", "average_score_skills", "average_score_agents"];
+      const colors = {
+        average_score_all: palette.average_score_all,
+        average_score_skills: palette.average_score_skills,
+        average_score_agents: palette.average_score_agents,
+      };
+      const innerW = W - padLeft - padRight;
+      const innerH = H - padTop - padBottom;
+
+      function x(i) {
+        if (points.length === 1) return padLeft;
+        return padLeft + (innerW * i) / (points.length - 1);
+      }
+      function y(v) {
+        const clamped = Math.max(0, Math.min(100, Number(v || 0)));
+        return padTop + ((100 - clamped) / 100) * innerH;
+      }
+
+      for (let grid = 0; grid <= 5; grid++) {
+        const value = grid * 20;
+        const yPos = y(value);
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", String(padLeft));
+        line.setAttribute("x2", String(W - padRight));
+        line.setAttribute("y1", String(yPos));
+        line.setAttribute("y2", String(yPos));
+        line.setAttribute("stroke", palette.grid);
+        line.setAttribute("stroke-width", "1");
+        svg.appendChild(line);
+      }
+
+      for (const key of scoreKeys) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        let d = "";
+        points.forEach((point, index) => {
+          const xx = x(index);
+          const yy = y(point[key]);
+          d += `${index === 0 ? "M" : "L"}${xx},${yy} `;
+        });
+        path.setAttribute("d", d.trim());
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", colors[key]);
+        path.setAttribute("stroke-width", "2.4");
+        path.setAttribute("stroke-linecap", "round");
+        svg.appendChild(path);
+      }
+    }
+
+    function initTheme() {
+      const storageKey = "control-deck-theme";
+      const toggle = els.themeToggle;
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+          if (toggle) {
+            toggle.textContent = "Light";
+            toggle.setAttribute("aria-pressed", "true");
+          }
+        } else {
+          document.documentElement.removeAttribute("data-theme");
+          if (toggle) {
+            toggle.textContent = "Dark";
+            toggle.setAttribute("aria-pressed", "false");
+          }
+        }
+        renderTrend();
+      }
+
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const stored = window.localStorage.getItem(storageKey);
+      const initial = stored || (prefersDark ? "dark" : "light");
+      applyTheme(initial === "dark" ? "dark" : "light");
+
+      if (!toggle) return;
+      toggle.addEventListener("click", () => {
+        const active = isDarkTheme() ? "dark" : "light";
+        const next = active === "dark" ? "light" : "dark";
+        window.localStorage.setItem(storageKey, next);
+        applyTheme(next);
+      });
+    }
+
+    function applyFilters() {
+      const q = state.search.trim().toLowerCase();
+      let items = DATA.entries.filter((item) => {
+        if (state.kind !== "all" && item.kind !== state.kind) return false;
+        if (state.status === "pass" && !item.pass) return false;
+        if (state.status === "fail" && item.pass) return false;
+        if (state.domain !== "all" && item.domain !== state.domain) return false;
+        if (item.score < state.minScore) return false;
+        if (!q) return true;
+        const hay = `${item.slug} ${item.domain} ${item.category} ${item.kind}`.toLowerCase();
+        return hay.includes(q);
+      });
+
+      switch (state.sort) {
+        case "score_asc":
+          items.sort((a, b) => a.score - b.score || a.slug.localeCompare(b.slug));
+          break;
+        case "logic_desc":
+          items.sort((a, b) => b.logic - a.logic || b.score - a.score || a.slug.localeCompare(b.slug));
+          break;
+        case "security_desc":
+          items.sort((a, b) => b.security - a.security || b.score - a.score || a.slug.localeCompare(b.slug));
+          break;
+        case "name_asc":
+          items.sort((a, b) => a.slug.localeCompare(b.slug));
+          break;
+        case "name_desc":
+          items.sort((a, b) => b.slug.localeCompare(a.slug));
+          break;
+        default:
+          items.sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
+          break;
+      }
+      return items;
+    }
+
+    function renderRows() {
+      const items = applyFilters();
+      els.rows.innerHTML = "";
+      for (const item of items) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="slug">${item.slug}</td>
+          <td><span class="chip">${item.kind}</span></td>
+          <td><span class="status ${item.pass ? "pass" : "fail"}">${item.pass ? "pass" : "fail"}</span></td>
+          <td>${item.score.toFixed(2)}</td>
+          <td>${item.logic.toFixed(2)}</td>
+          <td>${item.clarity.toFixed(2)}</td>
+          <td>${item.security.toFixed(2)}</td>
+          <td>${item.utility.toFixed(2)}</td>
+          <td>${item.domain}</td>
+          <td>${item.category}</td>
+        `;
+        els.rows.appendChild(tr);
+      }
+      els.footerText.textContent =
+        `Showing ${items.length} of ${DATA.entries.length} artifacts. ` +
+        `Generated at: ${DATA.summary.generated_at} | ` +
+        `Regression: ${DATA.summary.regression_status} | Coverage: ${DATA.summary.coverage_status}`;
+    }
+
+    function bindEvents() {
+      els.search.addEventListener("input", (event) => {
+        state.search = event.target.value || "";
+        renderRows();
+      });
+      els.kind.addEventListener("change", (event) => {
+        state.kind = event.target.value;
+        renderRows();
+      });
+      els.status.addEventListener("change", (event) => {
+        state.status = event.target.value;
+        renderRows();
+      });
+      els.domain.addEventListener("change", (event) => {
+        state.domain = event.target.value;
+        renderRows();
+      });
+      els.sort.addEventListener("change", (event) => {
+        state.sort = event.target.value;
+        renderRows();
+      });
+      els.minScore.addEventListener("input", (event) => {
+        const value = Number(event.target.value || "0");
+        state.minScore = Number.isFinite(value) ? value : 0;
+        els.minScoreValue.textContent = String(state.minScore);
+        renderRows();
+      });
+    }
+
+    fillSummary();
+    fillDomainOptions();
+    renderDomainKpis();
+    bindEvents();
+    initTheme();
+    renderRows();
+  </script>
+</body>
+</html>

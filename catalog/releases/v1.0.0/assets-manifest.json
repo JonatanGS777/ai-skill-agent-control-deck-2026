@@ -1,0 +1,10 @@
+{
+  "version": "v1.0.0",
+  "files": [
+    "catalog/repository-quality.md",
+    "catalog/benchmark-results.json",
+    "catalog/skills.index.json",
+    "catalog/agents.index.json",
+    "catalog/quality-dashboard.html"
+  ]
+}

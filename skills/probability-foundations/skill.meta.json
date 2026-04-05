@@ -1,0 +1,19 @@
+{
+  "name": "probability-foundations",
+  "title": "Probability Foundations",
+  "description": "Models uncertainty with probability axioms, conditional reasoning, and distribution checks.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "number-theory-modular-arithmetic",
+  "title": "Number Theory Modular Arithmetic",
+  "description": "Applies modular arithmetic and divisibility logic for correctness and crypto-adjacent tasks.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

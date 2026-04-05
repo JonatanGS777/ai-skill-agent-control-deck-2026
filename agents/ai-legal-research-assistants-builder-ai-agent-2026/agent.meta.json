@@ -1,0 +1,56 @@
+{
+  "name": "ai-legal-research-assistants-builder-ai-agent-2026",
+  "title": "Ai Legal Research Assistants Builder Ai Agent 2026",
+  "description": "Construye y gobierna soluciones de IA por dominio con objetivos claros, controles logicos y validacion continua del impacto.",
+  "version": "1.0.0",
+  "agent_type": "builder",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "domain-ai",
+    "builder",
+    "ai-agent",
+    "2026",
+    "governance"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "ai-domain-legal-research-assistants-skill-2026",
+    "automation-workflow-orchestration-skill-2026",
+    "chatbot-enterprise-knowledge-chatbots-skill-2026",
+    "optimization-foundations",
+    "probability-foundations",
+    "statistics-inference-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

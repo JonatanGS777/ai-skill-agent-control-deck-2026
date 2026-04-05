@@ -1,0 +1,78 @@
+name: Repository Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python Compile Check
+        run: |
+          python -m py_compile \
+            scripts/universal_skill_creator.py \
+            scripts/universal_agent_creator.py \
+            scripts/create_logic_foundation_skills.py \
+            scripts/install_agent_group_aliases.py \
+            scripts/install_created_agent_group.py \
+            scripts/rebuild_repo_catalog.py \
+            scripts/run_benchmarks.py \
+            scripts/build_quality_dashboard.py \
+            scripts/build_docs_portal.py \
+            scripts/semantic_version_manager.py \
+            scripts/generate_release_bundle.py \
+            scripts/generate_exceptional_pack_2026.py \
+            scripts/generate_ai_factory_pack_2026.py
+
+      - name: Semantic Version Gate
+        run: |
+          python scripts/semantic_version_manager.py --mode check --scope both --strict
+
+      - name: Benchmark Gate
+        run: |
+          python scripts/run_benchmarks.py --strict
+
+      - name: Repository Quality Gate
+        run: |
+          python scripts/rebuild_repo_catalog.py --strict
+          cat catalog/repository-quality.md
+
+      - name: Build Quality Dashboard
+        run: |
+          python scripts/build_quality_dashboard.py
+
+      - name: Build Docs Portal
+        run: |
+          python scripts/build_docs_portal.py
+
+      - name: Upload Catalog Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repository-catalog
+          if-no-files-found: warn
+          path: |
+            catalog/skills.index.json
+            catalog/agents.index.json
+            catalog/repository-quality.md
+            catalog/version-state.json
+            catalog/benchmark-results.json
+            catalog/benchmark-history.json
+            catalog/skill-quality-ranking.json
+            catalog/agent-quality-ranking.json
+            catalog/quality-dashboard.html
+            docs/portal/index.html
+            catalog/releases/releases-index.json
+            CHANGELOG.md

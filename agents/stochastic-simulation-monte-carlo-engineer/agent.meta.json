@@ -1,0 +1,36 @@
+{
+  "name": "stochastic-simulation-monte-carlo-engineer",
+  "title": "Stochastic Simulation Monte Carlo Engineer",
+  "description": "Desarrolla simulaciones estoc\u00e1sticas y m\u00e9todos Monte Carlo para an\u00e1lisis de incertidumbre.",
+  "version": "1.0.0",
+  "agent_type": "builder",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "python-testing",
+    "verification-loop",
+    "backend-patterns",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

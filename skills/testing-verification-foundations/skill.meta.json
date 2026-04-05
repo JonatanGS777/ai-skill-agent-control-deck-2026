@@ -1,0 +1,19 @@
+{
+  "name": "testing-verification-foundations",
+  "title": "Testing Verification Foundations",
+  "description": "Combines testing strategy and formal verification checks for dependable systems.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,2162 @@
+{
+  "generated_at": "2026-04-05T02:47:35.763545+00:00",
+  "status": "healthy",
+  "items": [
+    {
+      "slug": "ai-climate-risk-analytics-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-ecommerce-conversion-intelligence-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-energy-demand-forecasting-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-entertainment-production-ai-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-finance-analysis-copilots-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-healthcare-assistant-systems-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-manufacturing-quality-intelligence-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-marketing-campaign-intelligence-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-nonprofit-impact-analytics-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-real-estate-market-intelligence-strategist-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-api-integration-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-automation-risk-controls-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-crm-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-data-pipeline-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-devops-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-document-processing-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-enterprise-policy-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-etl-observability-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-event-driven-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-finance-ops-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-hr-ops-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-incident-response-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-no-code-automation-architecture-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-process-mining-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-qa-automation-systems-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-rpa-pipeline-design-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-sales-funnel-automation-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-task-prioritization-engines-orchestrator-ai-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-advanced-data-structures-exceptional-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-authentication-authorization-flows-exceptional-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-continuous-delivery-architecture-exceptional-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-memory-model-practice-exceptional-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-program-analysis-correctness-exceptional-agent-2026",
+      "total_score": 98.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-agritech-decision-intelligence-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-biotech-research-acceleration-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-customer-success-ai-operations-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-cybersecurity-operations-ai-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-education-tutoring-platforms-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-government-service-automation-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-hospitality-service-assistants-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-hr-recruiting-intelligence-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-insurance-claims-automation-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-legal-research-assistants-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-logistics-optimization-control-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-media-content-studio-ai-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-mobility-routing-intelligence-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-product-management-copilot-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-public-safety-intelligence-auditor-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-research-lab-orchestration-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-retail-personalization-engines-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-sports-performance-intelligence-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-supply-chain-control-tower-ai-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-travel-planning-assistants-builder-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-evaluation-metrics-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-fallback-escalation-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-conversational-design-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multi-turn-memory-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multilingual-chatbot-systems-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-omnichannel-chat-platform-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-persona-consistency-engine-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-prompt-routing-strategies-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-retrieval-augmented-chat-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sales-chatbot-operations-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sentiment-aware-dialog-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-support-chatbot-operations-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-tool-calling-orchestration-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-voice-chatbot-orchestration-operator-ai-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-algorithm-design-architectures-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-api-contract-governance-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-ci-cd-quality-automation-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-cloud-native-service-design-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-compiler-pipeline-construction-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-concurrency-safe-programming-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-database-system-design-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-distributed-backend-patterns-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-event-driven-system-design-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-high-performance-computing-patterns-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-infrastructure-as-code-patterns-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-observability-driven-debugging-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-parser-and-ast-engineering-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-property-based-testing-engineering-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-query-optimization-practice-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-reliability-engineering-for-services-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-secure-coding-and-hardening-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-static-analysis-frameworks-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-testing-strategy-at-scale-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-type-system-driven-design-exceptional-agent-2026",
+      "total_score": 96.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-eigen-structure-analysis-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-information-theory-foundations-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-predicate-logic-modeling-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-recurrence-relation-solving-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-statistical-estimation-rigour-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-autonomous-mission-orchestration-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-lidar-perception-pipelines-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-nonlinear-control-robotics-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-kinematics-modeling-exceptional-agent-2026",
+      "total_score": 95.2,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-api-integration-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-automation-risk-controls-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-crm-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-data-pipeline-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-devops-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-document-processing-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-enterprise-policy-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-etl-observability-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-event-driven-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-finance-ops-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-hr-ops-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-incident-response-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-no-code-automation-architecture-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-process-mining-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-qa-automation-systems-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-rpa-pipeline-design-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-sales-funnel-automation-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-task-prioritization-engines-executor-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-evaluation-metrics-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-fallback-escalation-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-conversational-design-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multi-turn-memory-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multilingual-chatbot-systems-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-omnichannel-chat-platform-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-persona-consistency-engine-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-prompt-routing-strategies-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-retrieval-augmented-chat-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sales-chatbot-operations-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sentiment-aware-dialog-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-support-chatbot-operations-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-tool-calling-orchestration-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-voice-chatbot-orchestration-designer-ai-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-axiomatic-set-reasoning-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-bayesian-inference-systems-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-combinatorial-optimization-design-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-convex-optimization-toolkit-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-diophantine-equation-logic-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-discrete-probability-modeling-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-dynamic-programming-math-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-entropy-and-divergence-analysis-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-formal-proof-strategy-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-graph-spectral-analysis-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-hypothesis-testing-design-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-induction-proof-engineering-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-linear-algebraic-transforms-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-matrix-factorization-reasoning-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-measure-theory-for-engineers-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-modular-arithmetic-design-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-nonlinear-programming-analysis-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-number-theory-algorithms-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-numerical-method-stability-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-stochastic-process-derivation-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-computer-vision-for-robotics-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-grasp-synthesis-methods-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-humanoid-motion-intelligence-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-legged-robot-stability-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-motion-planning-search-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-multi-robot-coordination-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-optimal-control-robotics-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-dynamics-simulation-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-manipulation-planning-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-navigation-stack-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-sensor-fusion-pipelines-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-slam-system-architecture-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-state-estimation-and-filtering-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-swarm-robotics-protocols-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-trajectory-planning-systems-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-visual-slam-engineering-exceptional-agent-2026",
+      "total_score": 93.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "cloud-native-systems-architect",
+      "total_score": 93.15,
+      "scores": {
+        "logic": 97.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "distributed-systems-consistency-architect",
+      "total_score": 93.15,
+      "scores": {
+        "logic": 97.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "fullstack-research-prototype-architect",
+      "total_score": 93.15,
+      "scores": {
+        "logic": 97.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "llm-systems-architect",
+      "total_score": 93.15,
+      "scores": {
+        "logic": 97.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "algorithmic-complexity-scientist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "applied-cryptography-engineer",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "compiler-and-language-tooling-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "computer-vision-pipeline-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "control-systems-signal-processing-engineer",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "cybersecurity-threat-modeler",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "database-query-optimization-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "graph-theory-algorithms-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "linkedin-svg-architecture-specialist-2026",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "nlp-information-retrieval-scientist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "optimization-operations-research-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "probability-statistical-inference-specialist",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "quantum-computing-algorithm-researcher",
+      "total_score": 92.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-compliance-chatbot-guardrails-operator-ai-agent-2026",
+      "total_score": 91.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 75.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "computational-geometry-visualization-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "data-structures-performance-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "discrete-math-formal-logic-specialist",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "linear-algebra-numerical-methods-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mlops-model-serving-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "network-protocol-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "operating-systems-concurrency-debugger",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "sre-reliability-observability-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "stochastic-simulation-monte-carlo-engineer",
+      "total_score": 91.4,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 80.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-agentic-workflow-automation-orchestrator-ai-agent-2026",
+      "total_score": 89.45,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-workflow-orchestration-orchestrator-ai-agent-2026",
+      "total_score": 89.45,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-compliance-chatbot-guardrails-designer-ai-agent-2026",
+      "total_score": 87.45,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 55.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-agentic-workflow-automation-executor-ai-agent-2026",
+      "total_score": 86.45,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-workflow-orchestration-executor-ai-agent-2026",
+      "total_score": 86.45,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 91.0
+      },
+      "pass_thresholds": true
+    }
+  ]
+}

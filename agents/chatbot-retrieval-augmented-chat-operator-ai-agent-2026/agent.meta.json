@@ -1,0 +1,56 @@
+{
+  "name": "chatbot-retrieval-augmented-chat-operator-ai-agent-2026",
+  "title": "Chatbot Retrieval Augmented Chat Operator Ai Agent 2026",
+  "description": "Opera chatbots en produccion con monitoreo activo, controles de riesgo y estrategias de fallback verificables.",
+  "version": "1.0.0",
+  "agent_type": "debugger",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "chatbot",
+    "operations",
+    "ai-agent",
+    "2026",
+    "production"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "chatbot-retrieval-augmented-chat-skill-2026",
+    "chatbot-support-chatbot-operations-skill-2026",
+    "chatbot-chatbot-fallback-escalation-skill-2026",
+    "chatbot-chatbot-security-hardening-skill-2026",
+    "debugging-causal-reasoning-foundations",
+    "security-threat-modeling-foundations",
+    "probability-foundations",
+    "testing-verification-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

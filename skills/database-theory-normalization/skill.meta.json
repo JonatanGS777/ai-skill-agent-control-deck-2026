@@ -1,0 +1,19 @@
+{
+  "name": "database-theory-normalization",
+  "title": "Database Theory Normalization",
+  "description": "Applies normalization, keys, dependencies, and integrity constraints to schema design.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

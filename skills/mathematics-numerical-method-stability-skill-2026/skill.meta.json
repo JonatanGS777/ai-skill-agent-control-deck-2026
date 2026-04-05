@@ -1,0 +1,28 @@
+{
+  "name": "mathematics-numerical-method-stability-skill-2026",
+  "title": "Mathematics Numerical Method Stability Skill 2026",
+  "description": "Desarrolla soluciones matematicas avanzadas para numerical method stability con rigor formal, validacion reproducible y decisiones auditables.",
+  "version": "1.0.0",
+  "domain": "mathematics",
+  "quality_tier": "expert",
+  "tags": [
+    "mathematics",
+    "logic",
+    "proof",
+    "2026",
+    "high-rigor"
+  ],
+  "foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "complexity-analysis-foundations",
+    "testing-verification-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

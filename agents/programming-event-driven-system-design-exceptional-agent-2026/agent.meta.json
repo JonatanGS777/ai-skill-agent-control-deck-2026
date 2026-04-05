@@ -1,0 +1,56 @@
+{
+  "name": "programming-event-driven-system-design-exceptional-agent-2026",
+  "title": "Programming Event Driven System Design Exceptional Agent 2026",
+  "description": "Agente de programacion excepcional para arquitectura, implementacion y verificacion de software moderno de produccion.",
+  "version": "1.0.0",
+  "agent_type": "specialist",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "programming",
+    "engineering",
+    "architecture",
+    "exceptional",
+    "2026"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "programming-event-driven-system-design-skill-2026",
+    "programming-concurrency-safe-programming-skill-2026",
+    "programming-memory-model-practice-skill-2026",
+    "fullstack-ultramodern-2026",
+    "debugging-causal-reasoning-foundations",
+    "security-threat-modeling-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

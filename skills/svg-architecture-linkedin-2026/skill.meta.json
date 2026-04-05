@@ -1,0 +1,26 @@
+{
+  "name": "svg-architecture-linkedin-2026",
+  "title": "Svg Architecture Linkedin 2026",
+  "description": "Genera SVG avanzados de arquitectura con nodos, conexiones din\u00e1micas y est\u00e9tica moderna optimizada para publicaciones en LinkedIn.",
+  "version": "1.1.0",
+  "domain": "visual-architecture",
+  "quality_tier": "advanced",
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md",
+  "tags": [
+    "svg",
+    "architecture",
+    "linkedin",
+    "visual-systems",
+    "2026"
+  ],
+  "foundation_skills": [
+    "graph-theory-foundations",
+    "logic-propositional-reasoning",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

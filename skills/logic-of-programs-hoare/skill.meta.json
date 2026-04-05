@@ -1,0 +1,19 @@
+{
+  "name": "logic-of-programs-hoare",
+  "title": "Logic Of Programs Hoare",
+  "description": "Uses Hoare-style reasoning and contracts for program correctness and safety.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

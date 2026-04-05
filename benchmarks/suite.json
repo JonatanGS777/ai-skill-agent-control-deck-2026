@@ -1,0 +1,24 @@
+{
+  "suite_version": "1.0.0",
+  "name": "repository-benchmark-suite-2026",
+  "weights": {
+    "logic": 0.35,
+    "clarity": 0.25,
+    "security": 0.2,
+    "utility": 0.2
+  },
+  "thresholds": {
+    "overall_min": 72.0,
+    "dimension_min": 55.0
+  },
+  "regression": {
+    "skill_prompt_bullets_min": 3,
+    "agent_prompt_bullets_min": 3,
+    "skill_prompt_must_reference_slug": true,
+    "agent_prompt_must_reference_slug": true
+  },
+  "ranking": {
+    "top_k": 15,
+    "bottom_k": 10
+  }
+}

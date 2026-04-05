@@ -1,0 +1,56 @@
+{
+  "name": "mathematics-statistical-estimation-rigour-exceptional-agent-2026",
+  "title": "Mathematics Statistical Estimation Rigour Exceptional Agent 2026",
+  "description": "Agente matematico excepcional para modelar, demostrar y validar soluciones de alta complejidad con precision formal.",
+  "version": "1.0.0",
+  "agent_type": "orchestrator",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "mathematics",
+    "proof",
+    "analysis",
+    "exceptional",
+    "2026"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "mathematics-statistical-estimation-rigour-skill-2026",
+    "mathematics-hypothesis-testing-design-skill-2026",
+    "mathematics-bayesian-inference-systems-skill-2026",
+    "logic-proof-strategies",
+    "algorithm-correctness-invariants",
+    "testing-verification-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

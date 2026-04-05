@@ -1,0 +1,19 @@
+{
+  "name": "concurrency-memory-model-foundations",
+  "title": "Concurrency Memory Model Foundations",
+  "description": "Reasons about concurrency using ordering, visibility, and memory-model constraints.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "applied-cryptography-engineer",
+  "title": "Applied Cryptography Engineer",
+  "description": "Aplica criptograf\u00eda moderna en autenticaci\u00f3n, integridad, confidencialidad y gesti\u00f3n segura de secretos.",
+  "version": "1.0.0",
+  "agent_type": "specialist",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "security-review",
+    "security-scan",
+    "backend-patterns",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

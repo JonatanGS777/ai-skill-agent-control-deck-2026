@@ -1,0 +1,56 @@
+{
+  "name": "robotics-autonomous-mission-orchestration-exceptional-agent-2026",
+  "title": "Robotics Autonomous Mission Orchestration Exceptional Agent 2026",
+  "description": "Agente de robotica excepcional para disenar sistemas autonomos robustos con control seguro, observabilidad y validacion integral.",
+  "version": "1.0.0",
+  "agent_type": "orchestrator",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "robotics",
+    "autonomy",
+    "control",
+    "exceptional",
+    "2026"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "robotics-autonomous-mission-orchestration-skill-2026",
+    "robotics-multi-robot-coordination-skill-2026",
+    "robotics-swarm-robotics-protocols-skill-2026",
+    "optimization-foundations",
+    "probability-foundations",
+    "numerical-stability-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "numerical-stability-foundations",
+  "title": "Numerical Stability Foundations",
+  "description": "Ensures numerical methods are stable, bounded, and robust against floating-point error.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

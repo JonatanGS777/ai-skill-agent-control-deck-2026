@@ -1,0 +1,28 @@
+{
+  "name": "robotics-motion-planning-search-skill-2026",
+  "title": "Robotics Motion Planning Search Skill 2026",
+  "description": "Implementa practicas de robotica de alto nivel para motion planning search con seguridad, precision y control verificable de extremo a extremo.",
+  "version": "1.0.0",
+  "domain": "robotics",
+  "quality_tier": "expert",
+  "tags": [
+    "robotics",
+    "autonomy",
+    "control",
+    "2026",
+    "systems"
+  ],
+  "foundation_skills": [
+    "optimization-foundations",
+    "probability-foundations",
+    "graph-theory-foundations",
+    "numerical-stability-foundations",
+    "testing-verification-foundations",
+    "distributed-systems-consistency-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

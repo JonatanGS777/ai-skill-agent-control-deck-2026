@@ -1,0 +1,36 @@
+{
+  "name": "optimization-operations-research-specialist",
+  "title": "Optimization Operations Research Specialist",
+  "description": "Especialista en optimizaci\u00f3n matem\u00e1tica y research operations para decisiones complejas.",
+  "version": "1.0.0",
+  "agent_type": "specialist",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "python-testing",
+    "backend-patterns",
+    "verification-loop",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

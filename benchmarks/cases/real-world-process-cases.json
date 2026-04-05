@@ -1,0 +1,75 @@
+[
+  {
+    "id": "automation-enterprise-ops",
+    "description": "Enterprise process automation across policy, orchestration, and execution.",
+    "required_skill_prefixes": [
+      "automation-workflow-orchestration-skill-2026",
+      "automation-enterprise-policy-automation-skill-2026",
+      "automation-api-integration-automation-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "automation-workflow-orchestration-orchestrator-ai-agent-2026",
+      "automation-workflow-orchestration-executor-ai-agent-2026"
+    ]
+  },
+  {
+    "id": "chatbot-enterprise-support",
+    "description": "Enterprise chatbot stack with routing, fallback, and operations.",
+    "required_skill_prefixes": [
+      "chatbot-conversational-design-skill-2026",
+      "chatbot-prompt-routing-strategies-skill-2026",
+      "chatbot-chatbot-fallback-escalation-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "chatbot-conversational-design-designer-ai-agent-2026",
+      "chatbot-conversational-design-operator-ai-agent-2026"
+    ]
+  },
+  {
+    "id": "domain-healthcare-ai",
+    "description": "Domain-specific AI strategy and implementation for healthcare assistants.",
+    "required_skill_prefixes": [
+      "ai-domain-healthcare-assistant-systems-skill-2026",
+      "automation-workflow-orchestration-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "ai-healthcare-assistant-systems-strategist-ai-agent-2026"
+    ]
+  },
+  {
+    "id": "domain-finance-ai",
+    "description": "Finance AI coverage including strategy and operational controls.",
+    "required_skill_prefixes": [
+      "ai-domain-finance-analysis-copilots-skill-2026",
+      "automation-finance-ops-automation-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "ai-finance-analysis-copilots-strategist-ai-agent-2026",
+      "automation-finance-ops-automation-orchestrator-ai-agent-2026"
+    ]
+  },
+  {
+    "id": "domain-cybersecurity-ai",
+    "description": "Cybersecurity AI operations with guardrails and deployment controls.",
+    "required_skill_prefixes": [
+      "ai-domain-cybersecurity-operations-ai-skill-2026",
+      "chatbot-chatbot-security-hardening-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "ai-cybersecurity-operations-ai-builder-ai-agent-2026"
+    ]
+  },
+  {
+    "id": "cross-stack-process-flow",
+    "description": "Logical process flow from foundational reasoning to automation and AI domains.",
+    "required_skill_prefixes": [
+      "logic-of-programs-hoare",
+      "testing-verification-foundations",
+      "automation-agentic-workflow-automation-skill-2026"
+    ],
+    "required_agent_fragments": [
+      "automation-agentic-workflow-automation-orchestrator-ai-agent-2026",
+      "ai-supply-chain-control-tower-ai-builder-ai-agent-2026"
+    ]
+  }
+]

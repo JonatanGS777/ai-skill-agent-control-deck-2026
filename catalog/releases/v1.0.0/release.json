@@ -1,0 +1,24 @@
+{
+  "version": "v1.0.0",
+  "released_at": "2026-04-05T02:30:16.073943+00:00",
+  "channel": "stable",
+  "benchmark_status": "healthy",
+  "benchmark_pass_rate": 100.0,
+  "repository_quality_status": "healthy",
+  "skills_count": 321,
+  "local_skills_count": 203,
+  "agents_count": 196,
+  "packs": [
+    {
+      "name": "ai-factory-pack-2026",
+      "skills": 70,
+      "agents": 100
+    },
+    {
+      "name": "exceptional-pack-2026",
+      "skills": 100,
+      "agents": 70
+    }
+  ],
+  "notes": ""
+}

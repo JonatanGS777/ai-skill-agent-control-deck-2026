@@ -1,0 +1,72 @@
+name: Release Bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Semantic version (optional, e.g. v1.2.3)
+        required: false
+        type: string
+      channel:
+        description: Release channel
+        required: false
+        default: stable
+        type: choice
+        options:
+          - stable
+          - candidate
+          - experimental
+      notes:
+        description: Optional release notes text
+        required: false
+        type: string
+      strict:
+        description: Require healthy benchmark and repository quality
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Quality Gate
+        run: |
+          make quality
+
+      - name: Generate Release Bundle
+        shell: bash
+        run: |
+          ARGS=(--channel "${{ inputs.channel }}" --notes "${{ inputs.notes }}")
+
+          if [ -n "${{ inputs.version }}" ]; then
+            ARGS+=(--version "${{ inputs.version }}")
+          fi
+
+          if [ "${{ inputs.strict }}" = "true" ]; then
+            ARGS+=(--strict)
+          fi
+
+          python scripts/generate_release_bundle.py "${ARGS[@]}"
+          python scripts/build_docs_portal.py
+
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-bundle
+          path: |
+            catalog/releases
+            catalog/releases/releases-index.json
+            CHANGELOG.md
+            catalog/benchmark-results.json
+            catalog/repository-quality.md
+            docs/portal/index.html

@@ -1,0 +1,56 @@
+{
+  "name": "automation-finance-ops-automation-executor-ai-agent-2026",
+  "title": "Automation Finance Ops Automation Executor Ai Agent 2026",
+  "description": "Ejecuta implementaciones automatizadas con foco en integracion segura, pruebas verificables y despliegue mantenible.",
+  "version": "1.0.0",
+  "agent_type": "builder",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "automation",
+    "builder",
+    "ai-agent",
+    "2026",
+    "execution"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "automation-finance-ops-automation-skill-2026",
+    "automation-api-integration-automation-skill-2026",
+    "automation-task-prioritization-engines-skill-2026",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "recursion-induction-foundations",
+    "logic-of-programs-hoare"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

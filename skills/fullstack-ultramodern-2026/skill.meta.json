@@ -1,0 +1,30 @@
+{
+  "name": "fullstack-ultramodern-2026",
+  "title": "Fullstack Ultramodern 2026",
+  "description": "Construye productos full stack 2026 con React 19, TypeScript, Tailwind y arquitectura moderna de producci\u00f3n.",
+  "version": "1.2.0",
+  "domain": "fullstack",
+  "quality_tier": "expert",
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md",
+  "tags": [
+    "fullstack",
+    "react-19",
+    "typescript",
+    "tailwind",
+    "architecture",
+    "production-ready",
+    "2026"
+  ],
+  "foundation_skills": [
+    "logic-of-programs-hoare",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations",
+    "distributed-systems-consistency-foundations"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "set-theory-foundations",
+  "title": "Set Theory Foundations",
+  "description": "Models problems with sets, subsets, unions, intersections, and cardinal reasoning.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

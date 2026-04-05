@@ -1,0 +1,28 @@
+{
+  "name": "programming-infrastructure-as-code-patterns-skill-2026",
+  "title": "Programming Infrastructure As Code Patterns Skill 2026",
+  "description": "Aplica ingenieria de software moderna para infrastructure as code patterns con foco en robustez, mantenibilidad y excelencia operacional.",
+  "version": "1.0.0",
+  "domain": "programming",
+  "quality_tier": "advanced",
+  "tags": [
+    "programming",
+    "software-engineering",
+    "architecture",
+    "2026",
+    "production"
+  ],
+  "foundation_skills": [
+    "algorithm-correctness-invariants",
+    "complexity-analysis-foundations",
+    "type-systems-foundations",
+    "debugging-causal-reasoning-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

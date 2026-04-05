@@ -1,0 +1,19 @@
+{
+  "name": "type-systems-foundations",
+  "title": "Type Systems Foundations",
+  "description": "Applies type-theoretic reasoning for sound interfaces and compile-time correctness.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "mathematics-control-theoretic-math-skill-2026",
+  "title": "Mathematics Control Theoretic Math Skill 2026",
+  "description": "Desarrolla soluciones matematicas avanzadas para control theoretic math con rigor formal, validacion reproducible y decisiones auditables.",
+  "version": "1.0.0",
+  "domain": "mathematics",
+  "quality_tier": "advanced",
+  "tags": [
+    "mathematics",
+    "logic",
+    "proof",
+    "2026",
+    "high-rigor"
+  ],
+  "foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "complexity-analysis-foundations",
+    "testing-verification-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

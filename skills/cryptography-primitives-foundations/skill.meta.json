@@ -1,0 +1,19 @@
+{
+  "name": "cryptography-primitives-foundations",
+  "title": "Cryptography Primitives Foundations",
+  "description": "Applies primitive-level crypto reasoning for secure protocols and key handling.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

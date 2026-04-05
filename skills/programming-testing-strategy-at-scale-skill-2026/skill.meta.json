@@ -1,0 +1,28 @@
+{
+  "name": "programming-testing-strategy-at-scale-skill-2026",
+  "title": "Programming Testing Strategy At Scale Skill 2026",
+  "description": "Aplica ingenieria de software moderna para testing strategy at scale con foco en robustez, mantenibilidad y excelencia operacional.",
+  "version": "1.0.0",
+  "domain": "programming",
+  "quality_tier": "advanced",
+  "tags": [
+    "programming",
+    "software-engineering",
+    "architecture",
+    "2026",
+    "production"
+  ],
+  "foundation_skills": [
+    "algorithm-correctness-invariants",
+    "complexity-analysis-foundations",
+    "type-systems-foundations",
+    "debugging-causal-reasoning-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

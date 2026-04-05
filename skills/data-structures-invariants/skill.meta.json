@@ -1,0 +1,19 @@
+{
+  "name": "data-structures-invariants",
+  "title": "Data Structures Invariants",
+  "description": "Maintains structural invariants in data structures and checks edge-case integrity.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

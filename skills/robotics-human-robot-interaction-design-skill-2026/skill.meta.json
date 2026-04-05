@@ -1,0 +1,28 @@
+{
+  "name": "robotics-human-robot-interaction-design-skill-2026",
+  "title": "Robotics Human Robot Interaction Design Skill 2026",
+  "description": "Implementa practicas de robotica de alto nivel para human robot interaction design con seguridad, precision y control verificable de extremo a extremo.",
+  "version": "1.0.0",
+  "domain": "robotics",
+  "quality_tier": "expert",
+  "tags": [
+    "robotics",
+    "autonomy",
+    "control",
+    "2026",
+    "systems"
+  ],
+  "foundation_skills": [
+    "optimization-foundations",
+    "probability-foundations",
+    "graph-theory-foundations",
+    "numerical-stability-foundations",
+    "testing-verification-foundations",
+    "distributed-systems-consistency-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

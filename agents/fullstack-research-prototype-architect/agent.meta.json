@@ -1,0 +1,36 @@
+{
+  "name": "fullstack-research-prototype-architect",
+  "title": "Fullstack Research Prototype Architect",
+  "description": "Arquitecto para prototipos full stack de investigaci\u00f3n con velocidad, rigor t\u00e9cnico y escalabilidad inicial.",
+  "version": "1.0.0",
+  "agent_type": "orchestrator",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "fullstack-ultramodern-2026",
+    "frontend-ultramodern-2026",
+    "api-design",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "chatbot-retrieval-augmented-chat-designer-ai-agent-2026",
+  "title": "Chatbot Retrieval Augmented Chat Designer Ai Agent 2026",
+  "description": "Disena experiencias conversacionales modernas con coherencia de persona, contexto persistente y contratos de salida robustos.",
+  "version": "1.0.0",
+  "agent_type": "specialist",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "max",
+  "tags": [
+    "chatbot",
+    "designer",
+    "ai-agent",
+    "2026",
+    "conversation"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "chatbot-retrieval-augmented-chat-skill-2026",
+    "chatbot-conversational-design-skill-2026",
+    "chatbot-prompt-routing-strategies-skill-2026",
+    "chatbot-persona-consistency-engine-skill-2026",
+    "logic-predicate-quantifiers",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "logic-of-programs-hoare"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "logic-proof-strategies",
+    "set-theory-foundations",
+    "relations-functions-foundations",
+    "discrete-structures-core",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "recursion-induction-foundations",
+    "type-systems-foundations",
+    "logic-of-programs-hoare",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations",
+    "distributed-systems-consistency-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}

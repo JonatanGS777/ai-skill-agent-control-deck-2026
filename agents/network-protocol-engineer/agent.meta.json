@@ -1,0 +1,36 @@
+{
+  "name": "network-protocol-engineer",
+  "title": "Network Protocol Engineer",
+  "description": "Dise\u00f1a e implementa protocolos de red robustos con observabilidad y garant\u00edas de compatibilidad.",
+  "version": "1.0.0",
+  "agent_type": "builder",
+  "skill_mode": "explicit",
+  "logic_foundation_mode": "standard",
+  "tags": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "AGENT.md",
+  "skills": [
+    "api-design",
+    "backend-patterns",
+    "security-review",
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "logic_foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-proof-strategies",
+    "complexity-analysis-foundations",
+    "algorithm-correctness-invariants",
+    "type-systems-foundations",
+    "testing-verification-foundations",
+    "debugging-causal-reasoning-foundations"
+  ]
+}

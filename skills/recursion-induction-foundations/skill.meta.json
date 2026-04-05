@@ -1,0 +1,19 @@
+{
+  "name": "recursion-induction-foundations",
+  "title": "Recursion Induction Foundations",
+  "description": "Solves problems with recursion and validates them through induction principles.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "formal-languages-automata",
+  "title": "Formal Languages Automata",
+  "description": "Uses automata and grammar reasoning for parsing, validation, and language constraints.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

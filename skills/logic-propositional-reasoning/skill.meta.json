@@ -1,0 +1,19 @@
+{
+  "name": "logic-propositional-reasoning",
+  "title": "Logic Propositional Reasoning",
+  "description": "Builds solutions using propositional logic, truth conditions, and contradiction checks.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

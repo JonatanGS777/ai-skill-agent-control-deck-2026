@@ -1,0 +1,19 @@
+{
+  "name": "debugging-causal-reasoning-foundations",
+  "title": "Debugging Causal Reasoning Foundations",
+  "description": "Uses causal reasoning to isolate root causes and avoid symptom-only fixes.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

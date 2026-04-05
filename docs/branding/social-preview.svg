@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="AI Skill and Agent Control Deck 2026">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08131c"/>
+      <stop offset="60%" stop-color="#0f2433"/>
+      <stop offset="100%" stop-color="#143648"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="82%" cy="8%" r="52%">
+      <stop offset="0%" stop-color="#22c1ff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#22c1ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="16%" cy="84%" r="48%">
+      <stop offset="0%" stop-color="#ff8b63" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#ff8b63" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c1ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ff8b63" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#g1)"/>
+  <rect width="1280" height="640" fill="url(#g2)"/>
+
+  <g opacity="0.26" stroke="#8bdfff" stroke-width="1">
+    <path d="M0 120 H1280"/>
+    <path d="M0 220 H1280"/>
+    <path d="M0 320 H1280"/>
+    <path d="M0 420 H1280"/>
+    <path d="M0 520 H1280"/>
+  </g>
+
+  <g transform="translate(88 88)">
+    <rect x="0" y="0" width="1104" height="464" rx="28" fill="#0a1a25" fill-opacity="0.62" stroke="#2f4d60"/>
+
+    <text x="56" y="108" fill="#8bdfff" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" letter-spacing="4">PUBLIC REPOSITORY</text>
+    <text x="56" y="188" fill="#e4edf5" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="64" font-weight="700">AI Skill &amp; Agent</text>
+    <text x="56" y="256" fill="#22c1ff" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="64" font-weight="700">Control Deck 2026</text>
+
+    <text x="56" y="324" fill="#9cb2c3" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="28">Benchmark-driven · Regression-safe · Release-ready</text>
+
+    <g transform="translate(56 356)">
+      <rect x="0" y="0" width="292" height="66" rx="33" fill="#0d2c3d" stroke="#2e5770"/>
+      <text x="146" y="42" text-anchor="middle" fill="#8bdfff" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700">203 Skills</text>
+
+      <rect x="320" y="0" width="292" height="66" rx="33" fill="#132e22" stroke="#2f6b50"/>
+      <text x="466" y="42" text-anchor="middle" fill="#95e6bc" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700">196 Agents</text>
+
+      <rect x="640" y="0" width="392" height="66" rx="33" fill="#3a221a" stroke="#7c4b39"/>
+      <text x="836" y="42" text-anchor="middle" fill="#ffc0ab" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="700">Quality Dashboard + Portal</text>
+    </g>
+  </g>
+
+  <path d="M96 566 H1184" stroke="url(#line)" stroke-width="4" opacity="0.9"/>
+</svg>

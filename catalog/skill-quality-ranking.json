@@ -1,0 +1,2239 @@
+{
+  "generated_at": "2026-04-05T02:47:35.763545+00:00",
+  "status": "healthy",
+  "items": [
+    {
+      "slug": "fullstack-ultramodern-2026",
+      "total_score": 98.6,
+      "scores": {
+        "logic": 100.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 93.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-agritech-decision-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-biotech-research-acceleration-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-climate-risk-analytics-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-customer-success-ai-operations-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-cybersecurity-operations-ai-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-ecommerce-conversion-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-education-tutoring-platforms-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-energy-demand-forecasting-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-entertainment-production-ai-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-finance-analysis-copilots-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-government-service-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-healthcare-assistant-systems-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-hospitality-service-assistants-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-hr-recruiting-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-insurance-claims-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-legal-research-assistants-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-logistics-optimization-control-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-manufacturing-quality-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-marketing-campaign-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-media-content-studio-ai-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-mobility-routing-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-nonprofit-impact-analytics-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-product-management-copilot-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-public-safety-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-real-estate-market-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-research-lab-orchestration-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-retail-personalization-engines-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-sports-performance-intelligence-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-supply-chain-control-tower-ai-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "ai-domain-travel-planning-assistants-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-api-integration-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-automation-risk-controls-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-crm-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-data-pipeline-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-devops-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-document-processing-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-enterprise-policy-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-etl-observability-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-event-driven-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-finance-ops-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-hr-ops-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-incident-response-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-no-code-automation-architecture-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-process-mining-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-qa-automation-systems-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-rpa-pipeline-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-sales-funnel-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-task-prioritization-engines-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-ab-testing-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-analytics-pipeline-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-evaluation-metrics-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-fallback-escalation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-chatbot-security-hardening-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-conversational-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-enterprise-knowledge-chatbots-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multi-turn-memory-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-multilingual-chatbot-systems-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-omnichannel-chat-platform-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-persona-consistency-engine-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-prompt-routing-strategies-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-realtime-chat-infrastructure-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-retrieval-augmented-chat-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sales-chatbot-operations-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-sentiment-aware-dialog-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-support-chatbot-operations-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-tool-calling-orchestration-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-voice-chatbot-orchestration-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-advanced-data-structures-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-ai-assisted-software-delivery-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-algorithm-design-architectures-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-api-contract-governance-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-authentication-authorization-flows-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-ci-cd-quality-automation-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-cloud-native-service-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-compiler-pipeline-construction-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-concurrency-safe-programming-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-continuous-delivery-architecture-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-database-system-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-distributed-backend-patterns-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-event-driven-system-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-fullstack-product-engineering-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-high-performance-computing-patterns-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-infrastructure-as-code-patterns-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-legacy-modernization-tactics-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-memory-model-practice-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-microservices-resilience-patterns-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-observability-driven-debugging-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-parser-and-ast-engineering-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-program-analysis-correctness-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-property-based-testing-engineering-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-query-optimization-practice-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-react-typescript-architecture-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-refactoring-large-codebases-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-reliability-engineering-for-services-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-secure-coding-and-hardening-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-static-analysis-frameworks-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-tailwind-design-system-engineering-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-testing-strategy-at-scale-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-type-system-driven-design-skill-2026",
+      "total_score": 97.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "frontend-ultramodern-2026",
+      "total_score": 96.85,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 93.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-mobile-robot-safety-skill-2026",
+      "total_score": 92.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 75.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "svg-architecture-linkedin-2026",
+      "total_score": 91.9,
+      "scores": {
+        "logic": 90.0,
+        "clarity": 100.0,
+        "security": 90.0,
+        "utility": 87.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-agentic-workflow-automation-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "automation-workflow-orchestration-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-axiomatic-set-reasoning-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-bayesian-inference-systems-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-calculus-of-variations-core-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-category-theory-programming-bridge-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-combinatorial-optimization-design-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-control-theoretic-math-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-convex-optimization-toolkit-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-differential-equation-modeling-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-diophantine-equation-logic-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-discrete-probability-modeling-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-dynamic-programming-math-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-eigen-structure-analysis-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-entropy-and-divergence-analysis-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-formal-proof-strategy-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-formal-verification-mathematics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-geometric-computation-math-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-graph-spectral-analysis-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-hypothesis-testing-design-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-induction-proof-engineering-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-information-theory-foundations-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-linear-algebraic-transforms-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-mathematical-model-audit-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-matrix-factorization-reasoning-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-measure-theory-for-engineers-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-modular-arithmetic-design-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-nonlinear-programming-analysis-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-number-theory-algorithms-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-numerical-method-stability-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-predicate-logic-modeling-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-recurrence-relation-solving-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-signal-processing-mathematics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-statistical-estimation-rigour-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-stochastic-process-derivation-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "mathematics-topological-data-insight-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "programming-domain-driven-design-workflows-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 75.0,
+        "clarity": 100.0,
+        "security": 100.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-autonomous-mission-orchestration-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-computer-vision-for-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-digital-twin-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-edge-compute-for-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-embedded-ai-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-ethical-robotic-deployment-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-fault-tolerant-robot-control-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-grasp-synthesis-methods-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-human-robot-interaction-design-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-humanoid-motion-intelligence-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-industrial-robot-automation-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-legged-robot-stability-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-lidar-perception-pipelines-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-motion-planning-search-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-multi-robot-coordination-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-nonlinear-control-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-optimal-control-robotics-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-real-time-robotic-systems-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-dynamics-simulation-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-kinematics-modeling-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-manipulation-planning-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robot-navigation-stack-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robotics-performance-benchmarking-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robotics-systems-integration-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-robotics-testing-verification-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-ros2-architecture-practice-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-sensor-fusion-pipelines-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-slam-system-architecture-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-state-estimation-and-filtering-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-swarm-robotics-protocols-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-trajectory-planning-systems-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "robotics-visual-slam-engineering-skill-2026",
+      "total_score": 90.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "chatbot-compliance-chatbot-guardrails-skill-2026",
+      "total_score": 89.05,
+      "scores": {
+        "logic": 95.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 94.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "cryptography-primitives-foundations",
+      "total_score": 78.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "logic-of-programs-hoare",
+      "total_score": 78.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "security-threat-modeling-foundations",
+      "total_score": 78.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 65.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "algorithm-correctness-invariants",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "combinatorics-counting-principles",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "complexity-analysis-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "computability-decidability",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "concurrency-memory-model-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "data-structures-invariants",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "database-theory-normalization",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "debugging-causal-reasoning-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "discrete-structures-core",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "distributed-systems-consistency-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "formal-languages-automata",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "functional-programming-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "graph-theory-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "linear-algebra-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "logic-predicate-quantifiers",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "logic-proof-strategies",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "logic-propositional-reasoning",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "number-theory-modular-arithmetic",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "numerical-stability-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "optimization-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "probability-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "recursion-induction-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "relations-functions-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "set-theory-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "statistics-inference-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "testing-verification-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "type-systems-foundations",
+      "total_score": 77.7,
+      "scores": {
+        "logic": 70.0,
+        "clarity": 100.0,
+        "security": 60.0,
+        "utility": 81.0
+      },
+      "pass_thresholds": true
+    }
+  ]
+}

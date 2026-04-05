@@ -1,0 +1,19 @@
+{
+  "name": "combinatorics-counting-principles",
+  "title": "Combinatorics Counting Principles",
+  "description": "Uses permutations, combinations, and counting arguments to validate solution spaces.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

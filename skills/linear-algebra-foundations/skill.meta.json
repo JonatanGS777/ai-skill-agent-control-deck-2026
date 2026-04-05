@@ -1,0 +1,19 @@
+{
+  "name": "linear-algebra-foundations",
+  "title": "Linear Algebra Foundations",
+  "description": "Uses vector and matrix reasoning for transformations, constraints, and model formulation.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

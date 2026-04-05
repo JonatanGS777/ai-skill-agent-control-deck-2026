@@ -1,0 +1,28 @@
+{
+  "name": "chatbot-multilingual-chatbot-systems-skill-2026",
+  "title": "Chatbot Multilingual Chatbot Systems Skill 2026",
+  "description": "Construye chatbots de alto rendimiento para multilingual chatbot systems con dialogo robusto, guardrails claros y monitoreo continuo de calidad.",
+  "version": "1.0.0",
+  "domain": "chatbot-ai",
+  "quality_tier": "expert",
+  "tags": [
+    "chatbot",
+    "conversational-ai",
+    "llm",
+    "guardrails",
+    "2026"
+  ],
+  "foundation_skills": [
+    "logic-propositional-reasoning",
+    "logic-predicate-quantifiers",
+    "type-systems-foundations",
+    "probability-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

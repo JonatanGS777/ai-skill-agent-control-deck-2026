@@ -1,0 +1,19 @@
+{
+  "name": "complexity-analysis-foundations",
+  "title": "Complexity Analysis Foundations",
+  "description": "Performs asymptotic analysis and tradeoff justification for algorithmic decisions.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

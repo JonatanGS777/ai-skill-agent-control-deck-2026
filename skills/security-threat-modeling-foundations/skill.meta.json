@@ -1,0 +1,19 @@
+{
+  "name": "security-threat-modeling-foundations",
+  "title": "Security Threat Modeling Foundations",
+  "description": "Builds threat models with attacker capability analysis and control-mapping logic.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

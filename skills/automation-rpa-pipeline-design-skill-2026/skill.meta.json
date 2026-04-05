@@ -1,0 +1,28 @@
+{
+  "name": "automation-rpa-pipeline-design-skill-2026",
+  "title": "Automation Rpa Pipeline Design Skill 2026",
+  "description": "Disena procesos automatizados para rpa pipeline design con control logico, trazabilidad completa y validacion operativa de extremo a extremo.",
+  "version": "1.0.0",
+  "domain": "automation-ai",
+  "quality_tier": "advanced",
+  "tags": [
+    "automation",
+    "process",
+    "ai",
+    "orchestration",
+    "2026"
+  ],
+  "foundation_skills": [
+    "logic-of-programs-hoare",
+    "algorithm-correctness-invariants",
+    "distributed-systems-consistency-foundations",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations",
+    "debugging-causal-reasoning-foundations"
+  ],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

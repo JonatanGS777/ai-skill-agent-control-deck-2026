@@ -1,0 +1,19 @@
+{
+  "name": "optimization-foundations",
+  "title": "Optimization Foundations",
+  "description": "Frames optimization problems with objective functions, constraints, and feasibility logic.",
+  "version": "1.0.0",
+  "domain": "math-programming-logic",
+  "quality_tier": "expert",
+  "tags": [
+    "logic",
+    "mathematics",
+    "programming-foundation"
+  ],
+  "foundation_skills": [],
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md"
+}

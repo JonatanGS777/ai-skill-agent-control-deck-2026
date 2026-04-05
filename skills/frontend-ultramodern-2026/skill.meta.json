@@ -1,0 +1,27 @@
+{
+  "name": "frontend-ultramodern-2026",
+  "title": "Frontend Ultramodern 2026",
+  "description": "Dise\u00f1a interfaces frontend ultramodernas, adaptables al brief, con lenguaje visual distintivo y sin patrones gen\u00e9ricos de IA.",
+  "version": "1.2.0",
+  "domain": "frontend",
+  "quality_tier": "expert",
+  "compatibility": [
+    "claude-code",
+    "codex"
+  ],
+  "entrypoint": "SKILL.md",
+  "tags": [
+    "frontend",
+    "ui-design",
+    "design-systems",
+    "ultramodern",
+    "2026",
+    "anti-generic-ai"
+  ],
+  "foundation_skills": [
+    "logic-propositional-reasoning",
+    "algorithm-correctness-invariants",
+    "testing-verification-foundations",
+    "security-threat-modeling-foundations"
+  ]
+}
