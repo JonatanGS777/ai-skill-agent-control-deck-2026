@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="808" height="496" viewBox="0 0 808 496">
+<defs><style>.p0{animation:fs 0.5s ease 0.00s both;}.p1{animation:fs 0.5s ease 0.07s both;}.p2{animation:fs 0.5s ease 0.14s both;}.p3{animation:fs 0.5s ease 0.21s both;}.p4{animation:fs 0.5s ease 0.28s both;}.p5{animation:fs 0.5s ease 0.35s both;}.p6{animation:fs 0.5s ease 0.42s both;}.p7{animation:fs 0.5s ease 0.49s both;}.p8{animation:fs 0.5s ease 0.56s both;}.p9{animation:fs 0.5s ease 0.63s both;}.p10{animation:fs 0.5s ease 0.70s both;}.p11{animation:fs 0.5s ease 0.77s both;}.p12{animation:fs 0.5s ease 0.84s both;}.p13{animation:fs 0.5s ease 0.91s both;}.p14{animation:fs 0.5s ease 0.98s both;}@keyframes fs{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}</style></defs>
+<rect width="808" height="496" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<text x="404" y="30" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="14" font-weight="bold" fill="#1f2328">Domain Coverage</text>
+<text x="404" y="48" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">15 domains · 399 artifacts · 100% pass rate</text>
+<g class="p0">
+<rect x="28" y="72" width="240" height="64" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+<rect x="28" y="72" width="5" height="64" rx="12" fill="#22c55e"/>
+<text x="48" y="98" font-size="16" dominant-baseline="middle" font-family="serif">&#9889;</text>
+<text x="70" y="93" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#15803d">Full Stack</text>
+<text x="70" y="107" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">1 artifacts</text>
+<text x="258" y="95" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#15803d">98.6</text>
+<rect x="44" y="122" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="44" y="122" width="197.6" height="5" rx="3" fill="#22c55e" opacity="0.85"/>
+</g>
+<g class="p1">
+<rect x="284" y="72" width="240" height="64" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+<rect x="284" y="72" width="5" height="64" rx="12" fill="#3b82f6"/>
+<text x="304" y="98" font-size="16" dominant-baseline="middle" font-family="serif">&#129504;</text>
+<text x="326" y="93" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#1d4ed8">Applied AI</text>
+<text x="326" y="107" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">30 artifacts</text>
+<text x="514" y="95" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#1d4ed8">97.0</text>
+<rect x="300" y="122" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="300" y="122" width="186.1" height="5" rx="3" fill="#3b82f6" opacity="0.85"/>
+</g>
+<g class="p2">
+<rect x="540" y="72" width="240" height="64" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+<rect x="540" y="72" width="5" height="64" rx="12" fill="#22c55e"/>
+<text x="560" y="98" font-size="16" dominant-baseline="middle" font-family="serif">&#127912;</text>
+<text x="582" y="93" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#15803d">Frontend</text>
+<text x="582" y="107" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">1 artifacts</text>
+<text x="770" y="95" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#15803d">96.8</text>
+<rect x="556" y="122" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="556" y="122" width="184.6" height="5" rx="3" fill="#22c55e" opacity="0.85"/>
+</g>
+<g class="p3">
+<rect x="28" y="150" width="240" height="64" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+<rect x="28" y="150" width="5" height="64" rx="12" fill="#22c55e"/>
+<text x="48" y="176" font-size="16" dominant-baseline="middle" font-family="serif">&#128187;</text>
+<text x="70" y="171" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#15803d">Programming</text>
+<text x="70" y="185" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">33 artifacts</text>
+<text x="258" y="173" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#15803d">96.8</text>
+<rect x="44" y="200" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="44" y="200" width="184.5" height="5" rx="3" fill="#22c55e" opacity="0.85"/>
+</g>
+<g class="p4">
+<rect x="284" y="150" width="240" height="64" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+<rect x="284" y="150" width="5" height="64" rx="12" fill="#a855f7"/>
+<text x="304" y="176" font-size="16" dominant-baseline="middle" font-family="serif">&#128257;</text>
+<text x="326" y="171" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#7e22ce">Orchestrator</text>
+<text x="326" y="185" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">48 artifacts</text>
+<text x="514" y="173" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#7e22ce">96.8</text>
+<rect x="300" y="200" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="300" y="200" width="184.1" height="5" rx="3" fill="#a855f7" opacity="0.85"/>
+</g>
+<g class="p5">
+<rect x="540" y="150" width="240" height="64" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+<rect x="540" y="150" width="5" height="64" rx="12" fill="#3b82f6"/>
+<text x="560" y="176" font-size="16" dominant-baseline="middle" font-family="serif">&#128172;</text>
+<text x="582" y="171" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#1d4ed8">Chatbot AI</text>
+<text x="582" y="185" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">20 artifacts</text>
+<text x="770" y="173" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#1d4ed8">96.7</text>
+<rect x="556" y="200" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="556" y="200" width="183.1" height="5" rx="3" fill="#3b82f6" opacity="0.85"/>
+</g>
+<g class="p6">
+<rect x="28" y="228" width="240" height="64" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+<rect x="28" y="228" width="5" height="64" rx="12" fill="#3b82f6"/>
+<text x="48" y="254" font-size="16" dominant-baseline="middle" font-family="serif">&#9881;</text>
+<text x="70" y="249" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#1d4ed8">Automation AI</text>
+<text x="70" y="263" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">20 artifacts</text>
+<text x="258" y="251" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#1d4ed8">96.3</text>
+<rect x="44" y="278" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="44" y="278" width="180.9" height="5" rx="3" fill="#3b82f6" opacity="0.85"/>
+</g>
+<g class="p7">
+<rect x="284" y="228" width="240" height="64" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+<rect x="284" y="228" width="5" height="64" rx="12" fill="#a855f7"/>
+<text x="304" y="254" font-size="16" dominant-baseline="middle" font-family="serif">&#128027;</text>
+<text x="326" y="249" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#7e22ce">Debugger</text>
+<text x="326" y="263" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">30 artifacts</text>
+<text x="514" y="251" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#7e22ce">95.2</text>
+<rect x="300" y="278" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="300" y="278" width="172.1" height="5" rx="3" fill="#a855f7" opacity="0.85"/>
+</g>
+<g class="p8">
+<rect x="540" y="228" width="240" height="64" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+<rect x="540" y="228" width="5" height="64" rx="12" fill="#a855f7"/>
+<text x="560" y="254" font-size="16" dominant-baseline="middle" font-family="serif">&#128269;</text>
+<text x="582" y="249" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#7e22ce">Reviewer</text>
+<text x="582" y="263" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">27 artifacts</text>
+<text x="770" y="251" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#7e22ce">94.8</text>
+<rect x="556" y="278" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="556" y="278" width="169.3" height="5" rx="3" fill="#a855f7" opacity="0.85"/>
+</g>
+<g class="p9">
+<rect x="28" y="306" width="240" height="64" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+<rect x="28" y="306" width="5" height="64" rx="12" fill="#a855f7"/>
+<text x="48" y="332" font-size="16" dominant-baseline="middle" font-family="serif">&#127959;</text>
+<text x="70" y="327" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#7e22ce">Builder</text>
+<text x="70" y="341" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">50 artifacts</text>
+<text x="258" y="329" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#7e22ce">93.7</text>
+<rect x="44" y="356" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="44" y="356" width="161.2" height="5" rx="3" fill="#a855f7" opacity="0.85"/>
+</g>
+<g class="p10">
+<rect x="284" y="306" width="240" height="64" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+<rect x="284" y="306" width="5" height="64" rx="12" fill="#a855f7"/>
+<text x="304" y="332" font-size="16" dominant-baseline="middle" font-family="serif">&#127919;</text>
+<text x="326" y="327" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#7e22ce">Specialist</text>
+<text x="326" y="341" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">41 artifacts</text>
+<text x="514" y="329" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#7e22ce">93.0</text>
+<rect x="300" y="356" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="300" y="356" width="156.3" height="5" rx="3" fill="#a855f7" opacity="0.85"/>
+</g>
+<g class="p11">
+<rect x="540" y="306" width="240" height="64" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+<rect x="540" y="306" width="5" height="64" rx="12" fill="#22c55e"/>
+<text x="560" y="332" font-size="16" dominant-baseline="middle" font-family="serif">&#128208;</text>
+<text x="582" y="327" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#15803d">Visual Arch</text>
+<text x="582" y="341" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">1 artifacts</text>
+<text x="770" y="329" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#15803d">91.9</text>
+<rect x="556" y="356" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="556" y="356" width="147.8" height="5" rx="3" fill="#22c55e" opacity="0.85"/>
+</g>
+<g class="p12">
+<rect x="28" y="384" width="240" height="64" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+<rect x="28" y="384" width="5" height="64" rx="12" fill="#3b82f6"/>
+<text x="48" y="410" font-size="16" dominant-baseline="middle" font-family="serif">&#129302;</text>
+<text x="70" y="405" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#1d4ed8">Robotics</text>
+<text x="70" y="419" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">33 artifacts</text>
+<text x="258" y="407" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#1d4ed8">90.1</text>
+<rect x="44" y="434" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="44" y="434" width="134.5" height="5" rx="3" fill="#3b82f6" opacity="0.85"/>
+</g>
+<g class="p13">
+<rect x="284" y="384" width="240" height="64" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="1.2"/>
+<rect x="284" y="384" width="5" height="64" rx="12" fill="#f97316"/>
+<text x="304" y="410" font-size="16" dominant-baseline="middle" font-family="serif">&#8721;</text>
+<text x="326" y="405" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#c2410c">Mathematics</text>
+<text x="326" y="419" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">34 artifacts</text>
+<text x="514" y="407" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#c2410c">90.0</text>
+<rect x="300" y="434" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="300" y="434" width="134.1" height="5" rx="3" fill="#f97316" opacity="0.85"/>
+</g>
+<g class="p14">
+<rect x="540" y="384" width="240" height="64" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="1.2"/>
+<rect x="540" y="384" width="5" height="64" rx="12" fill="#f97316"/>
+<text x="560" y="410" font-size="16" dominant-baseline="middle" font-family="serif">&#8866;</text>
+<text x="582" y="405" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#c2410c">Logic Foundations</text>
+<text x="582" y="419" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">30 artifacts</text>
+<text x="770" y="407" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="16" font-weight="bold" fill="#c2410c">77.8</text>
+<rect x="556" y="434" width="208" height="5" rx="3" fill="rgba(0,0,0,0.08)"/>
+<rect x="556" y="434" width="43.1" height="5" rx="3" fill="#f97316" opacity="0.85"/>
+</g>
+<circle cx="33" cy="474" r="5" fill="#3b82f6"/>
+<text x="42" y="478" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">AI</text>
+<circle cx="71" cy="474" r="5" fill="#22c55e"/>
+<text x="80" y="478" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">Engineering</text>
+<circle cx="163" cy="474" r="5" fill="#a855f7"/>
+<text x="172" y="478" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">Agents</text>
+<circle cx="225" cy="474" r="5" fill="#f97316"/>
+<text x="234" y="478" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">Logic</text>
+</svg>

@@ -97,7 +97,7 @@ flowchart TD
 
 <div align="center">
 
-<img src="docs/branding/chart-domains.svg" alt="Domain Coverage Scores" width="780"/>
+<img src="docs/branding/chart-domain-pills.svg" alt="Domain Coverage" width="800"/>
 
 </div>
 
