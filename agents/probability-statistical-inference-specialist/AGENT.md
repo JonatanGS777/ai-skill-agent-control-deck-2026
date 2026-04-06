@@ -1,7 +1,7 @@
 ---
 name: "probability-statistical-inference-specialist"
 description: "Aplica inferencia estadística, modelado probabilístico y validación de hipótesis en sistemas reales."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

@@ -1,8 +1,8 @@
 {
   "name": "discrete-math-formal-logic-specialist",
   "title": "Discrete Math Formal Logic Specialist",
-  "description": "Especialista en lógica formal, razonamiento discreto y validación de propiedades críticas.",
-  "version": "1.0.0",
+  "description": "Especialista en l\u00f3gica formal, razonamiento discreto y validaci\u00f3n de propiedades cr\u00edticas.",
+  "version": "1.1.0",
   "agent_type": "reviewer",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

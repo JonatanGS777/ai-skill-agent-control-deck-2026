@@ -1,8 +1,8 @@
 {
   "name": "algorithmic-complexity-scientist",
   "title": "Algorithmic Complexity Scientist",
-  "description": "Especialista en diseño de algoritmos, análisis de complejidad temporal/espacial y decisiones de tradeoff computacional.",
-  "version": "1.0.0",
+  "description": "Especialista en dise\u00f1o de algoritmos, an\u00e1lisis de complejidad temporal/espacial y decisiones de tradeoff computacional.",
+  "version": "1.1.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

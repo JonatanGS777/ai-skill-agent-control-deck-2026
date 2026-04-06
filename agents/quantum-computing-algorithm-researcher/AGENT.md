@@ -1,7 +1,7 @@
 ---
 name: "quantum-computing-algorithm-researcher"
 description: "Explora algoritmos cuánticos, complejidad y estrategias híbridas clásicas-cuánticas."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

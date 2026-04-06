@@ -1,7 +1,7 @@
 ---
 name: "distributed-systems-consistency-architect"
 description: "Diseña sistemas distribuidos resilientes con estrategias de consistencia, particionado y tolerancia a fallos."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

@@ -1,7 +1,7 @@
 ---
 name: "algorithmic-complexity-scientist"
 description: "Especialista en diseño de algoritmos, análisis de complejidad temporal/espacial y decisiones de tradeoff computacional."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

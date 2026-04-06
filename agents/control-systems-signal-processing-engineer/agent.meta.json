@@ -1,8 +1,8 @@
 {
   "name": "control-systems-signal-processing-engineer",
   "title": "Control Systems Signal Processing Engineer",
-  "description": "Implementa soluciones de control y procesamiento de señales con estabilidad y precisión numérica.",
-  "version": "1.0.0",
+  "description": "Implementa soluciones de control y procesamiento de se\u00f1ales con estabilidad y precisi\u00f3n num\u00e9rica.",
+  "version": "1.1.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

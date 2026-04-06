@@ -1,7 +1,7 @@
 ---
 name: "computational-geometry-visualization-engineer"
 description: "Diseña algoritmos geométricos y visualizaciones de alta claridad para sistemas técnicos."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

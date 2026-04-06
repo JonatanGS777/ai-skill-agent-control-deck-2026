@@ -1,8 +1,8 @@
 {
   "name": "linear-algebra-numerical-methods-engineer",
   "title": "Linear Algebra Numerical Methods Engineer",
-  "description": "Implementa métodos numéricos estables para álgebra lineal aplicada y cómputo científico.",
-  "version": "1.0.0",
+  "description": "Implementa m\u00e9todos num\u00e9ricos estables para \u00e1lgebra lineal aplicada y c\u00f3mputo cient\u00edfico.",
+  "version": "1.1.0",
   "agent_type": "builder",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

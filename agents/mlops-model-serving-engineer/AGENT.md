@@ -1,7 +1,7 @@
 ---
 name: "mlops-model-serving-engineer"
 description: "Construye pipelines MLOps para entrenamiento, serving y monitoreo de modelos en producción."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

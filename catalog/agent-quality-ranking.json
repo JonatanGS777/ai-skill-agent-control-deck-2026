@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T20:32:22.352111+00:00",
+  "generated_at": "2026-04-06T00:22:59.922180+00:00",
   "status": "healthy",
   "items": [
     {
@@ -1807,133 +1807,12 @@
       "pass_thresholds": true
     },
     {
-      "slug": "cloud-native-systems-architect",
-      "total_score": 93.15,
-      "scores": {
-        "logic": 97.0,
-        "clarity": 100.0,
-        "security": 80.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "distributed-systems-consistency-architect",
-      "total_score": 93.15,
-      "scores": {
-        "logic": 97.0,
-        "clarity": 100.0,
-        "security": 80.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
       "slug": "fullstack-research-prototype-architect",
       "total_score": 93.15,
       "scores": {
         "logic": 97.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "llm-systems-architect",
-      "total_score": 93.15,
-      "scores": {
-        "logic": 97.0,
-        "clarity": 100.0,
-        "security": 80.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "algorithmic-complexity-scientist",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "applied-cryptography-engineer",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "compiler-and-language-tooling-specialist",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "computer-vision-pipeline-specialist",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "control-systems-signal-processing-engineer",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "cybersecurity-threat-modeler",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "database-query-optimization-specialist",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "graph-theory-algorithms-specialist",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
         "utility": 91.0
       },
       "pass_thresholds": true
@@ -1950,46 +1829,35 @@
       "pass_thresholds": true
     },
     {
-      "slug": "nlp-information-retrieval-scientist",
-      "total_score": 92.4,
+      "slug": "cloud-native-systems-architect",
+      "total_score": 91.95,
       "scores": {
-        "logic": 92.0,
+        "logic": 97.0,
         "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
+        "security": 80.0,
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
-      "slug": "optimization-operations-research-specialist",
-      "total_score": 92.4,
+      "slug": "distributed-systems-consistency-architect",
+      "total_score": 91.95,
       "scores": {
-        "logic": 92.0,
+        "logic": 97.0,
         "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
+        "security": 80.0,
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
-      "slug": "probability-statistical-inference-specialist",
-      "total_score": 92.4,
+      "slug": "llm-systems-architect",
+      "total_score": 91.95,
       "scores": {
-        "logic": 92.0,
+        "logic": 97.0,
         "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
-      },
-      "pass_thresholds": true
-    },
-    {
-      "slug": "quantum-computing-algorithm-researcher",
-      "total_score": 92.4,
-      "scores": {
-        "logic": 92.0,
-        "clarity": 100.0,
-        "security": 85.0,
-        "utility": 91.0
+        "security": 80.0,
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
@@ -2016,90 +1884,222 @@
       "pass_thresholds": true
     },
     {
+      "slug": "algorithmic-complexity-scientist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "applied-cryptography-engineer",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "compiler-and-language-tooling-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "computer-vision-pipeline-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "control-systems-signal-processing-engineer",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "cybersecurity-threat-modeler",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "database-query-optimization-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "graph-theory-algorithms-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "nlp-information-retrieval-scientist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "optimization-operations-research-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "probability-statistical-inference-specialist",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
+      "slug": "quantum-computing-algorithm-researcher",
+      "total_score": 91.2,
+      "scores": {
+        "logic": 92.0,
+        "clarity": 100.0,
+        "security": 85.0,
+        "utility": 85.0
+      },
+      "pass_thresholds": true
+    },
+    {
       "slug": "data-structures-performance-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "discrete-math-formal-logic-specialist",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "linear-algebra-numerical-methods-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "mlops-model-serving-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "network-protocol-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "operating-systems-concurrency-debugger",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "sre-reliability-observability-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },
     {
       "slug": "stochastic-simulation-monte-carlo-engineer",
-      "total_score": 91.4,
+      "total_score": 90.2,
       "scores": {
         "logic": 92.0,
         "clarity": 100.0,
         "security": 80.0,
-        "utility": 91.0
+        "utility": 85.0
       },
       "pass_thresholds": true
     },

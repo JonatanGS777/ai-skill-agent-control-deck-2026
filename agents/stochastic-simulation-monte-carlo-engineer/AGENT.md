@@ -1,7 +1,7 @@
 ---
 name: "stochastic-simulation-monte-carlo-engineer"
 description: "Desarrolla simulaciones estocásticas y métodos Monte Carlo para análisis de incertidumbre."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

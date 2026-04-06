@@ -25,7 +25,7 @@
   },
   "summary": {
     "status": "healthy",
-    "generated_at": "2026-04-05T20:32:22.352111+00:00",
+    "generated_at": "2026-04-06T00:22:59.922180+00:00",
     "skills_total": 203,
     "skills_passed": 203,
     "skills_failed": 0,
@@ -33,9 +33,9 @@
     "agents_passed": 196,
     "agents_failed": 0,
     "overall_pass_rate_percent": 100.0,
-    "average_score_all": 93.26,
+    "average_score_all": 93.19,
     "average_score_skills": 91.74,
-    "average_score_agents": 94.83
+    "average_score_agents": 94.69
   },
   "regression": {
     "status": "pass",
@@ -148,16 +148,6 @@
         "pass_rate_percent": 100.0
       },
       {
-        "domain": "orchestrator",
-        "total": 48,
-        "passed": 48,
-        "failed": 0,
-        "skills": 0,
-        "agents": 48,
-        "average_score": 96.85,
-        "pass_rate_percent": 100.0
-      },
-      {
         "domain": "programming",
         "total": 33,
         "passed": 33,
@@ -165,6 +155,16 @@
         "skills": 33,
         "agents": 0,
         "average_score": 96.84,
+        "pass_rate_percent": 100.0
+      },
+      {
+        "domain": "orchestrator",
+        "total": 48,
+        "passed": 48,
+        "failed": 0,
+        "skills": 0,
+        "agents": 48,
+        "average_score": 96.78,
         "pass_rate_percent": 100.0
       },
       {
@@ -194,7 +194,7 @@
         "failed": 0,
         "skills": 0,
         "agents": 30,
-        "average_score": 95.21,
+        "average_score": 95.17,
         "pass_rate_percent": 100.0
       },
       {
@@ -204,7 +204,7 @@
         "failed": 0,
         "skills": 0,
         "agents": 27,
-        "average_score": 94.93,
+        "average_score": 94.79,
         "pass_rate_percent": 100.0
       },
       {
@@ -214,7 +214,7 @@
         "failed": 0,
         "skills": 0,
         "agents": 50,
-        "average_score": 93.82,
+        "average_score": 93.7,
         "pass_rate_percent": 100.0
       },
       {
@@ -224,7 +224,7 @@
         "failed": 0,
         "skills": 0,
         "agents": 41,
-        "average_score": 93.36,
+        "average_score": 93.04,
         "pass_rate_percent": 100.0
       },
       {
@@ -774,56 +774,56 @@
       },
       {
         "slug": "mlops-model-serving-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true
       },
       {
         "slug": "network-protocol-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true
       },
       {
         "slug": "operating-systems-concurrency-debugger",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true
       },
       {
         "slug": "sre-reliability-observability-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true
       },
       {
         "slug": "stochastic-simulation-monte-carlo-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true
       }
@@ -7797,12 +7797,12 @@
         "kind": "agent",
         "slug": "algorithmic-complexity-scientist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/algorithmic-complexity-scientist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -7814,7 +7814,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/algorithmic-complexity-scientist/examples/prompts.md",
             "bullets": 3,
@@ -7826,12 +7826,12 @@
         "kind": "agent",
         "slug": "applied-cryptography-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/applied-cryptography-engineer",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -7843,7 +7843,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/applied-cryptography-engineer/examples/prompts.md",
             "bullets": 3,
@@ -9885,12 +9885,12 @@
         "kind": "agent",
         "slug": "cloud-native-systems-architect",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/cloud-native-systems-architect",
-        "total_score": 93.15,
+        "total_score": 91.95,
         "scores": {
           "logic": 97.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -9902,7 +9902,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/cloud-native-systems-architect/examples/prompts.md",
             "bullets": 3,
@@ -9914,12 +9914,12 @@
         "kind": "agent",
         "slug": "compiler-and-language-tooling-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/compiler-and-language-tooling-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -9931,7 +9931,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/compiler-and-language-tooling-specialist/examples/prompts.md",
             "bullets": 3,
@@ -9960,7 +9960,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 8,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/computational-geometry-visualization-engineer/examples/prompts.md",
             "bullets": 3,
@@ -9972,12 +9972,12 @@
         "kind": "agent",
         "slug": "computer-vision-pipeline-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/computer-vision-pipeline-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -9989,7 +9989,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/computer-vision-pipeline-specialist/examples/prompts.md",
             "bullets": 3,
@@ -10001,12 +10001,12 @@
         "kind": "agent",
         "slug": "control-systems-signal-processing-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/control-systems-signal-processing-engineer",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10018,7 +10018,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/control-systems-signal-processing-engineer/examples/prompts.md",
             "bullets": 3,
@@ -10030,12 +10030,12 @@
         "kind": "agent",
         "slug": "cybersecurity-threat-modeler",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/cybersecurity-threat-modeler",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10047,7 +10047,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/cybersecurity-threat-modeler/examples/prompts.md",
             "bullets": 3,
@@ -10059,12 +10059,12 @@
         "kind": "agent",
         "slug": "data-structures-performance-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/data-structures-performance-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10076,7 +10076,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/data-structures-performance-engineer/examples/prompts.md",
             "bullets": 3,
@@ -10088,12 +10088,12 @@
         "kind": "agent",
         "slug": "database-query-optimization-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/database-query-optimization-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10105,7 +10105,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/database-query-optimization-specialist/examples/prompts.md",
             "bullets": 3,
@@ -10117,12 +10117,12 @@
         "kind": "agent",
         "slug": "discrete-math-formal-logic-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/discrete-math-formal-logic-specialist",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10134,7 +10134,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/discrete-math-formal-logic-specialist/examples/prompts.md",
             "bullets": 3,
@@ -10146,12 +10146,12 @@
         "kind": "agent",
         "slug": "distributed-systems-consistency-architect",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/distributed-systems-consistency-architect",
-        "total_score": 93.15,
+        "total_score": 91.95,
         "scores": {
           "logic": 97.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10163,7 +10163,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/distributed-systems-consistency-architect/examples/prompts.md",
             "bullets": 3,
@@ -10192,7 +10192,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 9,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/fullstack-research-prototype-architect/examples/prompts.md",
             "bullets": 3,
@@ -10204,12 +10204,12 @@
         "kind": "agent",
         "slug": "graph-theory-algorithms-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/graph-theory-algorithms-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10221,7 +10221,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/graph-theory-algorithms-specialist/examples/prompts.md",
             "bullets": 3,
@@ -10233,12 +10233,12 @@
         "kind": "agent",
         "slug": "linear-algebra-numerical-methods-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/linear-algebra-numerical-methods-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10250,7 +10250,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/linear-algebra-numerical-methods-engineer/examples/prompts.md",
             "bullets": 3,
@@ -10291,12 +10291,12 @@
         "kind": "agent",
         "slug": "llm-systems-architect",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/llm-systems-architect",
-        "total_score": 93.15,
+        "total_score": 91.95,
         "scores": {
           "logic": 97.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -10308,7 +10308,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/llm-systems-architect/examples/prompts.md",
             "bullets": 3,
@@ -11045,12 +11045,12 @@
         "kind": "agent",
         "slug": "mlops-model-serving-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/mlops-model-serving-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11062,7 +11062,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/mlops-model-serving-engineer/examples/prompts.md",
             "bullets": 3,
@@ -11074,12 +11074,12 @@
         "kind": "agent",
         "slug": "network-protocol-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/network-protocol-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11091,7 +11091,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/network-protocol-engineer/examples/prompts.md",
             "bullets": 3,
@@ -11103,12 +11103,12 @@
         "kind": "agent",
         "slug": "nlp-information-retrieval-scientist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/nlp-information-retrieval-scientist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11120,7 +11120,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/nlp-information-retrieval-scientist/examples/prompts.md",
             "bullets": 3,
@@ -11132,12 +11132,12 @@
         "kind": "agent",
         "slug": "operating-systems-concurrency-debugger",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/operating-systems-concurrency-debugger",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11149,7 +11149,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/operating-systems-concurrency-debugger/examples/prompts.md",
             "bullets": 3,
@@ -11161,12 +11161,12 @@
         "kind": "agent",
         "slug": "optimization-operations-research-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/optimization-operations-research-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11178,7 +11178,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/optimization-operations-research-specialist/examples/prompts.md",
             "bullets": 3,
@@ -11190,12 +11190,12 @@
         "kind": "agent",
         "slug": "probability-statistical-inference-specialist",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/probability-statistical-inference-specialist",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11207,7 +11207,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/probability-statistical-inference-specialist/examples/prompts.md",
             "bullets": 3,
@@ -11944,12 +11944,12 @@
         "kind": "agent",
         "slug": "quantum-computing-algorithm-researcher",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/quantum-computing-algorithm-researcher",
-        "total_score": 92.4,
+        "total_score": 91.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 85.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -11961,7 +11961,7 @@
           "security_keyword_hits": 4,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/quantum-computing-algorithm-researcher/examples/prompts.md",
             "bullets": 3,
@@ -12553,12 +12553,12 @@
         "kind": "agent",
         "slug": "sre-reliability-observability-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/sre-reliability-observability-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -12570,7 +12570,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/sre-reliability-observability-engineer/examples/prompts.md",
             "bullets": 3,
@@ -12582,12 +12582,12 @@
         "kind": "agent",
         "slug": "stochastic-simulation-monte-carlo-engineer",
         "path": "/home/user/ai-skill-agent-control-deck-2026/agents/stochastic-simulation-monte-carlo-engineer",
-        "total_score": 91.4,
+        "total_score": 90.2,
         "scores": {
           "logic": 92.0,
           "clarity": 100.0,
           "security": 80.0,
-          "utility": 91.0
+          "utility": 85.0
         },
         "pass_thresholds": true,
         "findings": [],
@@ -12599,7 +12599,7 @@
           "security_keyword_hits": 3,
           "output_contract_length": 88,
           "logic_foundation_skills_count": 7,
-          "skill_profile_count": 10,
+          "skill_profile_count": 7,
           "prompts": {
             "path": "/home/user/ai-skill-agent-control-deck-2026/agents/stochastic-simulation-monte-carlo-engineer/examples/prompts.md",
             "bullets": 3,

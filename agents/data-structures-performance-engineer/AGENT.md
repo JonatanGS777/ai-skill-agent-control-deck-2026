@@ -1,7 +1,7 @@
 ---
 name: "data-structures-performance-engineer"
 description: "Optimiza estructuras de datos y patrones de acceso con enfoque en rendimiento, memoria y escalabilidad."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

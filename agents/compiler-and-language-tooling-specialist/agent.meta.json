@@ -1,8 +1,8 @@
 {
   "name": "compiler-and-language-tooling-specialist",
   "title": "Compiler And Language Tooling Specialist",
-  "description": "Especialista en parsing, transformación de código, toolchains y arquitectura de compiladores/lenguajes.",
-  "version": "1.0.0",
+  "description": "Especialista en parsing, transformaci\u00f3n de c\u00f3digo, toolchains y arquitectura de compiladores/lenguajes.",
+  "version": "1.1.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

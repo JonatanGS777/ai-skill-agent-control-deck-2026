@@ -1,7 +1,7 @@
 ---
 name: "fullstack-research-prototype-architect"
 description: "Arquitecto para prototipos full stack de investigación con velocidad, rigor técnico y escalabilidad inicial."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

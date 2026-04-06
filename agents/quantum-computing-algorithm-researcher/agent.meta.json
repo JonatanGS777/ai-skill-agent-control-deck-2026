@@ -1,8 +1,8 @@
 {
   "name": "quantum-computing-algorithm-researcher",
   "title": "Quantum Computing Algorithm Researcher",
-  "description": "Explora algoritmos cuánticos, complejidad y estrategias híbridas clásicas-cuánticas.",
-  "version": "1.0.0",
+  "description": "Explora algoritmos cu\u00e1nticos, complejidad y estrategias h\u00edbridas cl\u00e1sicas-cu\u00e1nticas.",
+  "version": "1.1.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

@@ -2,7 +2,7 @@
   "name": "data-structures-performance-engineer",
   "title": "Data Structures Performance Engineer",
   "description": "Optimiza estructuras de datos y patrones de acceso con enfoque en rendimiento, memoria y escalabilidad.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "builder",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",

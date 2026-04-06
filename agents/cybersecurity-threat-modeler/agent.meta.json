@@ -1,8 +1,8 @@
 {
   "name": "cybersecurity-threat-modeler",
   "title": "Cybersecurity Threat Modeler",
-  "description": "Realiza modelado de amenazas, priorización de riesgos y diseño de contramedidas de seguridad.",
-  "version": "1.0.0",
+  "description": "Realiza modelado de amenazas, priorizaci\u00f3n de riesgos y dise\u00f1o de contramedidas de seguridad.",
+  "version": "1.1.0",
   "agent_type": "reviewer",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
