@@ -10,6 +10,7 @@
 [![Skills](https://img.shields.io/badge/Skills-203-ff8b63?style=for-the-badge&logo=lightning&logoColor=white)](skills/)
 [![Agents](https://img.shields.io/badge/Agents-196-a78bfa?style=for-the-badge&logo=robot&logoColor=white)](agents/)
 [![Benchmark](https://img.shields.io/badge/Benchmark-100%25-22c1ff?style=for-the-badge&logo=checkmarx&logoColor=white)](catalog/benchmark-results.json)
+[![Avg Score](https://img.shields.io/badge/avg%20score-93.26%2F100-22c1ff?style=for-the-badge)](catalog/benchmark-results.json)
 
 <br/>
 
@@ -24,6 +25,18 @@
 [Quick Start](#-quick-start) · [Documentation](#-documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
 
 </div>
+
+---
+
+## Install in 3 commands
+
+```bash
+git clone https://github.com/JonatanGS777/ai-skill-agent-control-deck-2026.git
+cd ai-skill-agent-control-deck-2026
+make bootstrap
+```
+
+> **Requires:** [Claude Code CLI](https://claude.ai/code) + Python 3.9+
 
 ---
 
@@ -95,6 +108,20 @@ This repository is a production platform for creating and managing **skills** (r
 | **Applied AI** | Customer success, agritech, biotech, climate analytics, cybersecurity, ecommerce, education, energy, healthcare, legal, finance, logistics |
 | **Software Engineering** | Full-stack, automation, workflow orchestration, security, testing, debugging, frontend frameworks |
 | **Agent Types** | Auditor, Builder, Strategist, Reviewer |
+
+</div>
+
+### Agent Archetypes
+
+Each industry domain includes 3 ready-to-use agent roles:
+
+<div align="center">
+
+| Archetype | Purpose |
+|:---:|---|
+| **Strategist** | High-level planning, decision intelligence, opportunity analysis |
+| **Builder** | Implementation pipelines, automation, system construction |
+| **Auditor** | Quality control, compliance, risk analysis, governance |
 
 </div>
 
@@ -222,7 +249,7 @@ Top current score: fullstack-ultramodern-2026 (98.6/100)
 
 | Resource | Description |
 |---|---|
-| [Claude Code Guide](docs/claude-code-guide.md) | Complete Claude Code reference guide |
+| [Claude Code Guide](docs/claude-code-guide.md) | Complete bilingual (ES/EN) reference — 18 sections, tools, memory, hooks, MCP, agents |
 | [Quick Start](docs/quickstart.md) | Setup in 5 minutes |
 | [Recommended Patterns](docs/patterns.md) | 5 proven patterns (Skill, Agent, Quality, Release) |
 | [Anti-patterns](docs/anti-patterns.md) | 5 common mistakes and how to fix them |
