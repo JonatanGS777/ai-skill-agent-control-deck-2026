@@ -18,7 +18,10 @@
 
 <br/>
 
-<img src="docs/branding/banner-slogan.svg" alt="Build · Measure · Scale · Govern · Release" width="620"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/branding/banner-slogan-dark.svg">
+  <img src="docs/branding/banner-slogan.svg" alt="Build · Measure · Scale · Govern · Release" width="620"/>
+</picture>
 
 [Quick Start](#install-in-3-commands) · [Documentation](#documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
 
@@ -53,7 +56,10 @@ This repository is a production platform for creating and managing **skills** (r
 
 <div align="center">
 
-<img src="docs/branding/dashboard-screenshot.png" alt="Quality Dashboard" width="860"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/branding/dashboard-screenshot-dark.png">
+  <img src="docs/branding/dashboard-screenshot.png" alt="Quality Dashboard" width="860"/>
+</picture>
 
 | Component | Count | Status |
 |:---:|:---:|:---:|
@@ -91,7 +97,10 @@ flowchart TD
 
 <div align="center">
 
-<img src="docs/branding/chart-domain-pills.svg" alt="Domain Coverage" width="800"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/branding/chart-domain-pills-dark.svg">
+  <img src="docs/branding/chart-domain-pills.svg" alt="Domain Coverage" width="800"/>
+</picture>
 
 </div>
 
@@ -184,7 +193,10 @@ Every skill and agent is scored across 4 dimensions:
 
 <div align="center">
 
-<img src="docs/branding/chart-scorecard.svg" alt="4-Dimension Quality Scorecard" width="816"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/branding/chart-scorecard-dark.svg">
+  <img src="docs/branding/chart-scorecard.svg" alt="4-Dimension Quality Scorecard" width="816"/>
+</picture>
 
 </div>
 
