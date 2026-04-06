@@ -18,13 +18,7 @@
 
 <br/>
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║    Build · Measure · Scale · Govern · Release                    ║
-║    203 Skills  ·  196 Agents  ·  30 Logic Foundations           ║
-║    Benchmark-driven  ·  Regression-safe  ·  Release-ready       ║
-╚══════════════════════════════════════════════════════════════════╝
-```
+<img src="docs/branding/banner-slogan.svg" alt="Build · Measure · Scale · Govern · Release" width="620"/>
 
 [Quick Start](#install-in-3-commands) · [Documentation](#documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
 
