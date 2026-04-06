@@ -1,7 +1,7 @@
 ---
 name: "optimization-operations-research-specialist"
 description: "Especialista en optimización matemática y research operations para decisiones complejas."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

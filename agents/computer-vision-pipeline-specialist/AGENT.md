@@ -1,7 +1,7 @@
 ---
 name: "computer-vision-pipeline-specialist"
 description: "Especialista en pipelines de visión computacional, pre/post-procesamiento y evaluación reproducible."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

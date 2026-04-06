@@ -2,7 +2,7 @@
   "name": "cloud-native-systems-architect",
   "title": "Cloud Native Systems Architect",
   "description": "Arquitecto cloud-native para despliegues resilientes, automatizaci\u00f3n operativa y evoluci\u00f3n incremental.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "orchestrator",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "docker-patterns",
-    "deployment-patterns",
-    "backend-patterns",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

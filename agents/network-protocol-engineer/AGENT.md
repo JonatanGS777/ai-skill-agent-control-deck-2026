@@ -1,7 +1,7 @@
 ---
 name: "network-protocol-engineer"
 description: "Diseña e implementa protocolos de red robustos con observabilidad y garantías de compatibilidad."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

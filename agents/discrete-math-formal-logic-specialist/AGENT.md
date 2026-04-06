@@ -1,7 +1,7 @@
 ---
 name: "discrete-math-formal-logic-specialist"
 description: "Especialista en lógica formal, razonamiento discreto y validación de propiedades críticas."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

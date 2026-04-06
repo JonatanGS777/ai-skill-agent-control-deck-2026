@@ -1,7 +1,7 @@
 ---
 name: "llm-systems-architect"
 description: "Diseña sistemas basados en LLM con pipelines robustos, prompts auditables y control de costos/calidad."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

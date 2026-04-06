@@ -1,7 +1,7 @@
 ---
 name: "cloud-native-systems-architect"
 description: "Arquitecto cloud-native para despliegues resilientes, automatización operativa y evolución incremental."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

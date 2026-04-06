@@ -1,6 +1,6 @@
 # Repository Quality Report
 
-- Skills discovered: **321**
+- Skills discovered: **204**
 - Local skills (repo-owned): **203**
 - Agents discovered: **196**
 - Logic foundation skills present: **30/30**

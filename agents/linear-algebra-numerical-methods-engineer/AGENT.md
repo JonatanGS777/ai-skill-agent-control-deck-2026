@@ -1,7 +1,7 @@
 ---
 name: "linear-algebra-numerical-methods-engineer"
 description: "Implementa métodos numéricos estables para álgebra lineal aplicada y cómputo científico."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

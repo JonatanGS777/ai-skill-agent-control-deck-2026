@@ -1,7 +1,7 @@
 ---
 name: "database-query-optimization-specialist"
 description: "Optimiza modelos de datos, índices y consultas complejas para sistemas transaccionales y analíticos."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

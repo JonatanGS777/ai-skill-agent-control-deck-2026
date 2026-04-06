@@ -1,7 +1,7 @@
 ---
 name: "control-systems-signal-processing-engineer"
 description: "Implementa soluciones de control y procesamiento de señales con estabilidad y precisión numérica."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

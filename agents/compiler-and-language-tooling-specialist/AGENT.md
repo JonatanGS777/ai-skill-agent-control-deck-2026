@@ -1,7 +1,7 @@
 ---
 name: "compiler-and-language-tooling-specialist"
 description: "Especialista en parsing, transformación de código, toolchains y arquitectura de compiladores/lenguajes."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

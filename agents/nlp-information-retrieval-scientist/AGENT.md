@@ -1,7 +1,7 @@
 ---
 name: "nlp-information-retrieval-scientist"
 description: "Diseña sistemas NLP e IR para recuperación contextual, reranking y respuestas de alta precisión."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

@@ -2,7 +2,7 @@
   "name": "computational-geometry-visualization-engineer",
   "title": "Computational Geometry Visualization Engineer",
   "description": "Dise\u00f1a algoritmos geom\u00e9tricos y visualizaciones de alta claridad para sistemas t\u00e9cnicos.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "builder",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -13,9 +13,7 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "frontend-design",
     "svg-architecture-linkedin-2026",
-    "python-testing",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

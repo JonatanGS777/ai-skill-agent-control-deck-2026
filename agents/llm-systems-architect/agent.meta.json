@@ -2,7 +2,7 @@
   "name": "llm-systems-architect",
   "title": "Llm Systems Architect",
   "description": "Dise\u00f1a sistemas basados en LLM con pipelines robustos, prompts auditables y control de costos/calidad.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "orchestrator",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "claude-api",
-    "ai-first-engineering",
-    "prompt-optimizer",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

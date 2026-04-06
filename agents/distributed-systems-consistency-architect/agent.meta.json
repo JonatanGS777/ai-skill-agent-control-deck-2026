@@ -2,7 +2,7 @@
   "name": "distributed-systems-consistency-architect",
   "title": "Distributed Systems Consistency Architect",
   "description": "Dise\u00f1a sistemas distribuidos resilientes con estrategias de consistencia, particionado y tolerancia a fallos.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "orchestrator",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "backend-patterns",
-    "deployment-patterns",
-    "verification-loop",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

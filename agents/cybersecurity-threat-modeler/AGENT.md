@@ -1,7 +1,7 @@
 ---
 name: "cybersecurity-threat-modeler"
 description: "Realiza modelado de amenazas, priorización de riesgos y diseño de contramedidas de seguridad."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

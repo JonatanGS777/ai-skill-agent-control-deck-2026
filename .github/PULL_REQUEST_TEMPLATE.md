@@ -1,6 +1,6 @@
 ## Summary
 
-Describe brevemente que cambia y por que.
+Briefly describe what changes and why.
 
 ## Type of Change
 
@@ -22,16 +22,16 @@ Describe brevemente que cambia y por que.
 
 ## Validation
 
-- [ ] `make quality` ejecutado localmente y exitoso.
-- [ ] Verifique que no hay regresiones en prompts/base logica.
-- [ ] Actualice docs relevantes.
+- [ ] `make quality` run locally and passing.
+- [ ] Verified no regressions in prompts/logical foundation.
+- [ ] Relevant docs updated.
 
 ## Risk Assessment
 
-- Riesgo tecnico:
-- Riesgo de regresion:
-- Mitigacion aplicada:
+- Technical risk:
+- Regression risk:
+- Mitigation applied:
 
 ## Release Notes Draft (optional)
 
-Si aplica, describe el texto sugerido para `--notes` en release bundle.
+If applicable, provide suggested text for `--notes` in the release bundle.

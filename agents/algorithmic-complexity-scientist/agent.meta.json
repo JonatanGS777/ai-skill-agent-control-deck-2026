@@ -2,7 +2,7 @@
   "name": "algorithmic-complexity-scientist",
   "title": "Algorithmic Complexity Scientist",
   "description": "Especialista en dise\u00f1o de algoritmos, an\u00e1lisis de complejidad temporal/espacial y decisiones de tradeoff computacional.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "specialist",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -13,9 +13,6 @@
   ],
   "entrypoint": "AGENT.md",
   "skills": [
-    "backend-patterns",
-    "verification-loop",
-    "python-testing",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

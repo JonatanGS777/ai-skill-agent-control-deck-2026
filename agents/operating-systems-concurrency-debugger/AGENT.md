@@ -1,7 +1,7 @@
 ---
 name: "operating-systems-concurrency-debugger"
 description: "Diagnostica condiciones de carrera, deadlocks y problemas de concurrencia de bajo nivel en software de sistemas."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

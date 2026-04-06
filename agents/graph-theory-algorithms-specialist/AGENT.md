@@ -1,7 +1,7 @@
 ---
 name: "graph-theory-algorithms-specialist"
 description: "Resuelve problemas en grafos: rutas, flujos, conectividad y optimización estructural."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

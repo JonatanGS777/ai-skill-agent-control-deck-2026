@@ -2,7 +2,7 @@
   "name": "fullstack-research-prototype-architect",
   "title": "Fullstack Research Prototype Architect",
   "description": "Arquitecto para prototipos full stack de investigaci\u00f3n con velocidad, rigor t\u00e9cnico y escalabilidad inicial.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agent_type": "orchestrator",
   "skill_mode": "explicit",
   "logic_foundation_mode": "standard",
@@ -15,7 +15,6 @@
   "skills": [
     "fullstack-ultramodern-2026",
     "frontend-ultramodern-2026",
-    "api-design",
     "logic-propositional-reasoning",
     "logic-proof-strategies",
     "complexity-analysis-foundations",

@@ -1,7 +1,7 @@
 ---
 name: "sre-reliability-observability-engineer"
 description: "Especialista SRE para confiabilidad, SLIs/SLOs, respuesta a incidentes y mejora continua operativa."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex

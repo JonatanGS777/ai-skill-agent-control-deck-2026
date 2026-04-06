@@ -1,7 +1,7 @@
 ---
 name: "applied-cryptography-engineer"
 description: "Aplica criptografía moderna en autenticación, integridad, confidencialidad y gestión segura de secretos."
-version: "1.0.0"
+version: "1.1.0"
 compatibility:
   - claude-code
   - codex
