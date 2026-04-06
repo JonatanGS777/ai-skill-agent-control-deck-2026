@@ -77,12 +77,12 @@ CORNER   = 14
 TOTAL_W  = PAD_X * 2 + COLS * CARD_W + (COLS - 1) * GAP
 TOTAL_H  = PAD_Y * 2 + CARD_H + 60   # +60 for title
 
-BG       = "#0d1117"
-CARD_BG  = "#161b22"
-BORDER   = "#30363d"
-TEXT_PRI = "#e6edf3"
-TEXT_SEC = "#8b949e"
-TRACK    = "#21262d"
+BG       = "#ffffff"
+CARD_BG  = "#f6f8fa"
+BORDER   = "#d0d7de"
+TEXT_PRI = "#1f2328"
+TEXT_SEC = "#656d76"
+TRACK    = "#e6eaef"
 
 lines = [
     f'<svg xmlns="http://www.w3.org/2000/svg" '

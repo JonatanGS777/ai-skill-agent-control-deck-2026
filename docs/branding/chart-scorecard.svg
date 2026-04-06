@@ -1,45 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="816" height="308" viewBox="0 0 816 308">
-<rect width="816" height="308" rx="12" fill="#0d1117"/>
-<text x="408" y="34" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="14" font-weight="bold" fill="#e6edf3">4-Dimension Quality System</text>
-<text x="408" y="52" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">Average scores across all ranked skills · 100% pass rate</text>
-<rect x="24" y="66" width="180" height="200" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<rect width="816" height="308" rx="12" fill="#ffffff"/>
+<text x="408" y="34" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="14" font-weight="bold" fill="#1f2328">4-Dimension Quality System</text>
+<text x="408" y="52" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">Average scores across all ranked skills · 100% pass rate</text>
+<rect x="24" y="66" width="180" height="200" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
 <rect x="24" y="66" width="180" height="4" rx="14" fill="#22c1ff"/>
 <text x="114" y="104" text-anchor="middle" font-size="26">⚙</text>
 <text x="114" y="128" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" font-weight="bold" fill="#22c1ff">Logic</text>
-<text x="114" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">weight: 35%</text>
-<text x="114" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#e6edf3">95.3</text>
-<text x="114" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">/ 100</text>
-<rect x="38" y="230" width="152" height="10" rx="5" fill="#21262d"/>
+<text x="114" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">weight: 35%</text>
+<text x="114" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#1f2328">95.3</text>
+<text x="114" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">/ 100</text>
+<rect x="38" y="230" width="152" height="10" rx="5" fill="#e6eaef"/>
 <rect x="38" y="230" width="126.7" height="10" rx="5" fill="#22c1ff" opacity="0.9"/>
-<text x="114" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">Reasoning · Invariants · Proofs</text>
-<rect x="220" y="66" width="180" height="200" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<text x="114" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#656d76">Reasoning · Invariants · Proofs</text>
+<rect x="220" y="66" width="180" height="200" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
 <rect x="220" y="66" width="180" height="4" rx="14" fill="#4ade80"/>
 <text x="310" y="104" text-anchor="middle" font-size="26">📖</text>
 <text x="310" y="128" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" font-weight="bold" fill="#4ade80">Clarity</text>
-<text x="310" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">weight: 25%</text>
-<text x="310" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#e6edf3">100.0</text>
-<text x="310" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">/ 100</text>
-<rect x="234" y="230" width="152" height="10" rx="5" fill="#21262d"/>
+<text x="310" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">weight: 25%</text>
+<text x="310" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#1f2328">100.0</text>
+<text x="310" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">/ 100</text>
+<rect x="234" y="230" width="152" height="10" rx="5" fill="#e6eaef"/>
 <rect x="234" y="230" width="152.0" height="10" rx="5" fill="#4ade80" opacity="0.9"/>
-<text x="310" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">Docs · Examples · Precision</text>
-<rect x="416" y="66" width="180" height="200" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<text x="310" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#656d76">Docs · Examples · Precision</text>
+<rect x="416" y="66" width="180" height="200" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
 <rect x="416" y="66" width="180" height="4" rx="14" fill="#f97316"/>
 <text x="506" y="104" text-anchor="middle" font-size="26">🔒</text>
 <text x="506" y="128" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" font-weight="bold" fill="#f97316">Security</text>
-<text x="506" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">weight: 20%</text>
-<text x="506" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#e6edf3">100.0</text>
-<text x="506" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">/ 100</text>
-<rect x="430" y="230" width="152" height="10" rx="5" fill="#21262d"/>
+<text x="506" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">weight: 20%</text>
+<text x="506" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#1f2328">100.0</text>
+<text x="506" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">/ 100</text>
+<rect x="430" y="230" width="152" height="10" rx="5" fill="#e6eaef"/>
 <rect x="430" y="230" width="152.0" height="10" rx="5" fill="#f97316" opacity="0.9"/>
-<text x="506" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">Guardrails · Boundaries · Threats</text>
-<rect x="612" y="66" width="180" height="200" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<text x="506" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#656d76">Guardrails · Boundaries · Threats</text>
+<rect x="612" y="66" width="180" height="200" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
 <rect x="612" y="66" width="180" height="4" rx="14" fill="#a78bfa"/>
 <text x="702" y="104" text-anchor="middle" font-size="26">🚀</text>
 <text x="702" y="128" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" font-weight="bold" fill="#a78bfa">Utility</text>
-<text x="702" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">weight: 20%</text>
-<text x="702" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#e6edf3">93.9</text>
-<text x="702" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">/ 100</text>
-<rect x="626" y="230" width="152" height="10" rx="5" fill="#21262d"/>
+<text x="702" y="144" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#656d76">weight: 20%</text>
+<text x="702" y="184" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="34" font-weight="bold" fill="#1f2328">93.9</text>
+<text x="702" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#656d76">/ 100</text>
+<rect x="626" y="230" width="152" height="10" rx="5" fill="#e6eaef"/>
 <rect x="626" y="230" width="119.1" height="10" rx="5" fill="#a78bfa" opacity="0.9"/>
-<text x="702" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">Real-world · Coverage · Value</text>
+<text x="702" y="254" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#656d76">Real-world · Coverage · Value</text>
 </svg>
