@@ -59,6 +59,8 @@ This repository is a production platform for creating and managing **skills** (r
 
 <div align="center">
 
+<img src="docs/branding/dashboard-screenshot.png" alt="Quality Dashboard" width="860"/>
+
 | Component | Count | Status |
 |:---:|:---:|:---:|
 | Specialized skills | **203** | ✅ Healthy |
