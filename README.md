@@ -2,7 +2,11 @@
 
 # AI Skill & Agent Control Deck 2026
 
-**The definitive system for building, measuring, and scaling AI skills and agents with solid logical foundations**
+**Drop 203 benchmarked skills and 196 agents directly into Claude Code.**
+
+<img src="docs/branding/social-preview.png" alt="AI Skill & Agent Control Deck 2026" width="860"/>
+
+<br/>
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-22c1ff?style=for-the-badge&logo=semver&logoColor=white)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-95e6bc?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
@@ -22,7 +26,7 @@
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-[Quick Start](#-quick-start) · [Documentation](#-documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
+[Quick Start](#install-in-3-commands) · [Documentation](#documentation) · [Skills](skills/) · [Agents](agents/) · [Dashboard](catalog/quality-dashboard.html) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -124,49 +128,6 @@ Each industry domain includes 3 ready-to-use agent roles:
 | **Auditor** | Quality control, compliance, risk analysis, governance |
 
 </div>
-
----
-
-## Quick Start
-
-### 1. Clone and bootstrap
-
-```bash
-git clone https://github.com/jonatangs777/ai-skill-agent-control-deck-2026.git
-cd ai-skill-agent-control-deck-2026
-
-# Full initialization: logic pack + aliases + semver + quality gate
-make bootstrap
-```
-
-### 2. Install a skill in Claude Code
-
-```bash
-# Copy skill to your local Claude Code installation
-cp -r skills/automation-agentic-workflow-automation-skill-2026 ~/.claude/skills/
-
-# Reload Claude Code to activate the skill
-claude
-```
-
-### 3. Open the quality dashboard
-
-```bash
-make dashboard
-open catalog/quality-dashboard.html
-```
-
-### 4. Run the full quality gate
-
-```bash
-make quality
-```
-
-### 5. Create a release
-
-```bash
-make release-auto
-```
 
 ---
 
