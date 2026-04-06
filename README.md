@@ -186,22 +186,13 @@ ai-skill-agent-control-deck-2026/
 
 ## 4-Dimension Quality System
 
-Every skill and agent is scored across:
+Every skill and agent is scored across 4 dimensions:
 
 <div align="center">
 
-<img src="docs/branding/chart-radar.svg" alt="Quality Dimensions Radar" width="380"/>
-&nbsp;&nbsp;&nbsp;
-<img src="docs/branding/chart-top10-scores.svg" alt="Top 10 Skills Score" width="380"/>
+<img src="docs/branding/chart-scorecard.svg" alt="4-Dimension Quality Scorecard" width="816"/>
 
 </div>
-
-| Dimension | Weight | Description |
-|---|:---:|---|
-| `logic` | 35% | Formal soundness: correctness, invariants, verifiable steps |
-| `clarity` | 25% | Documentation, examples, understandable instructions |
-| `security` | 20% | Threat handling, guardrails, boundary validation |
-| `utility` | 20% | Practical value, real-world case coverage |
 
 **Top current score:** `fullstack-ultramodern-2026` — **98.6 / 100**
 
