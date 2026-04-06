@@ -73,36 +73,31 @@ This repository is a production platform for creating and managing **skills** (r
 
 ## System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    CONTROL DECK 2026                        │
-├──────────────┬──────────────┬──────────────┬───────────────┤
-│   SKILLS     │   AGENTS     │   CATALOG    │    DOCS       │
-│              │              │              │               │
-│  203 skills  │  196 agents  │  Index JSON  │  Portal HTML  │
-│  SKILL.md    │  AGENT.md    │  Benchmarks  │  Patterns     │
-│  meta.json   │  meta.json   │  Dashboard   │  Governance   │
-│  examples/   │  examples/   │  Releases    │  Quickstart   │
-└──────┬───────┴──────┬───────┴──────┬───────┴───────┬───────┘
-       │              │              │               │
-       ▼              ▼              ▼               ▼
-┌─────────────────────────────────────────────────────────────┐
-│               QUALITY AUTOMATION (Makefile)                 │
-│  make quality · make benchmarks · make dashboard           │
-│  make docs-portal · make release-auto · make bootstrap     │
-└─────────────────────────────────────────────────────────────┘
-       │
-       ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    CI / GitHub Actions                       │
-│  repository-quality.yml  ·  release-bundle.yml             │
-│  Python compile · Semver validation · Benchmark gate       │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    S["🧠 skills/\n203 specialized skills\nSKILL.md · meta.json · examples/"]
+    A["🤖 agents/\n196 orchestration agents\nAGENT.md · meta.json · references/"]
+    C["📊 catalog/\nIndex JSON · Benchmarks\nDashboard · Releases"]
+    D["📚 docs/\nPortal HTML · Patterns\nGovernance · Quickstart"]
+
+    S & A & C & D --> Q
+
+    Q["⚙️ Quality Automation — Makefile\nmake quality · make benchmarks · make dashboard\nmake docs-portal · make release-auto · make bootstrap"]
+
+    Q --> CI
+
+    CI["🚀 CI / GitHub Actions\nrepository-quality.yml · release-bundle.yml\nPython compile · Semver validation · Benchmark gate"]
 ```
 
 ---
 
 ## Domain Coverage
+
+<div align="center">
+
+<img src="docs/branding/chart-domains.svg" alt="Domain Coverage Scores" width="780"/>
+
+</div>
 
 <div align="center">
 
@@ -191,18 +186,22 @@ ai-skill-agent-control-deck-2026/
 
 Every skill and agent is scored across:
 
-```
-┌────────────┬──────────────────────────────────────────────────────┐
-│ Dimension  │ Description                                          │
-├────────────┼──────────────────────────────────────────────────────┤
-│ logic      │ Formal soundness: correctness, invariants, proofs    │
-│ clarity    │ Documentation, examples, understandable instructions │
-│ security   │ Threat handling, guardrails, boundary validation     │
-│ utility    │ Practical value, real-world case coverage            │
-└────────────┴──────────────────────────────────────────────────────┘
+<div align="center">
 
-Top current score: fullstack-ultramodern-2026 (98.6/100)
-```
+<img src="docs/branding/chart-radar.svg" alt="Quality Dimensions Radar" width="380"/>
+&nbsp;&nbsp;&nbsp;
+<img src="docs/branding/chart-top10-scores.svg" alt="Top 10 Skills Score" width="380"/>
+
+</div>
+
+| Dimension | Weight | Description |
+|---|:---:|---|
+| `logic` | 35% | Formal soundness: correctness, invariants, verifiable steps |
+| `clarity` | 25% | Documentation, examples, understandable instructions |
+| `security` | 20% | Threat handling, guardrails, boundary validation |
+| `utility` | 20% | Practical value, real-world case coverage |
+
+**Top current score:** `fullstack-ultramodern-2026` — **98.6 / 100**
 
 ---
 

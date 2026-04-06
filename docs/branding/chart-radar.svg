@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+<rect width="420" height="420" rx="12" fill="#0d1117"/>
+<text x="210" y="28" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="14" font-weight="bold" fill="#e6edf3">Quality Dimensions</text>
+<text x="210" y="44" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">Average across all ranked skills</text>
+<polygon points="210.0,160.0 260.0,210.0 210.0,260.0 160.0,210.0" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="214.0" y="160.0" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">79</text>
+<polygon points="210.0,130.0 290.0,210.0 210.0,290.0 130.0,210.0" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="214.0" y="130.0" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">86</text>
+<polygon points="210.0,100.0 320.0,210.0 210.0,320.0 100.0,210.0" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="214.0" y="100.0" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">93</text>
+<polygon points="210.0,70.0 350.0,210.0 210.0,350.0 70.0,210.0" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="214.0" y="70.0" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8" fill="#8b949e">100</text>
+<line x1="210.0" y1="190.0" x2="210.0" y2="70.0" stroke="#30363d" stroke-width="1"/>
+<line x1="230.0" y1="210.0" x2="350.0" y2="210.0" stroke="#30363d" stroke-width="1"/>
+<line x1="210.0" y1="230.0" x2="210.0" y2="350.0" stroke="#30363d" stroke-width="1"/>
+<line x1="190.0" y1="210.0" x2="70.0" y2="210.0" stroke="#30363d" stroke-width="1"/>
+<polygon points="210.0,90.0 350.0,210.0 210.0,350.0 96.0,210.0" fill="#22c1ff" fill-opacity="0.2" stroke="#22c1ff" stroke-width="2"/>
+<circle cx="210.0" cy="90.0" r="5" fill="#22c1ff" stroke="#0d1117" stroke-width="2"/>
+<circle cx="350.0" cy="210.0" r="5" fill="#22c1ff" stroke="#0d1117" stroke-width="2"/>
+<circle cx="210.0" cy="350.0" r="5" fill="#22c1ff" stroke="#0d1117" stroke-width="2"/>
+<circle cx="96.0" cy="210.0" r="5" fill="#22c1ff" stroke="#0d1117" stroke-width="2"/>
+<text x="210.0" y="46.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#22c1ff">Logic</text>
+<text x="210.0" y="59.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">95.3 · 35%</text>
+<text x="374.0" y="210.0" text-anchor="start" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#4ade80">Clarity</text>
+<text x="374.0" y="223.0" text-anchor="start" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">100.0 · 25%</text>
+<text x="210.0" y="374.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#f97316">Security</text>
+<text x="210.0" y="387.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">100.0 · 20%</text>
+<text x="46.0" y="210.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="bold" fill="#a78bfa">Utility</text>
+<text x="46.0" y="223.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">93.9 · 20%</text>
+</svg>

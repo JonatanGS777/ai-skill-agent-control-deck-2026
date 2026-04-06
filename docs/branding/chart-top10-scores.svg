@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="380" viewBox="0 0 780 380">
+<rect width="780" height="380" rx="12" fill="#0d1117"/>
+<text x="390" y="36" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="15" font-weight="bold" fill="#e6edf3">Top 10 Skills — Quality Score</text>
+<text x="390" y="52" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">logic 35% · clarity 25% · security 20% · utility 20%</text>
+<line x1="362.9" y1="60" x2="362.9" y2="330" stroke="#21262d" stroke-width="1"/>
+<text x="362.9" y="344" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">80</text>
+<line x1="452.1" y1="60" x2="452.1" y2="330" stroke="#21262d" stroke-width="1"/>
+<text x="452.1" y="344" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">85</text>
+<line x1="541.4" y1="60" x2="541.4" y2="330" stroke="#21262d" stroke-width="1"/>
+<text x="541.4" y="344" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">90</text>
+<line x1="630.7" y1="60" x2="630.7" y2="330" stroke="#21262d" stroke-width="1"/>
+<text x="630.7" y="344" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">95</text>
+<line x1="720.0" y1="60" x2="720.0" y2="330" stroke="#21262d" stroke-width="1"/>
+<text x="720.0" y="344" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9" fill="#8b949e">100</text>
+<rect x="220" y="60" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="60" width="475.0" height="22" rx="4" fill="#22c1ff" opacity="0.85"/>
+<text x="212" y="75" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Fullstack Ultramodern 2026</text>
+<text x="701.0" y="75" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#22c1ff">98.6</text>
+<rect x="220" y="92" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="92" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="107" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Agritech Decision Intelligence</text>
+<text x="673.3" y="107" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="124" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="124" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="139" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Biotech Research Acceleration</text>
+<text x="673.3" y="139" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="156" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="156" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="171" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Climate Risk Analytics</text>
+<text x="673.3" y="171" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="188" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="188" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="203" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Customer Success Ai Operations</text>
+<text x="673.3" y="203" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="220" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="220" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="235" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Cybersecurity Operations Ai</text>
+<text x="673.3" y="235" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="252" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="252" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="267" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Ecommerce Conversion Intelli…</text>
+<text x="673.3" y="267" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="284" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="284" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="299" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Education Tutoring Platforms</text>
+<text x="673.3" y="299" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="316" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="316" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="331" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Energy Demand Forecasting</text>
+<text x="673.3" y="331" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+<rect x="220" y="348" width="500" height="22" rx="4" fill="#161b22"/>
+<rect x="220" y="348" width="447.3" height="22" rx="4" fill="#4ade80" opacity="0.85"/>
+<text x="212" y="363" text-anchor="end" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#e6edf3">Entertainment Production Ai</text>
+<text x="673.3" y="363" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" font-weight="bold" fill="#4ade80">97.05</text>
+</svg>
